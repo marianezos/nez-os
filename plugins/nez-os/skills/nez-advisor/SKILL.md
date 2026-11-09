@@ -51,7 +51,7 @@ Say, in one message:
 
 > "Let's set up your board. I'll start you with 7 real estate advisors: [each name and their question, one line each]. Add them like this, or change anything?"
 
-If the Advisory Board had to be created, fold that into the same question ("I'll also add your Advisory Board to your Notion"). If the Master Profile shows the agent leads a team or is a broker, mention the Team Growth Coach as an option in the same message; if their goals lean on social media or video, mention the Content Builder.
+If the Advisory Board had to be created, fold that into the same question ("I'll also add your Advisory Board to your Notion"). If the Master Profile shows the agent leads a team or is a broker, mention the Team Growth Coach as an option in the same message; if their goals lean on social media or video, mention the Content Builder; if they have Market Areas or work a specific farm or town, mention the Local Market Expert.
 
 On a yes, add each advisor following "How to add a starter role" in `starter-advisors.md`, personalized from the Master Profile. If they want a change (swap, drop or add one), make it and ask once more. Then say once that they can add mentors they follow or design their own advisor anytime with /nez-advisor.
 

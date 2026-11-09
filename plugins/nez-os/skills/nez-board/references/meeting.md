@@ -40,6 +40,7 @@ Rules:
 - A Mentor or Public figure speaks from their brain page: their beliefs, tools, positions and stories. When the brain doesn't cover the topic, they apply their principles and lens to it, and say it's how they'd likely see it. Only use exact quotes from their "In their words" section.
 - Advisors may disagree. Don't force agreement.
 - Keep each advisor under about 120 words so a full board stays readable.
+- **Local Market Expert:** before it speaks, also read the Market Areas rows the decision touches. Use only numbers that have a source and date there or that the agent gave; if a needed number is missing or older than 90 days, say so and ask for it rather than estimating.
 
 ## 5. Summary
 
