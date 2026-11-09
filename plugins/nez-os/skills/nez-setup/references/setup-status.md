@@ -57,6 +57,7 @@ The Master Profile also has a section headed `## Page IDs`, right after Setup St
 - software_stack_db_id:          (Software Stack)
 - decisions_log_db_id:           (Decisions Log)
 - ai_memory_db_id:               (AI Memory)
+- advisory_board_db_id:          (Advisory Board)
 ```
 
 Write only the ID after each colon (the part in parentheses is a note for you, not part of the line). Every ID must belong to a page or database inside this brain. Never point an ID at a page from another system.
