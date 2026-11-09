@@ -22,8 +22,9 @@ If a past decision already covers this, say so up front and ask whether they wan
 
 ## 3. Choose the board
 
-- Default: all Active advisors, up to 5.
-- If more than 5 are Active, pick the 5 whose questions fit this topic best, and say who's sitting out.
+- Default: up to 7 Active advisors.
+- If more than 7 are Active, pick the 6 whose questions fit this topic best, plus The Skeptic if they're Active, and say who's sitting out.
+- The Skeptic speaks last, after hearing the others.
 - The agent can name specific advisors ("just ask the Profit Keeper and the Listings Strategist").
 
 ## 4. Each advisor speaks
@@ -38,7 +39,7 @@ Rules:
 - Stay in character: use their lens and voice, not a generic answer.
 - A Mentor or Public figure speaks from their brain page: their beliefs, tools, positions and stories. When the brain doesn't cover the topic, they apply their principles and lens to it, and say it's how they'd likely see it. Only use exact quotes from their "In their words" section.
 - Advisors may disagree. Don't force agreement.
-- Keep each advisor under about 150 words.
+- Keep each advisor under about 120 words so a full board stays readable.
 
 ## 5. Summary
 

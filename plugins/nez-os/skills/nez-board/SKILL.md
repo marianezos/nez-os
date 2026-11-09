@@ -34,7 +34,7 @@ Give the agent a personal board of advisors to pressure-test decisions: spending
    ```
    CREATE TABLE ("Decision" TITLE, "Date" DATE, "Call" SELECT('Go':green, 'No go':red, 'Go with changes':yellow, 'Need more info':gray), "Advisors" RICH_TEXT, "Pillar" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange), "Follow-up" DATE, "Outcome" SELECT('Not reviewed':gray, 'Worked':green, 'Mixed':yellow, 'Didn''t work':red, 'Didn''t do it':default), "What Happened" RICH_TEXT)
    ```
-3. **No advisors yet:** set up the five starter advisors from `references/starter-advisors.md`. Add each as a row (Kind Role, Status Active, Sources 0, Version 1, Last Refreshed today) and write its brain into the row's page using the headings in `references/advisor-brain-spec.md`. Tell the agent in two or three lines who's on their board, then continue.
+3. **No advisors yet:** seat the default board from `references/starter-advisors.md` (seven advisors), following its "How to add a starter role" steps, including personalizing each one from the Master Profile. If the Master Profile shows the agent leads a team or is a broker, offer the Team Growth Coach; if their goals lean on social media or video, offer the Content Builder. Tell the agent in two or three lines who's on their board, then continue.
 
 ## Step 2: What does the agent want?
 
@@ -45,7 +45,7 @@ Work it out from their message. If unclear, ask once:
 - **Bring a decision** → follow `references/meeting.md`.
 - **Add an advisor** → follow `references/build-advisor.md` (add). For a Mentor or Public figure, gather sources with `references/gathering-sources.md` and, where commands run on the agent's computer, `scripts/fetch.mjs`.
 - **Refresh an advisor** → follow `references/build-advisor.md` (refresh), gathering new sources the same way.
-- **See or change the board** → list Active advisors (name, kind, their question), then Draft and Benched ones. Offer to bench, bring back, finish a draft, or add.
+- **See or change the board** → list Active advisors (name, kind, their question), then Draft and Benched ones, then any starter extras not yet added. Offer to bench, bring back, finish a draft, or add.
 - **Check a past decision** → open Board Meetings rows whose Follow-up date has passed and Outcome is "Not reviewed". For each, ask what happened, then set Outcome (Worked, Mixed, Didn't work, Didn't do it) and a one-line What Happened. If it changes a belief worth keeping ("seller ads don't work in my market"), offer an AI Memory row. Also offer this check at the start of any meeting when follow-ups are overdue.
 
 ## Step 3: After the meeting

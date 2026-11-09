@@ -2,7 +2,7 @@
 
 ## Kinds of advisor
 
-- **Role:** a type of expert (for example "Investor-friendly lender," "Luxury listing agent," "Recruiting broker"). Built from well-known public methods. No sources needed.
+- **Role:** a starter role from `starter-advisors.md` (add it with the steps there), or a custom type of expert (for example "Investor-friendly lender," "Luxury listing agent," "Recruiting broker"). Built from well-known public methods. No sources needed.
 - **Mentor:** someone the agent learns from directly (a coach, broker, past mentor). Built from sources the agent provides: notes, recordings, transcripts, posts, course material.
 - **Public figure:** a known author, coach, investor or creator. Built from their public work: books, videos, podcasts, articles, interviews, plus any sources the agent adds.
 
@@ -24,7 +24,7 @@
 6. Show the agent a short preview (their question, how they think, top beliefs) and ask "Look right?"
 7. Save: add a row to Advisory Board (Advisor name, Key, Kind, Seat = their question, Status Active, or Draft if built from fewer than 5 sources, Sources = number of sources, Version 1, Last Refreshed today) and write the brain into the row's page.
 8. For a Mentor or Public figure, remind the agent once: the advisor is for their own thinking, not for marketing or implying an endorsement. If you used a build folder, offer to delete it.
-9. If the board now has more than 5 Active advisors, mention that meetings pick the best 5 for each topic (or the ones the agent names), and offer to bench any.
+9. If the board now has more than 7 Active advisors, mention that meetings pick the best fit for each topic (or the ones the agent names), and offer to bench any.
 
 ## Steps: refresh an advisor
 
