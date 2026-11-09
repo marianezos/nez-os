@@ -13,7 +13,6 @@
 - Capture what makes them distinct: their signature frameworks, the questions they always ask, the stories they always tell, their phrases.
 - Label a Mentor or Public figure as a simulation in "Who they are." It never speaks for the real person.
 - Quotes in "In their words" must be word for word from a source. Everything else can be retold in your own words.
-- Building from a private person's material (a mentor's private trainings, messages): confirm the agent has their permission or that it's material the agent was given to learn from.
 
 ## Steps: add an advisor
 
