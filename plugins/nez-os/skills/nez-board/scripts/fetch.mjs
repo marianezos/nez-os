@@ -46,6 +46,7 @@ const opt = (name) => {
   const i = argv.indexOf(name);
   return i > -1 && argv[i + 1] && !argv[i + 1].startsWith("--") ? argv[i + 1] : "";
 };
+const plural = (n, word) => `${Number(n).toLocaleString()} ${word}${n === 1 ? "" : "s"}`;
 const wordCount = (t) => (t.match(/\S+/g) || []).length;
 const slug = (t) => (t || "source").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 50) || "source";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -318,18 +319,21 @@ function summary(list) {
   if (!items.length) return console.log("No sources yet.");
   const total = items.reduce((n, s) => n + (s.words || 0), 0);
   const years = items.map((s) => s.date).filter(Boolean).sort();
-  console.log(`${items.length} sources, ${total.toLocaleString()} words${years.length ? `, ${years[0].slice(0, 4)} to ${years.at(-1).slice(0, 4)}` : ""}`);
+  const first = years.length ? years[0].slice(0, 4) : "";
+  const last = years.length ? years.at(-1).slice(0, 4) : "";
+  const span = !first ? "" : first === last ? `, ${first}` : `, ${first} to ${last}`;
+  console.log(`${plural(items.length, "source")}, ${plural(total, "word")}${span}`);
   const kinds = {};
   for (const s of items) {
     kinds[s.kind] = kinds[s.kind] || { n: 0, w: 0 };
     kinds[s.kind].n++;
     kinds[s.kind].w += s.words || 0;
   }
-  for (const [k, v] of Object.entries(kinds)) console.log(`  ${k}: ${v.n} source${v.n === 1 ? "" : "s"}, ${v.w.toLocaleString()} words`);
+  for (const [k, v] of Object.entries(kinds)) console.log(`  ${k}: ${plural(v.n, "source")}, ${plural(v.w, "word")}`);
   const short = items.filter((s) => (s.words || 0) < SHORT_WORDS).map((s) => s.id);
   if (short.length) console.log(`  short (under ${SHORT_WORDS} words): ${short.join(", ")}`);
   console.log("");
-  for (const s of items) console.log(`${s.id}\t${s.kind}\t${s.date || "undated"}\t${(s.words || 0).toLocaleString()} words\t${s.title}`);
+  for (const s of items) console.log(`${s.id}\t${s.kind}\t${s.date || "undated"}\t${plural(s.words || 0, "word")}\t${s.title}`);
 }
 
 // The Sources table for the advisor's brain page (see advisor-brain-spec.md)
@@ -337,7 +341,7 @@ function sourcesTable(list, name) {
   const cell = (t) => String(t || "").replace(/\|/g, "/").replace(/\s*[—–]\s*/g, ": ");
   const kindName = { article: "article", video: "video", podcast: "podcast", post: "post", pdf: "article", notes: "notes", book: "book", course: "course" };
   const lines = [
-    `Sources for ${name || "this advisor"}: ${list.items.length} sources, ${list.items.reduce((n, s) => n + (s.words || 0), 0).toLocaleString()} words. Video dates are upload dates.`,
+    `Sources for ${name || "this advisor"}: ${plural(list.items.length, "source")}, ${plural(list.items.reduce((n, s) => n + (s.words || 0), 0), "word")}. Video dates are upload dates.`,
     "",
     "| Id | Title | Kind | Date | Link |",
     "| --- | --- | --- | --- | --- |",
