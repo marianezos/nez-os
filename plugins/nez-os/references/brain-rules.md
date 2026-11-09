@@ -34,7 +34,16 @@ Decide in this order:
 3. **It's a new kind of thing that will keep coming up:** ask the agent first. If they agree, create ONE new database inside the NEZ OS Brain page with a clear title, an icon, a one-line description, a Status and a Date. Then add it to the Brain Index table and save its ID in Page IDs.
 4. **It's a one-time document** (an email, a landing page, an audit, a plan): add it as a row in Marketing Hub, never as a loose page at the top of the brain.
 
-## 4. Logging changes
+## 4. Writing to Notion
+
+- **IDs:** each database has two IDs in Page IDs: the `_db_id` opens the database, and the `_ds_id` (its `collection://` data source ID) is the one to use for querying and adding rows. If a `_ds_id` is blank, fetch the database once, copy its data source ID into Page IDs, and go on.
+- **Dollar signs:** write every `$` as `\$` in page content and text properties (for example `\$425,000`). An unescaped `$` can turn into a math formula in Notion.
+- **Select options:** a row can only use an option the database already has. To add a new option, update that column and list every existing option plus the new one (any option left out gets removed).
+- **Dates:** use `YYYY-MM-DD`. When a time matters (meetings, saves), include the time in the agent's time zone. Your time may be a few minutes off, so never use your own timestamp to decide what's new; use Notion's created or last-edited times instead.
+- **Sections, not the bottom:** when adding a line to a page, put it inside the matching section, never tacked onto the end of the page.
+- **Safety net:** if a database you need is missing, search the brain once for a database with that exact title. If there isn't one, ask: "Your [name] isn't in your brain yet. Want me to add it now?" On yes, create ONE database with the standard layout from the skill, add it to the Brain Index and Page IDs, and continue. If the agent says no or it can't be created, give them the result in the chat and say you couldn't save it to Notion. Never create a second copy.
+
+## 5. Logging changes
 
 **Decisions Log.** When the agent makes a business or process decision (a new niche, a new lead source, dropping a tool, a pricing rule), add one row: Decision, Date, Pillar, Why, Decided By, Still Active checked. Then update the page the decision affects and name it in **Changes**. If a decision replaces an older one, uncheck Still Active on the old row.
 
@@ -50,7 +59,7 @@ Before adding, check for an Active row that says the same thing. If the new row 
 
 One-time instructions ("make this one shorter") are not memories. Only save what should apply next time too.
 
-## 5. Never
+## 6. Never
 
 - Create a second copy of a page or database that already exists.
 - Rename, move or delete anything the agent made. Mark things Retired, Lost, Replaced or no longer active instead.
@@ -61,7 +70,7 @@ One-time instructions ("make this one shorter") are not memories. Only save what
 - Write anything public that breaks the Compliance Guardrails. Flag the issue and suggest safer wording instead.
 - Remove or change the `nez-os-root` line on the main page.
 
-## 6. Talking to the agent
+## 7. Talking to the agent
 
 - Plain language. Never show page IDs, property names or database jargon.
 - Match their language: reply in Spanish if they write in Spanish.

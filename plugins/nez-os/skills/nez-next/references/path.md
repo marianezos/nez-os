@@ -25,7 +25,7 @@ The order /nez-next walks agents through. Walk top to bottom and recommend the f
 | 8 | Plan | Weekly rhythm | /nez-goals | vault | `last_check_in` has a date | Friday Weekly Review |
 | 9 | Clients | Texting approval | /nez-a2p | vault | Software Stack lists a CRM and the agent has said texting is approved (Decisions Log row mentioning A2P or texting approval) | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
 | 10 | Leads | Your lead magnet | /nez-lead-magnet | vault | Marketing Hub has a row with Type "Lead magnet" | Find My Best Lead Magnet |
-| 11 | Growth | Meet your advisory board | /nez-board | live | Meeting Notes has a row with Type "Board meeting" | (none: run /nez-board) |
+| 11 | Growth | Meet your advisory board | /nez-board | live | Board Meetings has at least 1 row | (none: run /nez-board) |
 | 12 | Content | Your first content week | /nez-content | vault | Content Planner has at least 3 rows with a Publish Date | Plan My Week of Content |
 
 ## Upkeep (when the path is done)
@@ -34,6 +34,7 @@ Recommend the first one that applies:
 
 | Rule | Recommend | Vault prompt if no skill |
 | --- | --- | --- |
+| A Board Meetings row has a Follow-up date that has passed and Outcome "Not reviewed" | Check how that decision turned out (/nez-board) | (none) |
 | `last_check_in` is more than 7 days ago | Weekly check-in (/nez-goals) | Friday Weekly Review |
 | Content Planner has nothing with a Publish Date in the next 14 days | Plan content (/nez-content) | Plan My Week of Content |
 | A Bottlenecks row is Open with High impact | Work on that bottleneck: name it and suggest one first fix | (none) |

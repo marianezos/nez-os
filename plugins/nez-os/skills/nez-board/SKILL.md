@@ -24,20 +24,29 @@ Give the agent a personal board of advisors to pressure-test decisions: spending
 ## Step 1: Find the brain and the board
 
 1. Find the brain per the brain rules (Page IDs first, then `nez-os-root` search).
-2. Open the **Advisory Board** database (`advisory_board_db_id` in Page IDs).
-   - **Missing:** create it inside the NEZ OS Brain page with these properties: Advisor (title), Key (text), Kind (select: Role, Mentor, Public figure), Seat (text), Status (select: Active, Benched), Sources (number), Last Refreshed (date). Add it to the Brain Index table and Page IDs.
-3. **No advisors yet:** set up the five starter advisors from `references/starter-advisors.md`. Add each as a row (Kind Role, Status Active, Sources 0, Last Refreshed today) and write its brain into the row's page using the headings in `references/advisor-brain-spec.md`. Tell the agent in two or three lines who's on their board, then continue.
+2. Open the **Advisory Board** and **Board Meetings** databases (`advisory_board_ds_id` and `board_meetings_ds_id` in Page IDs). If either is missing, follow the safety net in the brain rules and create it with the exact layout below, then save both its IDs in Page IDs and add it to the Brain Index.
+
+   **Advisory Board:**
+   ```
+   CREATE TABLE ("Advisor" TITLE, "Key" RICH_TEXT, "Kind" SELECT('Role':blue, 'Mentor':purple, 'Public figure':orange), "Seat" RICH_TEXT, "Status" SELECT('Active':green, 'Draft':yellow, 'Benched':gray), "Sources" NUMBER, "Version" NUMBER, "Last Refreshed" DATE)
+   ```
+   **Board Meetings:**
+   ```
+   CREATE TABLE ("Decision" TITLE, "Date" DATE, "Call" SELECT('Go':green, 'No go':red, 'Go with changes':yellow, 'Need more info':gray), "Advisors" RICH_TEXT, "Pillar" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange), "Follow-up" DATE, "Outcome" SELECT('Not reviewed':gray, 'Worked':green, 'Mixed':yellow, 'Didn''t work':red, 'Didn''t do it':default), "What Happened" RICH_TEXT)
+   ```
+3. **No advisors yet:** set up the five starter advisors from `references/starter-advisors.md`. Add each as a row (Kind Role, Status Active, Sources 0, Version 1, Last Refreshed today) and write its brain into the row's page using the headings in `references/advisor-brain-spec.md`. Tell the agent in two or three lines who's on their board, then continue.
 
 ## Step 2: What does the agent want?
 
 Work it out from their message. If unclear, ask once:
 
-> "Do you want to (1) bring a decision to your board, (2) add an advisor, (3) refresh an advisor with new sources, or (4) see or change who's on your board?"
+"> "Do you want to (1) bring a decision to your board, (2) add an advisor, (3) refresh an advisor with new sources, (4) see or change who's on your board, or (5) check how a past decision turned out?"
 
 - **Bring a decision** → follow `references/meeting.md`.
 - **Add an advisor** → follow `references/build-advisor.md` (add). For a Mentor or Public figure, gather sources with `references/gathering-sources.md` and, where commands run on the agent's computer, `scripts/fetch.mjs`.
 - **Refresh an advisor** → follow `references/build-advisor.md` (refresh), gathering new sources the same way.
-- **See or change the board** → list Active advisors (name, kind, their question) and Benched ones. Offer to bench, bring back, or add.
+- **See or change the board** → list Active advisors (name, kind, their question), then Draft and Benched ones. Offer to bench, bring back, finish a draft, or add.
+- **Check a past decision** → open Board Meetings rows whose Follow-up date has passed and Outcome is "Not reviewed". For each, ask what happened, then set Outcome (Worked, Mixed, Didn't work, Didn't do it) and a one-line What Happened. If it changes a belief worth keeping ("seller ads don't work in my market"), offer an AI Memory row. Also offer this check at the start of any meeting when follow-ups are overdue.
 
 ## Step 3: After the meeting
 

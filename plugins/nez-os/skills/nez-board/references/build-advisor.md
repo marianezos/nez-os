@@ -22,7 +22,7 @@
 4. Build the brain from the sources as described in `gathering-sources.md` ("Building the brain from the sources").
 5. Write the brain page following `advisor-brain-spec.md`.
 6. Show the agent a short preview (their question, how they think, top beliefs) and ask "Look right?"
-7. Save: add a row to Advisory Board (Advisor name, Key, Kind, Seat = their question, Status Active, Sources = number of sources, Last Refreshed today) and write the brain into the row's page.
+7. Save: add a row to Advisory Board (Advisor name, Key, Kind, Seat = their question, Status Active, or Draft if built from fewer than 5 sources, Sources = number of sources, Version 1, Last Refreshed today) and write the brain into the row's page.
 8. For a Mentor or Public figure, remind the agent once: the advisor is for their own thinking, not for marketing or implying an endorsement. If you used a build folder, offer to delete it.
 9. If the board now has more than 5 Active advisors, mention that meetings pick the best 5 for each topic (or the ones the agent names), and offer to bench any.
 
@@ -31,7 +31,7 @@
 1. Open their brain page.
 2. Add new sources. Continue numbering (if the last was S6, the next is S7).
 3. Update the sections the new sources change. If a position changed, write the newer view and note what it replaced, with the year.
-4. Update the Sources table, the Sources count and Last Refreshed.
+4. Update the Sources table, the Sources count, Last Refreshed, and add 1 to Version. If a Draft now has 5 or more sources, set it to Active.
 5. Tell the agent in two or three lines what changed.
 
 ## Steps: bench or bring back

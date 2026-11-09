@@ -10,6 +10,8 @@ Don't ask for things the brain already has (their market, goals, tools).
 
 ## 2. Pull context from the brain
 
+First, check Board Meetings for rows on a similar topic. If one exists, mention its call and outcome ("Last time you asked about ads, the board said Go with changes, and it Worked") so the advisors build on it.
+
 Read, quietly:
 - Master Profile (goals, market, clients) and Business Plan & Goals (income goal, the math, lead sources).
 - Decisions Log rows that are Still Active and related to the question.
@@ -44,13 +46,14 @@ After all advisors:
 - **Where they agree:** one or two lines.
 - **Where they disagree:** one line per disagreement, naming who's on each side.
 - **Blind-spot check:** if the majority view leans on an advisor's known blind spot (from "Where they can be wrong"), say so.
+- **The call:** Go, No go, Go with changes, or Need more info.
 - **Recommendation:** one clear recommendation and the first step to take this week. Say it's a recommendation and the decision is theirs.
 - **What would change the answer:** one or two facts that would flip it.
 
 ## 6. Save
 
 Ask: "Want me to save this meeting?" If yes:
-- **Meeting Notes:** one row. Meeting: short title of the question. Date: today. Type: Board meeting. With: the advisors' names. Summary: the recommendation in 2 to 3 sentences. Action Items: the first step(s). Put the full meeting in the row's page.
+- **Board Meetings:** one row. Decision: the question in a few words. Date: now (date and time). Call: the board's call. Advisors: the names of those who sat. Pillar: the closest pillar. Follow-up: 30 days out by default (sooner for quick tests, longer for big moves; ask if unsure). Outcome: Not reviewed. Put the full meeting (each advisor's take, the summary, the recommendation) in the row's page. Write every $ as \$.
 - If the agent makes a decision: **Decisions Log** row per the brain rules (Decision, Date, Pillar, Why, Decided By, Still Active, Changes).
 - If the agent says something that should guide future advice ("I never want to take on debt"): **AI Memory** row per the brain rules.
 - If action items are concrete: offer to add them to **Tasks**.
