@@ -23,6 +23,17 @@ import { tmpdir } from "node:os";
 import { execFile, spawnSync } from "node:child_process";
 import { promisify } from "node:util";
 
+// Node's built-in fetch ignores HTTP(S)_PROXY unless NODE_USE_ENV_PROXY=1 (Node 22.21+ / 24+).
+// When a proxy is configured, re-launch this script once with that setting so downloads work.
+const proxySet = ["HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy", "ALL_PROXY", "all_proxy"].some((k) => process.env[k]);
+if (proxySet && !process.env.NODE_USE_ENV_PROXY) {
+  const child = spawnSync(process.execPath, process.argv.slice(1), {
+    stdio: "inherit",
+    env: { ...process.env, NODE_USE_ENV_PROXY: "1", NODE_NO_WARNINGS: "1" },
+  });
+  process.exit(child.status ?? 1);
+}
+
 const run = promisify(execFile);
 const MIN_WORDS = 250;          // fewer words than this = probably a login wall, paywall or script-built page
 const SHORT_WORDS = 800;        // flagged as short in the summary
