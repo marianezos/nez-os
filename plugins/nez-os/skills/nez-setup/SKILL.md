@@ -11,6 +11,7 @@ Fill in the agent's NEZ OS brain in Notion so every other NEZ OS skill (and any 
 
 ## Core rules
 
+- **Read the brain rules first.** Before anything else, read the plugin's `references/brain-rules.md` (in the `nez-os` plugin folder, two levels up from this skill). Follow it for finding the brain, where things go, logging and what never to store. If it conflicts with this file, the brain rules win.
 - **One question at a time.** Wait for the answer before asking the next one. Keep it conversational, like a friendly coach, not a form.
 - **Plain language.** Never show page IDs, property names, database jargon or Markdown. Say "your Master Profile," not "the Master Profile page."
 - **Match their language.** If the agent writes in Spanish, run the whole interview in Spanish. Save their answers in the language they gave them.
@@ -34,7 +35,8 @@ Fill in the agent's NEZ OS brain in Notion so every other NEZ OS skill (and any 
    > 2. Is Notion connected to Claude with access to that page? (Settings → Connectors → Notion.)
    > Once both are done, run /nez-setup again."
 5. **No Notion tools available at all:** say Notion isn't connected yet, give step 2 above, and stop.
-6. Open the brain's **Brain Index** page and follow its rules for where things live. Then open **Master Profile** and look for its **Setup Status** section.
+6. Open the brain's **Brain Index** page and follow its rules for where things live. Then open **Master Profile** and look for its **Setup Status** and **Page IDs** sections.
+7. **Save the Page IDs** (first run, or if any are blank or broken): fill every line in the Master Profile's Page IDs section with the ID of the matching page or database inside this brain (see `references/setup-status.md` for the list). If the Page IDs section is missing, add it at the end of the Master Profile. Do this quietly; don't show IDs to the agent.
 
 ## Step 2: Welcome and pick up where they left off
 
