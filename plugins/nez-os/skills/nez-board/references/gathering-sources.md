@@ -24,15 +24,17 @@ Try the routes in order and use the first one that works. Never guess what a vid
 
 ## The fetch script (`scripts/fetch.mjs`)
 
-Turns web pages into text, YouTube videos into transcripts (when `yt-dlp` is installed), and keeps a numbered source list. It needs **Node 20 or newer** and internet access, so it only works where commands run on the agent's own computer (for example the Claude desktop app with a shell on their computer, or Claude Code). A cloud workspace usually can't reach these sites: there, use web fetch and pasting, and don't keep retrying the script.
+Turns web pages into text, YouTube videos into transcripts with `[mm:ss]` timestamps, and PDFs into text, and keeps a numbered source list. YouTube works with nothing extra installed (it reads YouTube's public captions); if `yt-dlp` is installed it's used first. PDFs need `pdftotext`; without it the PDF is saved so you can read it and `--add` the text. It needs **Node 20 or newer** and internet access, so it only works where commands run on the agent's own computer (for example the Claude desktop app with a shell on their computer, or Claude Code). A cloud workspace usually can't reach these sites: there, use web fetch and pasting, and don't keep retrying the script.
 
 Use a build folder outside the agent's Notion and project files, for example `~/nez-advisor-build/<advisor-key>`:
 
 - Fetch links: `node <skill folder>/scripts/fetch.mjs <build folder> <url> [<url> ...]`
+- Fetch a list of links (one per line): `node <skill folder>/scripts/fetch.mjs <build folder> --list urls.txt`
 - Add a file the agent gave you: `node <skill folder>/scripts/fetch.mjs <build folder> --add <file> --title "..." [--url ...] [--date YYYY-MM-DD] [--kind book|notes|course|podcast|video|article|post]`
-- See the source list: `node <skill folder>/scripts/fetch.mjs <build folder> --manifest`
+- See what you have: `node <skill folder>/scripts/fetch.mjs <build folder> --manifest`
+- Print the Sources table for the brain: `node <skill folder>/scripts/fetch.mjs <build folder> --sources-table --name "Full Name"`
 
-A source marked **thin** usually hit a login wall, a paywall or a page built by JavaScript: try another route. For PDFs, read them directly and `--add` the text. After the advisor's brain is saved, offer to delete the build folder so no raw content stays on the computer.
+Each source is saved as its own text file in `<build folder>/texts/`. Pages under 250 words are skipped as **thin** (usually a login wall, paywall or a page built by JavaScript): try another route, or add `--keep-short` to save them anyway. Links already in the list are skipped on re-runs. The timestamps make it easy to find and double-check a quote. After the advisor's brain is saved, offer to delete the build folder so no raw content stays on the computer.
 
 ## Instagram, TikTok and Facebook
 

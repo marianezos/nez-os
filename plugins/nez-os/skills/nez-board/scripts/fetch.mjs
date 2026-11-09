@@ -1,218 +1,365 @@
 #!/usr/bin/env node
-// NEZ OS advisor source fetcher.
-// Turns web pages into text, YouTube videos into transcripts (via yt-dlp when installed),
-// adds local files, and keeps a numbered source list (manifest.json) in a build folder.
+// NEZ OS advisor source fetcher (written for NEZ OS).
+// Collects public sources for a new advisor into a build folder: one text file per source,
+// plus a numbered source list (S1, S2, ...) that the advisor's brain cites.
 //
-// Usage:
-//   node fetch.mjs <buildDir> <url> [<url> ...]
-//   node fetch.mjs <buildDir> --add <file> --title "..." [--url ...] [--date YYYY-MM-DD] [--kind ...]
-//   node fetch.mjs <buildDir> --manifest
+//   node fetch.mjs <buildDir> <url> [<url> ...]          fetch links
+//   node fetch.mjs <buildDir> --list urls.txt              fetch every link in a file (one per line, # = comment)
+//   node fetch.mjs <buildDir> --add <file> [--title ".."] [--url ..] [--date YYYY-MM-DD] [--kind ..]
+//   node fetch.mjs <buildDir> --manifest                   summary of what you have
+//   node fetch.mjs <buildDir> --sources-table [--name "Full Name"]   print the Sources table for the brain
 //
-// Requires Node 20+. Optional: yt-dlp on PATH for YouTube transcripts.
+// Options: --keep-short (save thin pages instead of skipping them)
+//
+// Web pages become plain text. YouTube links become transcripts with [mm:ss] markers, using
+// yt-dlp when installed, otherwise YouTube's public caption tracks. PDFs need pdftotext; without
+// it the PDF is saved for you to read and --add. Re-runs skip links already in the list.
+// Node 20+, nothing to install.
 
-import { mkdir, readFile, writeFile, readdir, rm } from "node:fs/promises";
+import { mkdir, readFile, writeFile, readdir, rm, mkdtemp } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import { join, basename } from "node:path";
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
+import { join, basename, extname, resolve } from "node:path";
 import { tmpdir } from "node:os";
+import { execFile, spawnSync } from "node:child_process";
+import { promisify } from "node:util";
 
 const run = promisify(execFile);
-const THIN_CHARS = 1500;
+const MIN_WORDS = 250;          // fewer words than this = probably a login wall, paywall or script-built page
+const SHORT_WORDS = 800;        // flagged as short in the summary
+const PAUSE_MS = 500;           // pause between sites
+const BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36";
+
+const argv = process.argv.slice(2);
+const flag = (name) => argv.includes(name);
+const opt = (name) => {
+  const i = argv.indexOf(name);
+  return i > -1 && argv[i + 1] && !argv[i + 1].startsWith("--") ? argv[i + 1] : "";
+};
+const wordCount = (t) => (t.match(/\S+/g) || []).length;
+const slug = (t) => (t || "source").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 50) || "source";
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const installed = (bin) => !spawnSync(bin, ["--version"], { stdio: "ignore" }).error;
 
 function usage(msg) {
   if (msg) console.error(`Error: ${msg}\n`);
   console.error(`Usage:
   node fetch.mjs <buildDir> <url> [<url> ...]
-  node fetch.mjs <buildDir> --add <file> --title "..." [--url ...] [--date YYYY-MM-DD] [--kind ...]
-  node fetch.mjs <buildDir> --manifest`);
+  node fetch.mjs <buildDir> --list urls.txt
+  node fetch.mjs <buildDir> --add <file> [--title "..."] [--url ...] [--date YYYY-MM-DD] [--kind ...]
+  node fetch.mjs <buildDir> --manifest
+  node fetch.mjs <buildDir> --sources-table [--name "Full Name"]`);
   process.exit(1);
 }
 
-async function loadManifest(dir) {
-  const p = join(dir, "manifest.json");
-  if (!existsSync(p)) return { sources: [] };
-  return JSON.parse(await readFile(p, "utf8"));
+// ---------------------------------------------------------------- source list
+class SourceList {
+  constructor(dir) {
+    this.dir = dir;
+    this.textDir = join(dir, "texts");
+    this.file = join(dir, "manifest.json");
+    this.items = [];
+  }
+  async load() {
+    await mkdir(this.textDir, { recursive: true });
+    if (existsSync(this.file)) this.items = JSON.parse(await readFile(this.file, "utf8")).sources || [];
+    return this;
+  }
+  async save() {
+    await writeFile(this.file, JSON.stringify({ sources: this.items }, null, 2) + "\n");
+  }
+  has(link) {
+    return this.items.some((s) => s.link && s.link === link);
+  }
+  nextId() {
+    const max = this.items.reduce((m, s) => Math.max(m, parseInt(String(s.id).replace(/\D/g, ""), 10) || 0), 0);
+    return `S${max + 1}`;
+  }
+  async add(meta, text) {
+    const id = this.nextId();
+    const name = `${id}-${slug(meta.title)}.txt`;
+    const header = [meta.title || "(untitled)", `Source ${id} | ${meta.link || "local file"} | ${meta.date || "undated"} | ${meta.kind}${meta.channel ? " | " + meta.channel : ""}`, ""].join("\n");
+    await writeFile(join(this.textDir, name), `${header}\n${text.trim()}\n`);
+    const rec = { id, title: meta.title || "(untitled)", kind: meta.kind, date: meta.date || "", link: meta.link || "", channel: meta.channel || "", minutes: meta.minutes || 0, file: `texts/${name}`, words: wordCount(text) };
+    this.items.push(rec);
+    await this.save();
+    return rec;
+  }
 }
 
-async function saveManifest(dir, m) {
-  await writeFile(join(dir, "manifest.json"), JSON.stringify(m, null, 2));
-}
-
-function nextId(m) {
-  const nums = m.sources.map((s) => parseInt(String(s.id).replace(/\D/g, ""), 10)).filter((n) => !isNaN(n));
-  return `S${(nums.length ? Math.max(...nums) : 0) + 1}`;
-}
-
-function decodeEntities(s) {
+// ---------------------------------------------------------------- web pages
+const NAMED = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ndash: "-", mdash: "-", hellip: "...", lsquo: "'", rsquo: "'", ldquo: '"', rdquo: '"' };
+function decode(s) {
   return s
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;|&apos;/g, "'")
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&([a-z]+);/gi, (m, n) => NAMED[n.toLowerCase()] ?? m);
 }
 
-function htmlToText(html) {
-  let h = html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
-    .replace(/<(nav|header|footer|aside|form)[\s\S]*?<\/\1>/gi, " ");
-  const main = h.match(/<(article|main)[\s\S]*?<\/\1>/i);
-  if (main && main[0].length > 2000) h = main[0];
+function pageToText(html) {
+  let h = html.replace(/<!--[\s\S]*?-->/g, " ");
+  for (const tag of ["script", "style", "noscript", "svg", "nav", "header", "footer", "aside", "form", "iframe", "button", "template"]) {
+    h = h.replace(new RegExp(`<${tag}\\b[\\s\\S]*?<\\/${tag}>`, "gi"), " ");
+  }
+  const body = h.match(/<article\b[\s\S]*<\/article>/i) || h.match(/<main\b[\s\S]*<\/main>/i);
+  if (body && wordCount(body[0].replace(/<[^>]+>/g, " ")) >= MIN_WORDS) h = body[0];
+  else h = (h.match(/<body\b[\s\S]*<\/body>/i) || [h])[0];
   h = h
-    .replace(/<(br|\/p|\/div|\/li|\/h[1-6]|\/tr)[^>]*>/gi, "\n")
-    .replace(/<li[^>]*>/gi, "\n- ")
+    .replace(/<h([1-6])\b[^>]*>/gi, (_, n) => `\n\n${"#".repeat(Number(n))} `)
+    .replace(/<\/h[1-6]>/gi, "\n\n")
+    .replace(/<li\b[^>]*>/gi, "\n- ")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/(p|div|section|blockquote|tr|ul|ol|table|pre|figure)>/gi, "\n\n")
     .replace(/<[^>]+>/g, " ");
-  return decodeEntities(h)
-    .split("\n")
-    .map((l) => l.replace(/\s+/g, " ").trim())
-    .filter(Boolean)
-    .join("\n");
+  return decode(h).replace(/[ \t ]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-function pageMeta(html) {
-  const pick = (re) => {
+const MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+function pageInfo(html, url, text) {
+  const grab = (re) => {
     const m = html.match(re);
-    return m ? decodeEntities(m[1]).trim() : "";
+    return m ? decode(m[1]).trim() : "";
   };
-  return {
-    title:
-      pick(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i) ||
-      pick(/<title[^>]*>([^<]+)<\/title>/i),
-    date:
-      pick(/<meta[^>]+property=["']article:published_time["'][^>]+content=["']([^"']+)/i) ||
-      pick(/<meta[^>]+itemprop=["']datePublished["'][^>]+content=["']([^"']+)/i) ||
-      pick(/"datePublished"\s*:\s*"([^"]+)"/i),
+  const title = grab(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i) || grab(/<title[^>]*>([^<]+)<\/title>/i) || url;
+  let date =
+    grab(/<meta[^>]+(?:property|name|itemprop)=["'](?:article:published_time|datePublished|date|pubdate|publish-date|dc\.date)["'][^>]+content=["']([^"']+)/i) ||
+    grab(/"datePublished"\s*:\s*"([^"]+)"/) ||
+    grab(/<time[^>]+datetime=["']([^"']+)/i);
+  if (!date) {
+    const u = url.match(/\/((?:19|20)\d\d)\/(\d\d)\//);
+    if (u) date = `${u[1]}-${u[2]}`;
+  }
+  if (!date && text) {
+    const t = text.slice(0, 800).match(/\b(January|February|March|April|May|June|July|August|September|October|November|December) (?:\d{1,2}, )?((?:19|20)\d\d)\b/);
+    if (t) date = `${t[2]}-${String(MONTHS.indexOf(t[1].toLowerCase()) + 1).padStart(2, "0")}`;
+  }
+  return { title: title.replace(/\s+/g, " ").slice(0, 160), date: (date.match(/\d{4}(-\d\d){0,2}/) || [""])[0] };
+}
+
+async function getUrl(url, init = {}) {
+  const res = await fetch(url, {
+    redirect: "follow",
+    signal: AbortSignal.timeout(45000),
+    ...init,
+    headers: { "user-agent": BROWSER_UA, "accept-language": "en-US,en;q=0.9", ...(init.headers || {}) },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res;
+}
+
+// ---------------------------------------------------------------- youtube
+const youtubeId = (u) => (u.match(/(?:youtu\.be\/|[?&]v=|\/shorts\/|\/live\/|\/embed\/)([\w-]{11})/) || [])[1];
+const mmss = (ms) => {
+  const s = Math.floor((ms || 0) / 1000);
+  return `[${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}]`;
+};
+
+// YouTube "json3" captions -> paragraphs of roughly 60 words, each starting with its timestamp
+function captionsToText(data) {
+  const paras = [];
+  let words = [];
+  let start = null;
+  const flush = () => {
+    if (words.length) paras.push(`${mmss(start)} ${words.join(" ")}`);
+    words = [];
+    start = null;
   };
+  for (const ev of data.events || []) {
+    if (!ev.segs) continue;
+    const line = ev.segs.map((s) => s.utf8 || "").join("").replace(/\s+/g, " ").trim();
+    if (!line) continue;
+    if (start === null) start = ev.tStartMs || 0;
+    words.push(line);
+    if (wordCount(words.join(" ")) >= 60) flush();
+  }
+  flush();
+  return decode(paras.join("\n\n")).replace(/\[(Music|Applause|Laughter)\]/gi, "").replace(/ {2,}/g, " ").trim();
 }
 
-function isYouTube(url) {
-  return /(?:youtube\.com\/(?:watch|shorts|live)|youtu\.be\/)/i.test(url);
-}
-
-function vttToText(vtt) {
-  const lines = vtt
-    .split("\n")
-    .filter((l) => l && !/^WEBVTT|^Kind:|^Language:|-->|^\d+$|^NOTE/.test(l))
-    .map((l) => decodeEntities(l.replace(/<[^>]+>/g, "")).trim())
-    .filter(Boolean);
-  const out = [];
-  for (const l of lines) if (out[out.length - 1] !== l) out.push(l);
-  return out.join(" ").replace(/\s+/g, " ");
-}
-
-async function fetchYouTube(url) {
-  const work = join(tmpdir(), `nez-yt-${Date.now()}`);
-  await mkdir(work, { recursive: true });
+async function youtubeWithYtDlp(id) {
+  const work = await mkdtemp(join(tmpdir(), "nez-yt-"));
+  const url = `https://www.youtube.com/watch?v=${id}`;
   try {
-    const { stdout } = await run(
-      "yt-dlp",
-      ["--skip-download", "--write-auto-subs", "--write-subs", "--sub-langs", "en.*,es.*", "--sub-format", "vtt",
-       "--print", "%(title)s\t%(upload_date)s", "-o", join(work, "sub"), url],
-      { timeout: 180000 }
-    );
-    const [title = "", d = ""] = stdout.trim().split("\n").pop().split("\t");
-    const files = (await readdir(work)).filter((f) => f.endsWith(".vtt"));
-    if (!files.length) return { title, date: fmtDate(d), text: "", note: "no captions found" };
-    const text = vttToText(await readFile(join(work, files[0]), "utf8"));
-    return { title, date: fmtDate(d), text };
-  } catch (e) {
-    const missing = e.code === "ENOENT";
-    return { title: "", date: "", text: "", note: missing ? "yt-dlp not installed: paste the transcript instead" : `yt-dlp failed: ${e.message.split("\n")[0]}` };
+    const { stdout } = await run("yt-dlp", ["-J", "--no-warnings", url], { maxBuffer: 64 << 20, timeout: 120000 });
+    const info = JSON.parse(stdout);
+    await run("yt-dlp", ["--skip-download", "--write-subs", "--write-auto-subs", "--sub-langs", "en.*,en,es.*,es", "--sub-format", "json3", "--no-warnings", "-o", join(work, "v"), url], { timeout: 120000 });
+    const files = (await readdir(work)).filter((f) => f.endsWith(".json3"));
+    const pick = files.find((f) => /\.en\.json3$/.test(f)) || files.find((f) => /\.en/.test(f)) || files[0];
+    if (!pick) throw new Error("no captions");
+    const text = captionsToText(JSON.parse(await readFile(join(work, pick), "utf8")));
+    const d = info.upload_date || "";
+    return { title: info.title, date: d ? `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}` : "", text, channel: info.channel || "", seconds: info.duration || 0 };
   } finally {
     await rm(work, { recursive: true, force: true });
   }
 }
 
-function fmtDate(d) {
-  if (/^\d{8}$/.test(d)) return `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
-  return d ? String(d).slice(0, 10) : "";
-}
-
-async function fetchPage(url) {
-  const res = await fetch(url, {
-    headers: { "User-Agent": "Mozilla/5.0 (NEZ OS advisor builder)", Accept: "text/html,application/xhtml+xml,text/plain" },
-    redirect: "follow",
-    signal: AbortSignal.timeout(60000),
+async function youtubeWithCaptions(id) {
+  const res = await getUrl("https://www.youtube.com/youtubei/v1/player?prettyPrint=false", {
+    method: "POST",
+    headers: { "content-type": "application/json", "user-agent": "com.google.android.youtube/20.10.38 (Linux; U; Android 11) gzip" },
+    body: JSON.stringify({ videoId: id, context: { client: { clientName: "ANDROID", clientVersion: "20.10.38", androidSdkVersion: 30, hl: "en", gl: "US" } } }),
   });
-  if (!res.ok) return { title: "", date: "", text: "", note: `HTTP ${res.status}` };
-  const type = res.headers.get("content-type") || "";
-  if (type.includes("pdf")) return { title: "", date: "", text: "", note: "PDF: read it directly and use --add" };
-  const body = await res.text();
-  if (type.includes("text/plain")) return { title: basename(new URL(url).pathname), date: "", text: body.trim() };
-  const meta = pageMeta(body);
-  return { title: meta.title, date: fmtDate(meta.date), text: htmlToText(body) };
+  const player = await res.json();
+  const tracks = player.captions?.playerCaptionsTracklistRenderer?.captionTracks || [];
+  const english = tracks.filter((t) => /^en/.test(t.languageCode));
+  const spanish = tracks.filter((t) => /^es/.test(t.languageCode));
+  const pool = english.length ? english : spanish;
+  const track = pool.find((t) => t.kind !== "asr") || pool[0];
+  if (!track) throw new Error(player.playabilityStatus?.reason || "no captions");
+  const raw = await (await getUrl(track.baseUrl.replace(/&fmt=[^&]*/, "") + "&fmt=json3")).text();
+  if (!raw.trim()) throw new Error("caption track was empty");
+  let date = "";
+  try {
+    const page = await (await getUrl(`https://www.youtube.com/watch?v=${id}`)).text();
+    date = ((page.match(/"(?:publishDate|uploadDate)":"([^"]+)"/) || [])[1] || "").slice(0, 10);
+  } catch {}
+  return { title: player.videoDetails?.title || id, date, text: captionsToText(JSON.parse(raw)), channel: player.videoDetails?.author || "", seconds: Number(player.videoDetails?.lengthSeconds) || 0 };
 }
 
-function kindFor(url) {
-  if (isYouTube(url)) return "video";
-  if (/podcast|episode|spotify\.com\/episode|apple\.com\/.*podcast/i.test(url)) return "podcast";
+async function youtube(id) {
+  const problems = [];
+  if (installed("yt-dlp")) {
+    try {
+      return await youtubeWithYtDlp(id);
+    } catch (e) {
+      problems.push(`yt-dlp: ${String(e.message).split("\n")[0]}`);
+    }
+  }
+  try {
+    return await youtubeWithCaptions(id);
+  } catch (e) {
+    problems.push(`captions: ${e.message}`);
+  }
+  throw new Error(`${problems.join("; ")}. Ask the agent to paste the transcript (video > ...more > Show transcript).`);
+}
+
+// ---------------------------------------------------------------- pdf
+async function pdfToText(file) {
+  if (!installed("pdftotext")) return null;
+  const { stdout } = await run("pdftotext", ["-layout", "-enc", "UTF-8", file, "-"], { maxBuffer: 256 << 20 });
+  return stdout;
+}
+
+// ---------------------------------------------------------------- one link
+function kindFromUrl(url) {
+  if (/podcast|episode|spotify\.com\/episode|podcasts\.apple\.com/i.test(url)) return "podcast";
   if (/instagram|tiktok|facebook|linkedin|x\.com|twitter/i.test(url)) return "post";
   return "article";
 }
 
-async function store(dir, m, entry, text) {
-  const id = nextId(m);
-  const file = `${id}.txt`;
-  await writeFile(join(dir, file), `${entry.title || "(untitled)"}\n${entry.url || ""}\n${entry.date || ""}\n\n${text}\n`);
-  const words = text ? text.split(/\s+/).length : 0;
-  const rec = { id, title: entry.title || "(untitled)", kind: entry.kind, date: entry.date || "", link: entry.url || "", file, words, thin: text.length < THIN_CHARS, note: entry.note || "" };
-  m.sources.push(rec);
-  await saveManifest(dir, m);
-  return rec;
+async function fetchLink(list, rawUrl) {
+  const url = rawUrl.trim();
+  if (!url || url.startsWith("#")) return;
+  if (list.has(url)) return console.log(`skip   ${url} (already in list)`);
+  try {
+    const vid = youtubeId(url);
+    if (vid) {
+      const link = `https://www.youtube.com/watch?v=${vid}`;
+      if (list.has(link)) return console.log(`skip   ${url} (already in list)`);
+      const v = await youtube(vid);
+      const rec = await list.add({ title: v.title, link, date: v.date, kind: "video", channel: v.channel, minutes: Math.round(v.seconds / 60) }, v.text);
+      return console.log(`ok     ${rec.id}  ${rec.words.toLocaleString()} words  ${rec.title}`);
+    }
+    const res = await getUrl(url);
+    const type = res.headers.get("content-type") || "";
+    if (type.includes("pdf") || /\.pdf($|\?)/i.test(url)) {
+      const saved = join(list.textDir, `pending-${slug(basename(new URL(url).pathname, ".pdf"))}.pdf`);
+      await writeFile(saved, Buffer.from(await res.arrayBuffer()));
+      const text = await pdfToText(saved);
+      if (!text) return console.log(`pdf    saved to ${saved}. pdftotext isn't installed: read it, save the text as .txt, then --add it.`);
+      await rm(saved);
+      const rec = await list.add({ title: basename(saved, ".pdf").replace(/^pending-/, "").replace(/-/g, " "), link: url, date: (url.match(/(?:19|20)\d\d/) || [""])[0], kind: "pdf" }, text);
+      return console.log(`ok     ${rec.id}  ${rec.words.toLocaleString()} words  ${rec.title}`);
+    }
+    const html = await res.text();
+    const text = type.includes("text/plain") ? html : pageToText(html);
+    const info = pageInfo(html, url, text);
+    if (wordCount(text) < MIN_WORDS && !flag("--keep-short")) {
+      return console.log(`thin   ${url} (${wordCount(text)} words: login wall, paywall or script-built page. Try another route, or add --keep-short)`);
+    }
+    const rec = await list.add({ title: info.title, link: url, date: info.date, kind: kindFromUrl(url) }, text);
+    console.log(`ok     ${rec.id}  ${rec.words.toLocaleString()} words  ${rec.title}`);
+  } catch (e) {
+    console.log(`fail   ${url} (${e.message})`);
+  }
 }
 
-function report(r) {
-  const flag = r.thin ? "  THIN" : "";
-  console.log(`${r.id}\t${r.kind}\t${r.date || "-"}\t${r.words} words${flag}\t${r.title}${r.note ? `  (${r.note})` : ""}`);
+// ---------------------------------------------------------------- local files
+async function addFile(list, file) {
+  if (!file || !existsSync(file)) usage("--add needs a file that exists");
+  let text;
+  if (extname(file).toLowerCase() === ".pdf") {
+    text = await pdfToText(file);
+    if (!text) usage("pdftotext isn't installed: read the PDF, save its text as .txt, then --add that file");
+  } else {
+    text = await readFile(file, "utf8");
+  }
+  const rec = await list.add(
+    { title: opt("--title") || basename(file).replace(/\.[^.]+$/, ""), link: opt("--url"), date: opt("--date"), kind: opt("--kind") || "notes" },
+    text
+  );
+  console.log(`ok     ${rec.id}  ${rec.words.toLocaleString()} words  ${rec.title}`);
 }
 
+// ---------------------------------------------------------------- summaries
+function summary(list) {
+  const items = list.items;
+  if (!items.length) return console.log("No sources yet.");
+  const total = items.reduce((n, s) => n + (s.words || 0), 0);
+  const years = items.map((s) => s.date).filter(Boolean).sort();
+  console.log(`${items.length} sources, ${total.toLocaleString()} words${years.length ? `, ${years[0].slice(0, 4)} to ${years.at(-1).slice(0, 4)}` : ""}`);
+  const kinds = {};
+  for (const s of items) {
+    kinds[s.kind] = kinds[s.kind] || { n: 0, w: 0 };
+    kinds[s.kind].n++;
+    kinds[s.kind].w += s.words || 0;
+  }
+  for (const [k, v] of Object.entries(kinds)) console.log(`  ${k}: ${v.n} source${v.n === 1 ? "" : "s"}, ${v.w.toLocaleString()} words`);
+  const short = items.filter((s) => (s.words || 0) < SHORT_WORDS).map((s) => s.id);
+  if (short.length) console.log(`  short (under ${SHORT_WORDS} words): ${short.join(", ")}`);
+  console.log("");
+  for (const s of items) console.log(`${s.id}\t${s.kind}\t${s.date || "undated"}\t${(s.words || 0).toLocaleString()} words\t${s.title}`);
+}
+
+// The Sources table for the advisor's brain page (see advisor-brain-spec.md)
+function sourcesTable(list, name) {
+  const cell = (t) => String(t || "").replace(/\|/g, "/").replace(/\s*[—–]\s*/g, ": ");
+  const kindName = { article: "article", video: "video", podcast: "podcast", post: "post", pdf: "article", notes: "notes", book: "book", course: "course" };
+  const lines = [
+    `Sources for ${name || "this advisor"}: ${list.items.length} sources, ${list.items.reduce((n, s) => n + (s.words || 0), 0).toLocaleString()} words. Video dates are upload dates.`,
+    "",
+    "| Id | Title | Kind | Date | Link |",
+    "| --- | --- | --- | --- | --- |",
+    ...list.items.map((s) => `| ${s.id} | ${cell(s.title)} | ${kindName[s.kind] || s.kind} | ${s.date || "undated"} | ${s.link || "agent's file"} |`),
+  ];
+  console.log(lines.join("\n"));
+}
+
+// ---------------------------------------------------------------- main
 async function main() {
-  const args = process.argv.slice(2);
-  if (args.length < 2) usage();
-  const dir = args[0];
-  await mkdir(dir, { recursive: true });
-  const m = await loadManifest(dir);
+  const dirArg = argv[0];
+  if (!dirArg || dirArg.startsWith("--")) usage();
+  const list = await new SourceList(resolve(dirArg)).load();
 
-  if (args[1] === "--manifest") {
-    if (!m.sources.length) return console.log("No sources yet.");
-    console.log("Id\tKind\tDate\tSize\tTitle");
-    m.sources.forEach(report);
-    return;
-  }
+  if (flag("--sources-table")) return sourcesTable(list, opt("--name"));
+  if (flag("--manifest")) return summary(list);
+  if (flag("--add")) return addFile(list, opt("--add"));
 
-  if (args[1] === "--add") {
-    const file = args[2];
-    if (!file || !existsSync(file)) usage("--add needs a file that exists");
-    const opt = (name) => {
-      const i = args.indexOf(name);
-      return i > -1 ? args[i + 1] : "";
-    };
-    const text = (await readFile(file, "utf8")).trim();
-    const rec = await store(dir, m, { title: opt("--title") || basename(file), url: opt("--url"), date: opt("--date"), kind: opt("--kind") || "notes" }, text);
-    report(rec);
-    return;
+  let urls;
+  if (flag("--list")) {
+    const file = opt("--list");
+    if (!file || !existsSync(file)) usage("--list needs a file of links");
+    urls = (await readFile(file, "utf8")).split(/\r?\n/);
+  } else {
+    urls = argv.slice(1).filter((a) => !a.startsWith("--"));
   }
-
-  for (const url of args.slice(1)) {
-    if (m.sources.some((s) => s.link === url)) {
-      console.log(`skip\talready in list\t${url}`);
-      continue;
-    }
-    let got;
-    try {
-      got = isYouTube(url) ? await fetchYouTube(url) : await fetchPage(url);
-    } catch (e) {
-      got = { title: "", date: "", text: "", note: `fetch failed: ${e.message}` };
-    }
-    const rec = await store(dir, m, { title: got.title, url, date: got.date, kind: kindFor(url), note: got.note }, got.text || "");
-    report(rec);
+  if (!urls.length) usage("give at least one link");
+  for (const u of urls) {
+    await fetchLink(list, u);
+    await sleep(PAUSE_MS);
   }
+  console.log("");
+  summary(list);
 }
 
 main().catch((e) => {
