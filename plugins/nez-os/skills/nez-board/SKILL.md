@@ -35,8 +35,8 @@ Work it out from their message. If unclear, ask once:
 > "Do you want to (1) bring a decision to your board, (2) add an advisor, (3) refresh an advisor with new sources, or (4) see or change who's on your board?"
 
 - **Bring a decision** → follow `references/meeting.md`.
-- **Add an advisor** → follow `references/build-advisor.md` (add).
-- **Refresh an advisor** → follow `references/build-advisor.md` (refresh).
+- **Add an advisor** → follow `references/build-advisor.md` (add). For a Mentor or Public figure, gather sources with `references/gathering-sources.md` and, where commands run on the agent's computer, `scripts/fetch.mjs`.
+- **Refresh an advisor** → follow `references/build-advisor.md` (refresh), gathering new sources the same way.
 - **See or change the board** → list Active advisors (name, kind, their question) and Benched ones. Offer to bench, bring back, or add.
 
 ## Step 3: After the meeting

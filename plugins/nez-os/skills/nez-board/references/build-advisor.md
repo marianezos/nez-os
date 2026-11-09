@@ -18,12 +18,13 @@
 
 1. Ask: who or what kind of advisor, and what question they should own at the table.
 2. Choose the Kind (Role, Mentor, Public figure).
-3. For Mentor or Public figure: ask for sources (links, files, pasted notes, book titles). Number them S1, S2, and so on. A Public figure can be built from public work alone if the agent has no sources handy; offer to add sources later with a refresh.
-4. Read each source and note: how they think, beliefs, tools, positions, stories, exact lines.
+3. For Mentor or Public figure: gather sources following `gathering-sources.md` (their favorites first, then a proposed list they approve, read each one, log ids S1, S2, ..., stop when it repeats). A Public figure can also draw on their widely known public work; offer to add more sources later with a refresh.
+4. Build the brain from the sources as described in `gathering-sources.md` ("Building the brain from the sources").
 5. Write the brain page following `advisor-brain-spec.md`.
 6. Show the agent a short preview (their question, how they think, top beliefs) and ask "Look right?"
 7. Save: add a row to Advisory Board (Advisor name, Key, Kind, Seat = their question, Status Active, Sources = number of sources, Last Refreshed today) and write the brain into the row's page.
-8. If the board now has more than 5 Active advisors, mention that meetings pick the best 5 for each topic (or the ones the agent names), and offer to bench any.
+8. For a Mentor or Public figure, remind the agent once: the advisor is for their own thinking, not for marketing or implying an endorsement. If you used a build folder, offer to delete it.
+9. If the board now has more than 5 Active advisors, mention that meetings pick the best 5 for each topic (or the ones the agent names), and offer to bench any.
 
 ## Steps: refresh an advisor
 
