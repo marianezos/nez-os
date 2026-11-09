@@ -9,6 +9,7 @@ NEZ OS gives your AI (Claude or ChatGPT) a brain: one place in Notion that holds
 1. A **Notion** account (free works).
 2. The **NEZ OS Brain** template, duplicated into your Notion (link in the NEZ OS Vault).
 3. **Claude** with the Notion connector turned on and access to your NEZ OS Brain page.
+4. **For building advisors from videos and articles:** give Claude internet access to those sites (Claude → Settings → Capabilities → network access: allow all sites, or add youtube.com and the sites you'll use). Pasting text always works as a backup.
 
 ## Install
 

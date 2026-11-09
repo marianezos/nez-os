@@ -2,6 +2,17 @@
 
 Aim for **10 to 30 strong sources**: enough to see how the person really thinks. Depth beats volume, and long-form beats clips. Most creators repeat the same ideas in their short clips that they cover in their long videos and podcasts, so long-form carries most of the value.
 
+## Before you start: give Claude access to the sites
+
+Claude can only read a site the agent has allowed. Tell the agent up front:
+
+> "To read videos and articles for your advisor, Claude needs permission to reach those sites. If I can't open them, here's how to allow it:
+> 1. **Claude's internet access:** in Claude, open **Settings → Capabilities**, find the setting for code execution and network (internet) access, and either allow all sites or add the ones we need: `youtube.com`, `www.youtube.com`, and the websites of the person's blog, podcast or newsletter. On a Team or Enterprise plan, the organization's admin controls this.
+> 2. **Your browser (Instagram, TikTok, Facebook, LinkedIn):** when Claude asks to use a site in your browser, click **Allow**. Be logged in to that site first.
+> 3. **Paywalled or private content:** Claude can't get past logins or paywalls. Paste the text or upload the file instead."
+
+If a link fails with a network or "blocked" error, it's this permission, not the link: say so once, give the steps above, and switch to pasting until the agent has changed it. Don't keep retrying.
+
 ## What makes a good source
 
 - **Best:** long interviews and podcast episodes, keynotes, their own long videos, books they wrote, their essays and newsletters, courses the agent bought.
