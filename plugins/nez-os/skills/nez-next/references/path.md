@@ -25,8 +25,9 @@ The order /nez-next walks agents through. Walk top to bottom and recommend the f
 | 8 | Plan | Weekly rhythm | /nez-goals | vault | `last_check_in` has a date | Friday Weekly Review |
 | 9 | Clients | Texting approval | /nez-a2p | vault | Software Stack lists a CRM and the agent has said texting is approved (Decisions Log row mentioning A2P or texting approval) | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
 | 10 | Leads | Your lead magnet | /nez-lead-magnet | vault | Marketing Hub has a row with Type "Lead magnet" | Find My Best Lead Magnet |
-| 11 | Growth | Meet your advisory board | /nez-board | live | Board Meetings has at least 1 row | (none: run /nez-board) |
-| 12 | Content | Your first content week | /nez-content | vault | Content Planner has at least 3 rows with a Publish Date | Plan My Week of Content |
+| 11 | Growth | Set up your advisory board | /nez-advisor | live | Advisory Board has at least 1 Active row | (none: run /nez-advisor) |
+| 12 | Growth | Meet your advisory board | /nez-board | live | Board Meetings has at least 1 row | (none: run /nez-board) |
+| 13 | Content | Your first content week | /nez-content | vault | Content Planner has at least 3 rows with a Publish Date | Plan My Week of Content |
 
 ## Upkeep (when the path is done)
 
@@ -41,6 +42,7 @@ Recommend the first one that applies:
 | A Market Areas row has Data As Of older than 90 days, or no data at all | Refresh that area's numbers with a source and date | (none) |
 | `last_review` is empty or more than 30 days ago | Monthly review (/nez-goals) | Friday Weekly Review |
 | The agent mentions a big decision (hiring, ads, joining a team, going full time) | Bring it to the board (/nez-board) | (none) |
+| The agent mentions a coach, author or creator they learn from | Add them as a simulated advisor (/nez-advisor) | (none) |
 | Nothing else applies | Reconnect with past clients | Past Client Check-In That Isn't Awkward |
 
 ## Skip rules

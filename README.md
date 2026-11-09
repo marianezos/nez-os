@@ -24,7 +24,8 @@ NEZ OS gives your AI (Claude or ChatGPT) a brain: one place in Notion that holds
 | --- | --- | --- |
 | `/nez-setup` | Interviews you and fills in your NEZ OS brain in 6 short stages. Start here. | Live |
 | `/nez-next` | Reads your progress and tells you your best next step. | Live |
-| `/nez-board` | Your personal advisory board: bring a decision, hear from a board of 7 real estate advisors (plus mentors you add), get a recommendation. | Live |
+| `/nez-advisor` | Builds your advisory board: 7 real estate advisors to start, plus simulated mentors built from the coaches and creators you follow, or advisors you design. | Live |
+| `/nez-board` | Brings a decision to your board, gives you a call and a recommendation, and checks back on how it turned out. | Live |
 | `/nez-voice` | Learns how you actually talk so every draft sounds like you. | Coming soon |
 | `/nez-goals` | Turns your income goal into a weekly plan with check-ins. | Coming soon |
 | `/nez-a2p` | Gets your GoHighLevel texting approved the first time. | Coming soon |
