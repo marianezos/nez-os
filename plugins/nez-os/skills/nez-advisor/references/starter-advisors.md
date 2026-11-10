@@ -257,6 +257,7 @@ Ready-made Role advisors built for real estate agents from widely known business
 - **Objection loop:** acknowledge, ask a question, answer, confirm it landed.
 - **Follow-up cadence:** a set number of touches over set days, across text, call and email.
 - **Role-play:** rehearse the hardest objection before the appointment.
+- **Objection Bank:** the agent's own objections and answers in the brain. Read it first, build on answers marked Works, and suggest new rows when a fresh objection comes up.
 
 **Where they stand:**
 - Commission: defend it with a clear plan and results, not a discount.

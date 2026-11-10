@@ -32,7 +32,7 @@ Files this skill uses (all in this skill's `references/` and `scripts/` folders)
 
 ## Step 1: Find the board and look
 
-1. Find the brain per the brain rules. Open the **Advisory Board** (`advisory_board_ds_id` in Page IDs). If it's missing, follow the brain rules' safety net and create it with this exact layout, then save both its IDs in Page IDs and add it to the Brain Index:
+1. Find the brain per the brain rules. Open the **Advisory Board** (`advisory_board_ds_id` in Page IDs). If it's missing, follow the brain rules' safety net and create it with this exact layout, then save both its IDs in Page IDs add it to the Brain Index and the Dashboard's Your workspace list:
    ```
    CREATE TABLE ("Advisor" TITLE, "Key" RICH_TEXT, "Kind" SELECT('Role':blue, 'Mentor':purple, 'Public figure':orange), "Seat" RICH_TEXT, "Status" SELECT('Active':green, 'Draft':yellow, 'Benched':gray), "Sources" NUMBER, "Version" NUMBER, "Last Refreshed" DATE)
    ```

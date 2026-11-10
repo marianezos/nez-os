@@ -31,7 +31,7 @@ Decide in this order:
 
 1. **It's one more of something that already has a database** (a task, a piece of content, a client, an area, a meeting, a person, a tool): add a row. Put the details in the row's page. This is almost always the answer.
 2. **It updates something on an existing page** (a new income goal, a new brokerage, a new rule): update that line in its section. Keep the heading and label; change only the value.
-3. **It's a new kind of thing that will keep coming up:** ask the agent first. If they agree, create ONE new database inside the NEZ OS Brain page with a clear title, an icon, a one-line description, a Status and a Date. Then add it to the Brain Index table and save its ID in Page IDs.
+3. **It's a new kind of thing that will keep coming up:** ask the agent first. If they agree, create ONE new database inside the NEZ OS Brain page with a clear title, an icon, a one-line description, a Status and a Date. Put it under the right section on the main page, add it to the Brain Index table, save both its IDs in Page IDs, and add it to the Dashboard's **Your workspace** list under the same section.
 4. **It's a one-time document** (an email, a landing page, an audit, a plan): add it as a row in Marketing Hub, never as a loose page at the top of the brain.
 
 ## 4. Writing to Notion
@@ -41,7 +41,7 @@ Decide in this order:
 - **Select options:** a row can only use an option the database already has. To add a new option, update that column and list every existing option plus the new one (any option left out gets removed).
 - **Dates:** use `YYYY-MM-DD`. When a time matters (meetings, saves), include the time in the agent's time zone. Your time may be a few minutes off, so never use your own timestamp to decide what's new; use Notion's created or last-edited times instead.
 - **Sections, not the bottom:** when adding a line to a page, put it inside the matching section, never tacked onto the end of the page.
-- **Safety net:** if a database you need is missing, search the brain once for a database with that exact title. If there isn't one, ask: "Your [name] isn't in your brain yet. Want me to add it now?" On yes, create ONE database with the standard layout from the skill, add it to the Brain Index and Page IDs, and continue. If the agent says no or it can't be created, give them the result in the chat and say you couldn't save it to Notion. Never create a second copy.
+- **Safety net:** if a database you need is missing, search the brain once for a database with that exact title. If there isn't one, ask: "Your [name] isn't in your brain yet. Want me to add it now?" On yes, create ONE database with the standard layout from the skill, add it to the Brain Index, Page IDs and the Dashboard's Your workspace list, and continue. If the agent says no or it can't be created, give them the result in the chat and say you couldn't save it to Notion. Never create a second copy.
 
 ## 5. Logging changes
 

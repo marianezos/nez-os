@@ -54,6 +54,8 @@ The Master Profile also has a section headed `## Page IDs`, right after Setup St
 - clients_deals_ds_id:          (Clients & Deals data source)
 - meeting_notes_db_id:           (Meeting Notes)
 - meeting_notes_ds_id:          (Meeting Notes data source)
+- objection_bank_db_id:          (Objection Bank)
+- objection_bank_ds_id:         (Objection Bank data source)
 - content_planner_db_id:         (Content Planner)
 - content_planner_ds_id:        (Content Planner data source)
 - tasks_db_id:                   (Tasks)

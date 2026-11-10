@@ -24,7 +24,7 @@ Pressure-test a decision with several sharp perspectives, then give the agent on
 ## Step 1: Find the board
 
 1. Find the brain per the brain rules. Open the **Advisory Board** and **Board Meetings** (`advisory_board_ds_id` and `board_meetings_ds_id` in Page IDs).
-2. **Board Meetings missing:** follow the brain rules' safety net and create it with this exact layout, save both IDs in Page IDs, and add it to the Brain Index:
+2. **Board Meetings missing:** follow the brain rules' safety net and create it with this exact layout, save both IDs in Page IDs, add it to the Brain Index and the Dashboard's Your workspace list:
    ```
    CREATE TABLE ("Decision" TITLE, "Date" DATE, "Call" SELECT('Go':green, 'No go':red, 'Go with changes':yellow, 'Need more info':gray), "Advisors" RICH_TEXT, "Pillar" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange), "Follow-up" DATE, "Outcome" SELECT('Not reviewed':gray, 'Worked':green, 'Mixed':yellow, 'Didn''t work':red, 'Didn''t do it':default), "What Happened" RICH_TEXT)
    ```

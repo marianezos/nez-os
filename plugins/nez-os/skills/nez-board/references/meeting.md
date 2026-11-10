@@ -41,6 +41,7 @@ Rules:
 - Advisors may disagree. Don't force agreement.
 - Keep each advisor under about 120 words so a full board stays readable.
 - **Local Market Expert:** before it speaks, also read the Market Areas rows the decision touches. Use only numbers that have a source and date there or that the agent gave; if a needed number is missing or older than 90 days, say so and ask for it rather than estimating.
+- **Conversion Coach:** when the decision touches client conversations, also read the Objection Bank rows it touches. Lean on answers marked Works, flag Starter or Testing answers as untested, and suggest adding any new objection that comes up as a Testing row.
 
 ## 5. Summary
 
