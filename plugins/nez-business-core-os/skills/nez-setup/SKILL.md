@@ -1,6 +1,6 @@
 ---
 name: nez-setup
-description: Sets up a real estate agent's NEZ OS brain in Notion. Finds their NEZ OS Brain page, then interviews them one question at a time in six short stages (core profile, compliance, voice and edge, goals, objection bank, market areas) and fills in their Master Profile, Compliance Guardrails, Voice Library, Offers & Services, Business Plan & Goals, Software Stack, Objection Bank and Market Areas. Ends with a self-test that shows the brain working. Run it first; every other NEZ OS skill reads what it saves. Triggers when the user runs /nez-setup, or says "set up my brain", "set up NEZ OS", "fill in my master profile", "continue setup", "update my profile", "build my objection bank", "add a market area", or "run the self-test".
+description: Sets up a real estate agent's NEZ OS brain in Notion. Finds their NEZ OS Brain page, then interviews them one question at a time in six short stages (core profile, compliance, voice and edge, goals, objection bank, market areas) and fills in their Master Profile, Compliance Guardrails, Voice Library, Offers & Services, Business Plan & Goals, Software Stack, Objection Bank and Market Areas. Ends with a self-test that shows the brain working. Run it first; every other NEZ OS skill reads what it saves. Triggers when the user runs /nez-setup, or says "set up my brain", "set up NEZ OS", "fill in my master profile", "continue setup", "update my profile", "build my objection bank", "add a market area", or "run the self-test", or "show me the NEZ OS line".
 ---
 
 # NEZ OS Setup: Build Your AI Brain
@@ -72,7 +72,8 @@ The questions for every stage are in `industries/real-estate.md`. Stages 2 to 6 
 4. **Confirm.** Show a short plain-language summary and ask "Look right?" Make any changes they ask for.
 5. **Save.** Fetch the page or database first, then fill in the matching lines under the matching headings. Keep every heading, callout and label exactly as it is; never rewrite a whole page. For databases, use the exact property names and existing select options; if nothing fits, leave the select empty. Then set the stage's line in Setup Status to today's date (`YYYY-MM-DD`).
 6. **Say where it's saved.** For example: "Saved to your Compliance Guardrails in your NEZ OS brain. To change it any time, run /nez-setup and choose Update something."
-7. **Next step.** Recommend ONE next step: the next unfinished stage in the table. Never push. After Stage 2 or Stage 3, also offer the self-test: "Want a two-minute test to see how well I use your brain?"
+7. **After Stage 1 only:** if `nez_first_shown` in Setup Status is blank, follow `references/nez-first.md` once (the line that makes NEZ OS skills the default), then continue.
+8. **Next step.** Recommend ONE next step: the next unfinished stage in the table. Never push. After Stage 2 or Stage 3, also offer the self-test: "Want a two-minute test to see how well I use your brain?"
 
 ## Step 5: Finish
 
@@ -96,7 +97,8 @@ When the agent runs /nez-setup and at least one stage is done, read Setup Status
 > 3. Redo a stage
 > 4. Add to my objection bank
 > 5. Add a market area
-> 6. Run the self-test"
+> 6. Run the self-test
+> 7. Show me the NEZ OS line again"
 
 Show option 1 only when a stage is unfinished.
 
@@ -106,6 +108,7 @@ Show option 1 only when a stage is unfinished.
 - **4:** run Stage 5 for a new client type, or to add objections to one already done.
 - **5:** run Stage 6 for one new area.
 - **6:** run the SELF-TEST below.
+- **7:** follow `references/nez-first.md` to show the line again (with their brain link filled in).
 
 ## SELF-TEST
 
