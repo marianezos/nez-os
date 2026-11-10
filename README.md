@@ -15,10 +15,22 @@ NEZ OS gives your AI (Claude or ChatGPT) a brain: one place in Notion that holds
 
 1. In Claude, open the plugins area and choose to add a plugin marketplace.
 2. Paste this repository's link: `https://github.com/marianezos/nez-os`
-3. Install **NEZ OS**.
+3. Install **nez-os** first (the core). Add the pillar plugins as they go live.
 4. Start a new chat and run `/nez-setup`.
 
-## Skills
+## Plugins
+
+One marketplace, one plugin per pillar. Every plugin reads the same brain, so install `nez-os` first.
+
+| Plugin | Pillar | What's in it | Status |
+| --- | --- | --- | --- |
+| `nez-os` | Brain + Growth | Setup, next step, advisory board, board meetings | Live |
+| `nez-leads` | Leads | Lead magnets, funnels, DM automation, ads, prospecting | Coming soon |
+| `nez-clients` | Clients | Texting approval (A2P), CRM, follow-up, transactions, sphere, roleplay | Coming soon |
+| `nez-content` | Content | Content plans, hooks, Reels, carousels, listing pages, videos | Coming soon |
+| `nez-connect` | All | Local connectors for GoHighLevel and other tools | Later |
+
+## Skills in nez-os
 
 | Skill | What it does | Status |
 | --- | --- | --- |
