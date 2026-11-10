@@ -41,3 +41,19 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Respect the goal. Show what similar homes sold for and how long this one has been listed, then decide on a strong strategy together. [PROOF] The goal is an offer that gets accepted on good terms, not the lowest number.
 - **Text:** Let's look at what similar homes sold for before we set the number. Can I send you the comps?
 - **Don't say:** "You'll lose it if you lowball." Guarantees about what the seller will accept.
+
+## 6. "We'll just use the listing agent."
+- **Category:** Other agent
+- **Behind it:** They think it'll be simpler or get them a better deal.
+- **Ask first:** "Who do you want negotiating for you on price and repairs?"
+- **Answer idea:** Explain, without knocking anyone, that the listing agent works for the seller. Describe what you do for the buyer: pricing the offer, inspections, repairs and getting to closing. [PROOF]
+- **Text:** Totally your choice. Want to know what having someone on your side looks like before you decide?
+- **Don't say:** Anything negative about the listing agent. Claims about what they will or won't do.
+
+## 7. "We're not sure we can afford this yet."
+- **Category:** Money & readiness
+- **Behind it:** They're nervous about the payment, closing costs or what comes after.
+- **Ask first:** "What monthly payment would let you sleep at night?"
+- **Answer idea:** Connect them with a lender for real numbers, and lay out the full cost of buying (down payment, closing costs, moving, repairs) so nothing surprises them. [PROOF]
+- **Text:** Let's get you real numbers, not guesses. Want an intro to a lender this week?
+- **Don't say:** 'You can definitely afford it.' Any rate or approval promise.

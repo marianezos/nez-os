@@ -33,3 +33,27 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Offer a simple comparison: what their current kind of home costs in each area here, with sources and dates. [PROOF]
 - **Text:** Send me what you have now and I'll show you what that looks like here, area by area.
 - **Don't say:** Numbers without a source and date.
+
+## 5. "We need to sell our current home first."
+- **Category:** Timing
+- **Behind it:** Fear of owning two homes.
+- **Ask first:** "What would make the timing feel safe?"
+- **Answer idea:** Lay out the options for timing the sale and purchase, and connect them with an agent where they live now and a lender here. [PROOF]
+- **Text:** There are ways to time it so you're not stuck. Want me to walk you through them?
+- **Don't say:** Lending or timing promises.
+
+## 6. "Our timeline is too tight."
+- **Category:** Timing
+- **Behind it:** The move date is fixed and close.
+- **Ask first:** "What's the latest date you need to be in a home?"
+- **Answer idea:** Build a plan backward from their move date, line up a lender and your remote tour process now, and have a backup like a short-term rental. [PROOF]
+- **Text:** Let's plan backward from your move date. Can we do a quick call today?
+- **Don't say:** Promises that it'll all work out on time.
+
+## 7. "We're worried about costs and taxes in the new area."
+- **Category:** Money & readiness
+- **Behind it:** They don't know the real cost of living there.
+- **Ask first:** "What costs matter most to you: taxes, HOA, insurance, commute?"
+- **Answer idea:** Share property tax, HOA and insurance information from official sources with dates, and point tax questions to a CPA. [PROOF]
+- **Text:** Let's compare real costs area by area. Want me to put it together?
+- **Don't say:** Numbers without a source and date. Tax advice.

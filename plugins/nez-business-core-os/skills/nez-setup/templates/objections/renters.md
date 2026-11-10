@@ -33,3 +33,11 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Renting can be the right step for now. If buying is a goal, offer to connect them with a lender to see what it would take, with no pressure. [PROOF]
 - **Text:** Renting may be right for now. If buying's on your list, want a no-pressure chat with a lender to see what it would take?
 - **Don't say:** "Renting is throwing money away."
+
+## 5. "Do we really need an agent to rent?"
+- **Category:** Trust & process
+- **Behind it:** They aren't sure what an agent does for renters.
+- **Ask first:** "What's been hardest about finding a place so far?"
+- **Answer idea:** Explain what you do (finding places that fit, setting up tours, explaining applications and leases) and be clear about any cost up front. [PROOF]
+- **Text:** Not always. Here's what I'd do for you, so you can decide. Any questions?
+- **Don't say:** Hidden fees. Claims that they can't rent without an agent.

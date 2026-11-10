@@ -33,3 +33,11 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Offer to lay out both paths side by side: what selling could bring and what renting brings each year, with their CPA weighing in on taxes. [PROOF]
 - **Text:** Good question to ask. Want a side-by-side of selling versus renting so you can talk it over with your CPA?
 - **Don't say:** Tax advice. Predictions about rents or prices.
+
+## 5. "Property managers charge too much."
+- **Category:** Commission & fees
+- **Behind it:** They see the fee but not the time and risk it covers.
+- **Ask first:** "What's your time worth on calls, repairs and late rent?"
+- **Answer idea:** Compare the fee with the hours, vacancy and mistakes it can save, and let them choose full management or leasing only. [PROOF]
+- **Text:** Fair to compare. Want a side-by-side of managing it yourself versus with help?
+- **Don't say:** 'You'll regret it.' Guarantees about vacancy or rent.

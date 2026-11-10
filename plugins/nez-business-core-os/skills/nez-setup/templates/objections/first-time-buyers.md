@@ -33,3 +33,27 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Name the fear as normal. Walk them through the steps in order so nothing is a surprise, and explain where they can pause or walk away (inspection, appraisal, financing). [PROOF] Offer your step-by-step guide or a short call.
 - **Text:** Totally normal to feel that way. Want me to send the steps from start to keys so you know what's coming?
 - **Don't say:** "Don't worry about it." Anything that brushes off the fear.
+
+## 5. "We don't know if we're ready to buy."
+- **Category:** Money & readiness
+- **Behind it:** They don't know what 'ready' looks like.
+- **Ask first:** "What would 'ready' look like to you?"
+- **Answer idea:** Offer a simple readiness check with a lender and you: savings, credit, payment comfort, timeline. Then a plan, whether that's now or in a year. [PROOF]
+- **Text:** No rush. Want a quick readiness check so you know exactly where you stand?
+- **Don't say:** Pressure. 'Now is the best time to buy.'
+
+## 6. "The process feels overwhelming."
+- **Category:** Trust & process
+- **Behind it:** Too many steps and unfamiliar words.
+- **Ask first:** "Which part feels the most confusing?"
+- **Answer idea:** Break it into a few clear steps and tell them what happens at each one, and what they need to do (and don't). [PROOF]
+- **Text:** Want me to send the steps from start to keys in plain English?
+- **Don't say:** Jargon. 'It's easy.'
+
+## 7. "We don't want to be stretched too thin or surprised by repairs."
+- **Category:** Money & readiness
+- **Behind it:** Fear of being house-poor or facing a big repair right after moving in.
+- **Ask first:** "What would feel like a comfortable cushion after you move in?"
+- **Answer idea:** Plan a payment that leaves room to breathe, use the inspection to spot big-ticket items, and set aside a repair cushion. Their lender helps with the numbers. [PROOF]
+- **Text:** Let's plan a payment that still leaves you room to breathe. Want to map it out together?
+- **Don't say:** Promises that a home won't need repairs. Budget advice beyond your role.

@@ -33,3 +33,35 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Compare both on the same basis: price, upgrades they'd add, repairs, timing and incentives. Help them choose what fits. [PROOF]
 - **Text:** Let's compare new and resale side by side so you can see the full picture. Want me to put it together?
 - **Don't say:** That one is always better.
+
+## 5. "The builder's prices are fixed, so there's nothing to negotiate."
+- **Category:** Price
+- **Behind it:** They think there's no room on a new build.
+- **Ask first:** "Which matters more to you: price, upgrades, or closing costs?"
+- **Answer idea:** Even when the base price holds, there may be room on upgrades, lot premiums, closing costs or timing. Offer to ask on their behalf. [PROOF]
+- **Text:** Even if the price holds, there may be room elsewhere. Want me to ask the builder?
+- **Don't say:** Promises about what the builder will give.
+
+## 6. "We'd rather wait until it's built."
+- **Category:** Timing
+- **Behind it:** They want to see the finished home before committing.
+- **Ask first:** "What would you need to see to feel sure?"
+- **Answer idea:** Explain the trade-offs of buying early (choices, price) versus waiting for a finished or spec home, and look at both. [PROOF]
+- **Text:** Both can work. Want me to show you what's available now and what's coming?
+- **Don't say:** Urgency you can't back up.
+
+## 7. "What if it's delayed or the quality is poor?"
+- **Category:** Trust & process
+- **Behind it:** Worry about the timeline and workmanship.
+- **Ask first:** "What would give you peace of mind on timing and quality?"
+- **Answer idea:** Plan for both: read the contract's timeline terms with their attorney, set up inspections at key stages, and know the builder's warranty. [PROOF]
+- **Text:** Let's plan for both. Want me to set up inspections at the key stages?
+- **Don't say:** Claims about a specific builder. Legal advice on the contract.
+
+## 8. "The upgrades and lot premiums feel high."
+- **Category:** Price
+- **Behind it:** Extras are adding up fast.
+- **Ask first:** "Which upgrades matter most to you?"
+- **Answer idea:** Help them sort must-haves from nice-to-haves, and compare which upgrades are easier to add later versus during the build. [PROOF]
+- **Text:** Let's sort what to add now versus later. Want to go through the list together?
+- **Don't say:** Value promises on upgrades.

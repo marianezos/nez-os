@@ -33,3 +33,19 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Nobody can time it. Focus on deals that work with today's numbers, and keep their criteria on file so they're ready whenever a deal fits. [PROOF]
 - **Text:** No pressure. I'll keep your criteria on file and only send deals that work with today's numbers.
 - **Don't say:** Market predictions.
+
+## 5. "Why pay a commission when I can go straight to the seller?"
+- **Category:** Commission & fees
+- **Behind it:** They want to save money.
+- **Ask first:** "What would make it worth having an agent on a deal for you?"
+- **Answer idea:** Explain what you bring that affects their profit: access to deals, fast comps, negotiating, contractor and lender contacts, and handling the paperwork. [PROOF]
+- **Text:** Fair question. Want me to show you what I'd bring to your next deal?
+- **Don't say:** 'You'll lose money without me.' Cutting your fee on the spot.
+
+## 6. "I'm worried about tenants and repairs."
+- **Category:** Trust & process
+- **Behind it:** Fear of problem tenants or a money pit.
+- **Ask first:** "What happened on past deals that you don't want to repeat?"
+- **Answer idea:** Build the worry into the numbers: inspection, repair budget, vacancy and management costs. Offer property manager and contractor contacts, and fair, consistent screening. [PROOF]
+- **Text:** Let's build repairs and vacancy into the numbers before you buy. Want to run it together?
+- **Don't say:** Promises about tenants or returns. Any screening by protected class.

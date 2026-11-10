@@ -33,3 +33,27 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Their network matters, and you'll include it. Explain how you also reach buyers outside it so they get the best possible offer. [PROOF]
 - **Text:** Your network is a real asset. Want me to show you how we'd reach buyers beyond it too?
 - **Don't say:** Anything dismissive about their connections.
+
+## 5. "Our home is one of a kind, so the comps don't apply."
+- **Category:** Price
+- **Behind it:** They believe the home's features put it in a class of its own.
+- **Ask first:** "Which features do you think buyers will value most?"
+- **Answer idea:** Agree that unique homes need more than comps. Show the closest sales, what buyers at that level paid for similar features, and a pricing plan with a review date. [PROOF]
+- **Text:** Let's look at the closest sales and what buyers paid for features like yours. Free this week?
+- **Don't say:** 'It's just like the others.' Guarantees on price.
+
+## 6. "Your fee should be lower on a higher-priced home."
+- **Category:** Commission & fees
+- **Behind it:** They expect the percentage to shrink as the price grows.
+- **Ask first:** "What would you need to see to feel the fee is earned?"
+- **Answer idea:** Walk through what the plan includes at this level (presentation, reach, screening buyers, negotiation) and what's at stake in the final price. [PROOF]
+- **Text:** Fair to ask. Want a one-page breakdown of what's included for your home?
+- **Don't say:** 'All fees are standard.' Cutting your fee on the spot.
+
+## 7. "We want the biggest-name agent or brokerage."
+- **Category:** Other agent
+- **Behind it:** They equate a big name with better results.
+- **Ask first:** "What would the biggest name do for you that matters most?"
+- **Answer idea:** Focus on the specific plan and attention they'd get from you, and the reach your brokerage and marketing provide. [PROOF]
+- **Text:** Totally fair. Can I show you the exact plan I'd run for your home?
+- **Don't say:** Anything negative about other agents or brokerages.

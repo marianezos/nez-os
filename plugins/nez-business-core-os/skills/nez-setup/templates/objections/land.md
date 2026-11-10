@@ -35,3 +35,27 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Agree there's no rush. Offer to keep watching and check in on their schedule. [PROOF]
 - **Text:** No rush. I'll keep an eye out and check in when you'd like.
 - **Don't say:** False urgency.
+
+## 5. "Can we even build what we want on it?"
+- **Category:** Trust & process
+- **Behind it:** They don't know the rules for that piece of land.
+- **Ask first:** "What are you hoping to build or do there?"
+- **Answer idea:** Make the checks part of the plan: zoning, permits, utilities, access, survey and soil, confirmed with the city or county and licensed pros, with time for them in the offer. [PROOF]
+- **Text:** Let's find out before you commit. Want me to set up the checks in the offer timeline?
+- **Don't say:** 'You can build anything there.'
+
+## 6. "We'll find land on our own, or buy straight from the owner."
+- **Category:** Other agent
+- **Behind it:** They think land deals are simple.
+- **Ask first:** "Who's checking zoning, access and the survey for you?"
+- **Answer idea:** Explain what you handle: finding the right parcel, the checks, negotiating and the contract, so nothing gets missed. [PROOF]
+- **Text:** Happy to help either way. Want a checklist of what to confirm before buying land?
+- **Don't say:** Anything negative about the owner.
+
+## 7. "Financing land seems hard."
+- **Category:** Money & readiness
+- **Behind it:** Land loans work differently than home loans.
+- **Ask first:** "Have you talked with a lender who does land loans?"
+- **Answer idea:** Connect them with a lender who finances land so they know the real options, and plan the offer around them. [PROOF]
+- **Text:** Land loans work differently. Want an intro to a lender who does them?
+- **Don't say:** Rate quotes or loan promises.

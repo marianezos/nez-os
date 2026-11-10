@@ -35,3 +35,27 @@ NEZ OS starters for Stage 5. Rewrite each answer in the agent's voice, swap [PRO
 - **Answer idea:** Lay out the options for timing a sale and a purchase, and connect them with a lender about financing choices. [PROOF]
 - **Text:** There are a few ways to time it so you're never stuck. Want me to walk you through them?
 - **Don't say:** Lending advice or promises about timing.
+
+## 5. "We're not sure a 55+ community is right for us."
+- **Category:** Trust & process
+- **Behind it:** It's a big lifestyle change and they can't picture it yet.
+- **Ask first:** "What would a community need to have for it to feel right to you?"
+- **Answer idea:** No rush. Offer to show how the community actually works: amenities, fees, activities and rules, so they decide on facts. Suggest a no-pressure tour or event visit. [PROOF]
+- **Text:** No pressure at all. Want to take a quick tour so you can see how it works in person?
+- **Don't say:** Assumptions about their age, health or family. Who 'belongs' there. Pushing them toward or away from it.
+
+## 6. "The community's rules might not work for us."
+- **Category:** Trust & process
+- **Behind it:** Worry about rules on guests, pets, rentals, parking or changes to the home.
+- **Ask first:** "Which rules matter most to you?"
+- **Answer idea:** Get the community's rules and documents and go through the ones they care about together, so there are no surprises after closing. [PROOF]
+- **Text:** Let's look at the actual rules before you decide. Want me to request the documents?
+- **Don't say:** Your own guess about what a rule means. Promises that a rule won't change.
+
+## 7. "We don't want to give up our space."
+- **Category:** Trust & process
+- **Behind it:** They're attached to room for hobbies, storage and guests.
+- **Ask first:** "Which rooms in your home do you use most?"
+- **Answer idea:** Floor plans vary a lot. Compare real plans and model homes against how they use their space today, and focus on the storage and flexible rooms they care about. [PROOF]
+- **Text:** Makes sense. Want to see a few floor plans next to the spaces you use most?
+- **Don't say:** 'You won't need all that space.' Pressure to downsize.
