@@ -11,7 +11,7 @@
       "name": "nez-os",
       "source": "./plugins/nez-os",
       "description": "The core NEZ OS skills for real estate agents: build your AI brain in Notion, get your next best step, and run your business across five pillars (Brain, Leads, Clients, Content, Growth) with Fair Housing guardrails built in.",
-      "version": "0.7.2",
+      "version": "0.8.0",
       "author": {
         "name": "Maria Nez AI"
       },

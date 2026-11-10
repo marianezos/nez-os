@@ -28,7 +28,7 @@ Keep the agent moving. Read what they've finished, recommend the one most useful
 2. Keep only pages whose first line starts with `nez-os-root:`. Ignore pages from other systems.
 3. More than one: ask which to use. Never guess.
 4. **None found:** recommend this as the one next step and stop:
-   > "Your first step is setting up your NEZ OS brain. Duplicate the NEZ OS Brain template from the Vault (Resources), connect Notion to Claude, then run /nez-setup. Setup takes about 30 to 40 minutes in short stages."
+   > "Your first step is setting up your NEZ OS brain. Duplicate the NEZ OS Brain template from the Vault (Resources), connect Notion to Claude, then run /nez-setup. The first stage takes about 10 minutes, and your skills work right after it."
 5. No Notion tools at all: say Notion needs to be connected first (Settings → Connectors → Notion) and stop.
 
 ## Step 2: Read progress

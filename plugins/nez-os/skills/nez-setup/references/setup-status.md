@@ -5,13 +5,16 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 ```
 ## Setup Status
 
-- stage_1_you_and_market:
-- stage_2_clients_and_difference:
-- stage_3_brand_and_rules:
+- industry_flow:
+- stage_1_core_profile:
+- stage_2_compliance:
+- stage_3_voice_and_edge:
 - stage_4_goals:
-- stage_5_tools:
-- stage_6_areas:
+- stage_5_objection_bank:
+- stage_6_market_areas:
 - setup_complete:
+- services_offer_asked:
+- self_test_last_run:
 - voice_profile:
 - last_check_in:
 - last_review:
@@ -19,13 +22,18 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 
 ## How to write them
 
-- When a stage is saved, set its line to the date in `YYYY-MM-DD` format, for example `- stage_1_you_and_market: 2026-11-09`.
-- A stage the agent chose to skip entirely: write `skipped YYYY-MM-DD`.
-- `setup_complete`: write the date only when all 6 stages are done or skipped.
-- `voice_profile`: written by /nez-voice (or by setup if the agent pastes a finished voice profile).
+- `industry_flow`: set by /nez-setup on first run. `real-estate` for now (see `industries/README.md`).
+- When a stage is saved, set its line to the date in `YYYY-MM-DD` format, for example `- stage_1_core_profile: 2026-11-09`.
+- A stage in progress: `in progress: group B done` (Stage 1), or `in progress: sellers, buyers` (Stage 5, the client types done so far).
+- `stage_6_market_areas`: the date plus the count, for example `2026-11-09 (3 areas)`.
+- A stage the agent chose to skip entirely: `skipped YYYY-MM-DD`.
+- `setup_complete`: the date only when all 6 stages are done or skipped.
+- `services_offer_asked`: `yes` once the Stage 1 services offer has been asked, whatever the answer. Never ask it again.
+- `self_test_last_run`: the date of the last self-test.
+- `voice_profile`: the date an approved voice summary was saved (by Stage 3, or later by /nez-voice).
 - `last_check_in`: written by /nez-goals (weekly check-ins).
 - `last_review`: written by /nez-goals or a monthly review.
-- Never remove a line. Only fill in or update values.
+- Never remove a line. Only fill in or update values. If an older brain has the old stage lines (`stage_1_you_and_market` and so on), leave them and add the new lines below them.
 
 ---
 
