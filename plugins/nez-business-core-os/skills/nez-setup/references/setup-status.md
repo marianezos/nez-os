@@ -5,6 +5,9 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 ```
 ## Setup Status
 
+- profile_version:
+- template_version:
+- workspace_source:
 - industry_flow:
 - stage_1_core_profile:
 - stage_2_compliance:
@@ -23,6 +26,8 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 
 ## How to write them
 
+- `profile_version` and `template_version`: set on first run to the current values in `templates/profile-changes.md`, and raised by PROFILE UPDATE. Blank means version 1.
+- `workspace_source`: `template` if they duplicated the NEZ OS Brain template, `built` if setup built it.
 - `industry_flow`: set by /nez-setup on first run. `real-estate` for now (see `industries/README.md`).
 - When a stage is saved, set its line to the date in `YYYY-MM-DD` format, for example `- stage_1_core_profile: 2026-11-09`.
 - A stage in progress: `in progress: group B done` (Stage 1), or `in progress: sellers, buyers` (Stage 5, the client types done so far).

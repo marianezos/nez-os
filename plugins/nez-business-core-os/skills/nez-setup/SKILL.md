@@ -35,9 +35,11 @@ Fill in the agent's NEZ OS brain in Notion so every other NEZ OS skill (and any 
    > 1. Did you duplicate the NEZ OS Brain template into your Notion? (The link is in the NEZ OS Vault, under Resources.)
    > 2. Is Notion connected to Claude with access to that page? (Settings, then Connectors, then Notion.)
    > Once both are done, run /nez-setup again. If your screen looks different from these steps, send me a screenshot and I'll tell you what to click."
+   If they say they already duplicated it and it still can't be found after a second try, go to step 8.
 5. **No Notion tools available at all:** say Notion isn't connected yet, give step 2 above, and stop.
 6. Open the brain's **Brain Index** and follow its rules for where things live. Then open the **Master Profile** and read its **Setup Status** and **Page IDs** sections.
-7. **Save the Page IDs** (first run, or if any are blank or broken): fill every line in the Page IDs section with the ID of the matching page or database inside this brain (see `references/setup-status.md`). Do this quietly; never show IDs to the agent.
+7. **Save the Page IDs** (first run, or if any are blank or broken): fill every line in the Page IDs section with the ID of the matching page or database inside this brain (see `references/setup-status.md`). Do this quietly; never show IDs to the agent. On a first run, also set `profile_version` and `template_version` to the current values in `templates/profile-changes.md`, and `workspace_source: template`.
+8. **Template won't copy?** If the agent has tried twice to duplicate the template and it still isn't found, offer to build the brain for them: follow Build mode in `templates/workspace-build.md`.
 
 ## Step 2: Pick the industry flow
 
@@ -46,6 +48,11 @@ Read `industry_flow` in Setup Status. If it's blank, it's a first run: NEZ OS is
 If the agent says they are not in real estate, say: "NEZ OS is built for real estate agents right now. Other industries are coming. I can still set up the parts that fit any business, like your profile, voice and goals, if you'd like." If they say yes, run the real estate flow but skip questions and stages that only make sense for real estate (brokerage, license, Fair Housing, objection bank, market areas), and word the rest for their business. See `industries/README.md`.
 
 ## Step 3: Welcome or pick up where they left off
+
+**On every run with an existing brain, first do these two quietly:**
+1. **Profile update:** read `profile_version` in Setup Status (blank means 1). If it's lower than the current version in `templates/profile-changes.md`, follow PROFILE UPDATE below.
+2. **Workspace check:** follow Check mode in `templates/workspace-build.md` (missing pages, databases, fields or options; one question at most).
+
 
 - **Nothing done yet:** welcome them in 2 to 3 sentences: setup builds the brain every AI tool reads, Stage 1 takes about 10 minutes and skills work after it, and they can stop any time. Then start Stage 1.
 - **Some stages done:** show the RE-RUN MENU below.
@@ -70,7 +77,7 @@ The questions for every stage are in `industries/real-estate.md`. Stages 2 to 6 
 2. **Questions.** Ask the stage's questions from the industry file, one at a time, saving at the end of each group.
 3. **Build.** For stages with a template (Compliance, Voice and edge, Objection bank, Market areas), follow that template in `templates/`. Fill every line from the agent's answers. Never invent a value; if they skipped something, leave it blank and say so.
 4. **Confirm.** Show a short plain-language summary and ask "Look right?" Make any changes they ask for.
-5. **Save.** Fetch the page or database first, then fill in the matching lines under the matching headings. Keep every heading, callout and label exactly as it is; never rewrite a whole page. For databases, use the exact property names and existing select options; if nothing fits, leave the select empty. Then set the stage's line in Setup Status to today's date (`YYYY-MM-DD`).
+5. **Save.** Fetch the page or database first, then fill in the matching lines under the matching headings (`templates/master-profile.md` lists every Master Profile line). Keep every heading, callout and label exactly as it is; never rewrite a whole page. For databases, use the exact property names and existing select options; if nothing fits, leave the select empty. Then set the stage's line in Setup Status to today's date (`YYYY-MM-DD`).
 6. **Say where it's saved.** For example: "Saved to your Compliance Guardrails in your NEZ OS brain. To change it any time, run /nez-setup and choose Update something."
 7. **After Stage 1 only:** if `nez_first_shown` in Setup Status is blank, follow `references/nez-first.md` once (the line that makes NEZ OS skills the default), then continue.
 8. **Next step.** Recommend ONE next step: the next unfinished stage in the table. Never push. After Stage 2 or Stage 3, also offer the self-test: "Want a two-minute test to see how well I use your brain?"
@@ -85,6 +92,16 @@ When every stage is done or skipped:
 5. Recommend the next step: run /nez-next. It reads the brain and points to the best next move (usually the Advisory Board with /nez-advisor).
 
 ---
+
+## PROFILE UPDATE
+
+When the brain's `profile_version` is behind:
+1. Read `templates/profile-changes.md`. For every version after theirs, apply the "added automatically" items without asking (new Setup Status lines, carried-over progress, new headings). Say nothing about them.
+2. Check which "needs an answer" lines are blank. If none, set `profile_version` and `template_version` to current and continue.
+3. If some are blank, say: "Since you set up, NEZ OS added a few things that make your results better. It takes about [N] minutes. Want to fill them in now?" (about 1 minute per 2 questions). If they say not now, leave `profile_version` as it is and go on; offer again next run.
+4. On yes, ask only those questions, one at a time, saving each inside its section (`templates/master-profile.md`). Never re-ask something answered and never rewrite existing values.
+5. Mention any stage the version notes as "new and improved," once, as an option.
+6. Set `profile_version` and `template_version` to the current values.
 
 ## RE-RUN MENU
 

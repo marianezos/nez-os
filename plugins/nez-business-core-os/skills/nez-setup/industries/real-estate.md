@@ -115,13 +115,13 @@ Say first: "Now a few questions about your business. This is what lets me write 
 9. "Rank where your business comes from, biggest first: sphere and referrals, past clients, open houses, social media, YouTube, paid ads, online leads (Zillow, Realtor.com and so on), door knocking or cold calls, partners, or something else."
    **Saves to:** Where my business comes from (an ordered list).
 10. "Walk me through working with you as a **buyer**, from first call to keys."
-    **Saves to:** Offers & Services, For buyers.
+    **Saves to:** Offers & Services, For buyers (What's included, My buyer process).
 11. "And as a **seller**: what's in your marketing, and what are the main steps?"
-    **Saves to:** Offers & Services, For sellers.
+    **Saves to:** Offers & Services, For sellers (My listing marketing plan, What's included, My seller process).
 12. "Any programs you know really well? First-time buyer programs, down payment assistance, VA, FHA, and so on."
-    **Saves to:** Offers & Services, under the client type they fit.
+    **Saves to:** Offers & Services, For buyers, Special programs I know well (or Other clients I serve if it's for investors, renters or relocation).
 13. "Do you offer any free guides, tools, classes or events?"
-    **Saves to:** Offers & Services, Free resources / Classes or events.
+    **Saves to:** Offers & Services, Free resources I offer (each with its link) and Classes, events or workshops.
 
 *Never write promises or guarantees into Offers & Services. If they say "I'll sell your home in 30 days," save it as their goal or process, and say why in one sentence.*
 
