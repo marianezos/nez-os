@@ -1,0 +1,8 @@
+{
+  "name": "nez-tools-os",
+  "description": "NEZ OS Tools: local connectors that let Claude work with GoHighLevel and other tools on your computer. Coming later.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Maria Nez AI"
+  }
+}

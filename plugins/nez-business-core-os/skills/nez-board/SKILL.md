@@ -11,7 +11,7 @@ Pressure-test a decision with several sharp perspectives, then give the agent on
 
 ## Core rules
 
-- **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-os` plugin folder, two levels up from this skill).
+- **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill).
 - **Each advisor speaks only from its own brain page,** plus the agent's situation from the brain. Read an advisor's page right before it speaks.
 - **Advisors stay distinct.** Use each one's question, lens and voice. Don't blend them into one generic answer.
 - **Simulations, clearly labeled.** An advisor built from a real person is a simulation of their public thinking, never the real person. If the agent asks, say so plainly.

@@ -1,10 +1,10 @@
-# nez-clients
+# nez-real-estate-os
 
 **Pillar:** Clients
 
-NEZ OS Clients: texting approval (A2P), CRM setup, follow-up sequences, transactions, seller updates and sphere touches for real estate agents. Reads the NEZ OS brain built by the nez-os plugin.
+NEZ OS Real Estate: texting approval (A2P), CRM setup, follow-up sequences, transactions, seller updates and sphere touches for real estate agents. Reads the NEZ OS brain built by the nez-business-core-os plugin.
 
-Install the core `nez-os` plugin first: every NEZ OS plugin reads the brain it builds.
+Install the core `nez-business-core-os` plugin first: every NEZ OS plugin reads the brain it builds.
 
 | Skill | What it does | Status |
 | --- | --- | --- |
@@ -16,4 +16,4 @@ Install the core `nez-os` plugin first: every NEZ OS plugin reads the brain it b
 | `/nez-sphere` | Sphere and past-client touch plans | Planned |
 | `/nez-roleplay` | Practice objections from your Objection Bank | Planned |
 
-This plugin is added to the marketplace when its first skill is live. `references/brain-rules.md` is an exact copy of the one in `nez-os`; keep them identical.
+This plugin is added to the marketplace when its first skill is live. `references/brain-rules.md` is an exact copy of the one in `nez-business-core-os`; keep them identical.

@@ -11,7 +11,7 @@ Fill in the agent's NEZ OS brain in Notion so every other NEZ OS skill (and any 
 
 ## Core rules
 
-- **Read the brain rules first.** Before anything else, read the plugin's `references/brain-rules.md` (in the `nez-os` plugin folder, two levels up from this skill). Follow it for finding the brain, where things go, logging and what never to store. If it conflicts with this file, the brain rules win.
+- **Read the brain rules first.** Before anything else, read the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Follow it for finding the brain, where things go, logging and what never to store. If it conflicts with this file, the brain rules win.
 - **One question at a time.** Wait for the answer before asking the next one. Keep it conversational, like a friendly coach, not a form. Where the industry file gives answer options, show them as a short lettered list; the agent can always answer in their own words instead.
 - **Plain language.** Never show page IDs, property names, field names, database jargon or Markdown. Say "your Master Profile," not "the Master Profile page" or `primary_market`.
 - **Match their language.** If the agent writes in Spanish, run the whole interview in Spanish. Save their answers in the language they gave them.

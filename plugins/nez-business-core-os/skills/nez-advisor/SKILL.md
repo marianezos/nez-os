@@ -11,7 +11,7 @@ Give the agent a board of advisors they trust: ready-made real estate roles, rol
 
 ## Core rules
 
-- **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-os` plugin folder, two levels up from this skill). Follow it for finding the brain, writing to Notion (including `\$` for dollar signs), logging, and what never to store.
+- **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Follow it for finding the brain, writing to Notion (including `\$` for dollar signs), logging, and what never to store.
 - **Look first, then ask.** Read the Advisory Board and the Master Profile before asking anything. Say in one or two lines what you found ("You have 7 advisors on your board: ..."). Never ask for something the brain already has.
 - **One question at a time.** Wait for the answer before the next one.
 - **Real people are simulations.** An advisor built from a real person has "(simulated)" in its name and says so at the top of its brain. It never claims to be the person and never says the person agreed with, endorsed or reviewed anything.

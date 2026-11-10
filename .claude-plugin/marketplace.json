@@ -4,14 +4,14 @@
     "name": "Maria Nez AI"
   },
   "metadata": {
-    "description": "NEZ OS · The Agent Operating System. AI and GoHighLevel systems for real estate agents, built around a Notion brain that knows your business."
+    "description": "NEZ OS \u00b7 The Agent Operating System. AI and GoHighLevel systems for real estate agents, built around a Notion brain that knows your business."
   },
   "plugins": [
     {
-      "name": "nez-os",
-      "source": "./plugins/nez-os",
+      "name": "nez-business-core-os",
+      "source": "./plugins/nez-business-core-os",
       "description": "The core NEZ OS skills for real estate agents: build your AI brain in Notion, get your next best step, and run your business across five pillars (Brain, Leads, Clients, Content, Growth) with Fair Housing guardrails built in.",
-      "version": "0.8.1",
+      "version": "0.9.0",
       "author": {
         "name": "Maria Nez AI"
       },

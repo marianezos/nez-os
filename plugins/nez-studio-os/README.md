@@ -1,10 +1,10 @@
-# nez-content
+# nez-studio-os
 
 **Pillar:** Content
 
-NEZ OS Content: content plans, hooks, Reels, carousels, listing pages, walkthrough videos and brand review, all in your voice. Reads the NEZ OS brain built by the nez-os plugin.
+NEZ OS Studio: content plans, hooks, Reels, carousels, listing pages, walkthrough videos and brand review, all in your voice. Reads the NEZ OS brain built by the nez-business-core-os plugin.
 
-Install the core `nez-os` plugin first: every NEZ OS plugin reads the brain it builds.
+Install the core `nez-business-core-os` plugin first: every NEZ OS plugin reads the brain it builds.
 
 | Skill | What it does | Status |
 | --- | --- | --- |
@@ -16,4 +16,4 @@ Install the core `nez-os` plugin first: every NEZ OS plugin reads the brain it b
 | `/nez-walkthrough-video` | Listing walkthrough videos from photos | Planned |
 | `/nez-brand-review` | Checks drafts against your voice and guardrails | Planned |
 
-This plugin is added to the marketplace when its first skill is live. `references/brain-rules.md` is an exact copy of the one in `nez-os`; keep them identical.
+This plugin is added to the marketplace when its first skill is live. `references/brain-rules.md` is an exact copy of the one in `nez-business-core-os`; keep them identical.

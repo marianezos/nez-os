@@ -11,7 +11,7 @@ Keep the agent moving. Read what they've finished, recommend the one most useful
 
 ## Core rules
 
-- **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-os` plugin folder, two levels up from this skill). Use its "Finding the brain" and "Read before you work" sections. This skill is read-only, so skip the saving and logging sections, including filling Page IDs.
+- **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Use its "Finding the brain" and "Read before you work" sections. This skill is read-only, so skip the saving and logging sections, including filling Page IDs.
 - **Read-only.** Never create, edit or delete anything in Notion.
 - **One recommendation.** Then two short alternatives. Never a long menu.
 - **Never ask questions to figure out progress.** If something is missing or unclear, treat that step as not done.

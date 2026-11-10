@@ -1,0 +1,13 @@
+# nez-tools-os
+
+**Pillar:** All pillars
+
+NEZ OS Tools: local connectors that let Claude work with GoHighLevel and other tools on your computer. Coming later.
+
+Install the core `nez-business-core-os` plugin first: every NEZ OS plugin reads the brain it builds.
+
+| Skill | What it does | Status |
+| --- | --- | --- |
+| `/nez-connector` | Installs and checks NEZ OS connectors | Planned |
+
+This plugin is added to the marketplace when its first skill is live. `references/brain-rules.md` is an exact copy of the one in `nez-business-core-os`; keep them identical.

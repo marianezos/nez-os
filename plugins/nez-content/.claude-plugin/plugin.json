@@ -1,8 +1,0 @@
-{
-  "name": "nez-content",
-  "description": "NEZ OS Content: content plans, hooks, Reels, carousels, listing pages, walkthrough videos and brand review, all in your voice. Reads the NEZ OS brain built by the nez-os plugin.",
-  "version": "0.1.0",
-  "author": {
-    "name": "Maria Nez AI"
-  }
-}
