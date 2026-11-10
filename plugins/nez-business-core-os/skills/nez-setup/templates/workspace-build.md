@@ -179,15 +179,21 @@ CREATE TABLE "Bottlenecks" (
 ```
 
 ### People (Your team & how you work) · people_db_id / people_ds_id
-Description: Your team and trusted partners: lenders, inspectors, title, attorneys and vendors. Include how each person likes to communicate.
+Description: You, your team and trusted partners: lenders, inspectors, title, attorneys and vendors. /nez-self adds each person's work style and how they like to be communicated with.
 ```sql
 CREATE TABLE "People" (
   "Name" TITLE,
-  "Role" SELECT('Team member':purple, 'Assistant':purple, 'Lender':blue, 'Title / escrow':green, 'Attorney':gray, 'Inspector':orange, 'Contractor / vendor':brown, 'Stager / photographer':pink, 'Referral partner':yellow),
+  "Role" SELECT('Me':red, 'Team member':purple, 'Assistant':purple, 'Lender':blue, 'Title / escrow':green, 'Attorney':gray, 'Inspector':orange, 'Contractor / vendor':brown, 'Stager / photographer':pink, 'Referral partner':yellow),
   "Company" RICH_TEXT,
   "Phone" PHONE_NUMBER,
   "Email" EMAIL,
   "Best Way to Reach" SELECT('Text':green, 'Call':blue, 'Email':gray),
+  "Reports To" RICH_TEXT,
+  "Personality" RICH_TEXT,
+  "Communication Tips" RICH_TEXT COMMENT 'Length, format, detail, directness, what to lead with',
+  "Profile Source" SELECT('Own answers':green, 'Estimated':yellow),
+  "Profile Date" DATE,
+  "Status" SELECT('Active':green, 'Waiting for answers':yellow, 'Former':gray),
   "Notes" RICH_TEXT
 )
 ```

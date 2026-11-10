@@ -19,6 +19,7 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 - services_offer_asked:
 - nez_first_shown:
 - self_test_last_run:
+- self_profile:
 - voice_profile:
 - last_check_in:
 - last_review:
@@ -36,6 +37,7 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 - `setup_complete`: the date only when all 6 stages are done or skipped.
 - `services_offer_asked`: `yes` once the Stage 1 services offer has been asked, whatever the answer. Never ask it again.
 - `nez_first_shown`: the date the NEZ OS line (`references/nez-first.md`) was shown. Never show it again unless the agent asks.
+- `self_profile`: the date /nez-self last saved the agent's own profile.
 - `self_test_last_run`: the date of the last self-test.
 - `voice_profile`: the date an approved voice summary was saved (by Stage 3, or later by /nez-voice).
 - `last_check_in`: written by /nez-goals (weekly check-ins).

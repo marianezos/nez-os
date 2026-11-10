@@ -58,6 +58,20 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Everything else | "see Software Stack" (Stage 1 B8) |
 | How I work | Hours I work and hours I protect | Stage 1 B9 |
 | | Best way for clients to reach me | Stage 1 B10 |
+| My personality | Work style | /nez-self Step 3 |
+| | How I decide | /nez-self |
+| | How I like information | /nez-self (length, format, detail, directness, what to lead with) |
+| | How I take feedback | /nez-self |
+| | What drives me | /nez-self |
+| | What drains me | /nez-self |
+| | When I'm stressed | /nez-self |
+| | My energy | /nez-self |
+| | Content strengths and challenge | /nez-self |
+| | Success beyond the numbers | /nez-self |
+| | Biggest thing holding me back | /nez-self |
+| | Other results I shared | /nez-self (DISC, Enneagram and so on, or "none") |
+| | How my AI should work with me | /nez-self (3 to 5 short instructions) |
+| | Profile source and date | /nez-self |
 | My goals this year | My 12-month goal in my words | Stage 4 Q1 |
 | | Income goal | Stage 4 Q2 |
 | | Number of closings | Stage 4 math |
@@ -86,4 +100,5 @@ Heading `## Page IDs`, a gray 🤖 callout explaining `_db_id` and `_ds_id`, the
 | Each objection | Objection Bank (one row per objection) |
 | Reviews and results | Proof |
 | Lasting preferences and corrections | AI Memory |
+| Teammates' work styles and communication tips | People |
 | Decisions and why | Decisions Log |

@@ -80,7 +80,7 @@ The questions for every stage are in `industries/real-estate.md`. Stages 2 to 6 
 5. **Save.** Fetch the page or database first, then fill in the matching lines under the matching headings (`templates/master-profile.md` lists every Master Profile line). Keep every heading, callout and label exactly as it is; never rewrite a whole page. For databases, use the exact property names and existing select options; if nothing fits, leave the select empty. Then set the stage's line in Setup Status to today's date (`YYYY-MM-DD`).
 6. **Say where it's saved.** For example: "Saved to your Compliance Guardrails in your NEZ OS brain. To change it any time, run /nez-setup and choose Update something."
 7. **After Stage 1 only:** if `nez_first_shown` in Setup Status is blank, follow `references/nez-first.md` once (the line that makes NEZ OS skills the default), then continue.
-8. **Next step.** Recommend ONE next step: the next unfinished stage in the table. Never push. After Stage 2 or Stage 3, also offer the self-test: "Want a two-minute test to see how well I use your brain?"
+8. **Next step.** Recommend ONE next step: the next unfinished stage in the table. Exception: after Stage 3, if `self_profile` is blank, recommend /nez-self first (about 10 minutes), then come back for Stage 4. Never push. After Stage 2 or Stage 3, also offer the self-test: "Want a two-minute test to see how well I use your brain?"
 
 ## Step 5: Finish
 

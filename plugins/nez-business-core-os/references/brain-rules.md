@@ -19,7 +19,7 @@ If a skill's own instructions conflict with these rules, these rules win.
 Read in this order, and only what the job needs:
 
 1. **Brain Index:** the map of where everything lives.
-2. **Master Profile:** who the agent is, their market, clients, brand and goals.
+2. **Master Profile:** who the agent is, their market, clients, brand and goals. Its **My personality** section tells you how they like to work: use it to shape the structure of what you give them (length, order, detail, how many options, whether to recommend one), never the facts or the rules, and never mention it in anything a client sees.
 3. **Compliance Guardrails** and **Voice Library:** always, before writing anything a client or the public will see.
 4. **The SOP for this job**, if one exists in SOPs.
 5. **AI Memory:** rows with Status "Active" for the Area you're working in, plus "General".

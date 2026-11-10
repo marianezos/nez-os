@@ -18,16 +18,17 @@ The order /nez-next walks agents through. Walk top to bottom and recommend the f
 | 1 | Foundation | Core profile | /nez-setup | live | `stage_1_core_profile` has a date | Create My NEZ OS Master Profile |
 | 2 | Foundation | Compliance | /nez-setup | live | `stage_2_compliance` has a date | Compliance Guardrails for Every Draft |
 | 3 | Foundation | Voice and edge | /nez-setup | live | `stage_3_voice_and_edge` has a date, or Voice Library has real content | Teach AI How I Actually Talk |
-| 4 | Foundation | Goals | /nez-setup | live | `stage_4_goals` has a date | My One-Page Business Plan |
-| 5 | Foundation | Objection bank | /nez-setup | live | `stage_5_objection_bank` has a date, or the Objection Bank has at least 3 rows with Status Testing or Works | (none: run /nez-setup) |
-| 6 | Foundation | Market areas | /nez-setup | live | `stage_6_market_areas` has a date, or Market Areas has at least 1 row | (none: run /nez-setup) |
-| 7 | Foundation | Setup self-test | /nez-setup | live | `self_test_last_run` has a date | (none: run /nez-setup and choose the self-test) |
-| 8 | Plan | Weekly rhythm | /nez-goals | vault | `last_check_in` has a date | Friday Weekly Review |
-| 9 | Clients | Texting approval | /nez-a2p | vault | Software Stack lists a CRM and the agent has said texting is approved (Decisions Log row mentioning A2P or texting approval) | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
-| 10 | Leads | Your lead magnet | /nez-lead-magnet | vault | Marketing Hub has a row with Type "Lead magnet" | Find My Best Lead Magnet |
-| 11 | Growth | Set up your advisory board | /nez-advisor | live | Advisory Board has at least 1 Active row | (none: run /nez-advisor) |
-| 12 | Growth | Meet your advisory board | /nez-board | live | Board Meetings has at least 1 row | (none: run /nez-board) |
-| 13 | Content | Your first content week | /nez-content | vault | Content Planner has at least 3 rows with a Publish Date | Plan My Week of Content |
+| 4 | Foundation | Your personality and work style | /nez-self | live | `self_profile` has a date, or the Master Profile's Work style line is filled in | (none: run /nez-self) |
+| 5 | Foundation | Goals | /nez-setup | live | `stage_4_goals` has a date | My One-Page Business Plan |
+| 6 | Foundation | Objection bank | /nez-setup | live | `stage_5_objection_bank` has a date, or the Objection Bank has at least 3 rows with Status Testing or Works | (none: run /nez-setup) |
+| 7 | Foundation | Market areas | /nez-setup | live | `stage_6_market_areas` has a date, or Market Areas has at least 1 row | (none: run /nez-setup) |
+| 8 | Foundation | Setup self-test | /nez-setup | live | `self_test_last_run` has a date | (none: run /nez-setup and choose the self-test) |
+| 9 | Plan | Weekly rhythm | /nez-goals | vault | `last_check_in` has a date | Friday Weekly Review |
+| 10 | Clients | Texting approval | /nez-a2p | vault | Software Stack lists a CRM and the agent has said texting is approved (Decisions Log row mentioning A2P or texting approval) | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
+| 11 | Leads | Your lead magnet | /nez-lead-magnet | vault | Marketing Hub has a row with Type "Lead magnet" | Find My Best Lead Magnet |
+| 12 | Growth | Set up your advisory board | /nez-advisor | live | Advisory Board has at least 1 Active row | (none: run /nez-advisor) |
+| 13 | Growth | Meet your advisory board | /nez-board | live | Board Meetings has at least 1 row | (none: run /nez-board) |
+| 14 | Content | Your first content week | /nez-content | vault | Content Planner has at least 3 rows with a Publish Date | Plan My Week of Content |
 
 ## Upkeep (when the path is done)
 
