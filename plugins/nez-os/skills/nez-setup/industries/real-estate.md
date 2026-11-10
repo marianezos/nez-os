@@ -143,11 +143,18 @@ Say first: "Last group, and it's optional. Say 'skip' on anything and we'll come
    **Saves to:** Colors.
 4. "Any fonts you use in your marketing? It's fine if you're not sure."
    **Saves to:** Fonts.
-5. **Services offer** *(ask at most once ever: skip it if `services_offer_asked` in Setup Status has any value).* First ask: "Do you already have a designer, an agency or a systems person who handles your brand and CRM?" If yes, write "no" under Interested in branding or systems help, set `services_offer_asked: yes`, and move on. If no, say:
-   > "If you ever want hands-on help with your brand or your CRM setup, the Maria Nez AI team builds these for agents. Ask in the NEZ OS community and we'll send you the options. Want me to note that you're interested?
+5. **Services offer** *(ask at most once ever: skip it if `services_offer_asked` in Setup Status has any value).* First ask: "Do you already have someone who handles your CRM, website and marketing systems for you?" If yes, write "no" under Interested in branding or systems help, set `services_offer_asked: yes`, and move on. If no, pick the one or two services that fit their answers best, lead with them, and mention the rest in one line:
+   - CRM answered "barely" or "basics", or no CRM yet → **GoHighLevel setup:** pipelines, automations and follow-up built for them.
+   - Uses GoHighLevel or wants to text their database → **Texting approval (A2P):** registration and website fixes so texts get approved the first time.
+   - No website, or branding is B, C or D → **Website or area guide site.**
+   - Lead sources are mostly sphere or referrals, or they want more online leads → **Lead magnet funnel** with comment-to-DM delivery.
+   - Felt setup was a lot, or asks for help → **Done-for-you NEZ OS setup:** we fill in your brain with you.
+
+   Then say, for example:
+   > "If you ever want this done for you, the Maria Nez AI team builds [the one or two that fit] for agents. We also do [the others, in a few words]. Ask in the NEZ OS community and we'll send you the options. Want me to note what you're interested in?
    > A) Yes, note it
    > B) No thanks"
-   **Saves to:** Interested in branding or systems help (yes / no). Set `services_offer_asked: yes` either way.
+   **Saves to:** Interested in branding or systems help: the services they want noted, or "no". Set `services_offer_asked: yes` either way. Never repeat the offer in later stages or skills.
 
 → **Save Group D.** Setup Status: `stage_1_core_profile: <today's date>`. Stage 1 is done.
 
