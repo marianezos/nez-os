@@ -279,7 +279,7 @@ Fetch the Master Profile and fill the **My personality** lines (see `../nez-setu
 
 Then:
 1. Add an **AI Memory** row: Memory "How to work with me", Type Preference, Area General, Applies To "All NEZ OS skills", Details = the "How my AI should work with me" lines, Saved By Claude, Status Active, Date today. If an Active row with that name exists, set it to Replaced first.
-2. Create or update their own row in **People** (Role "Me", Profile Source "Own answers", Status Active, Personality and Communication Tips filled in from the above), with its page per `templates/person-page.md`.
+2. Create or update their own row in **People** per Step 5 of `references/teammates.md` (Role "Me", Human or AI "Human", Profile Source "Own answers", Status Active, Personality, Other Results and Communication Tips from the above), with its page per `templates/person-page.md`.
 3. Set `self_profile` in Setup Status to today's date.
 
 ## Step 6: Next step

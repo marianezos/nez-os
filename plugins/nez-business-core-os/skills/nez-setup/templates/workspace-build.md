@@ -194,6 +194,8 @@ CREATE TABLE "People" (
   "Profile Source" SELECT('Own answers':green, 'Estimated':yellow),
   "Profile Date" DATE,
   "Status" SELECT('Active':green, 'Waiting for answers':yellow, 'Former':gray),
+  "Human or AI" SELECT('Human':blue, 'AI':purple),
+  "Other Results" RICH_TEXT COMMENT 'Test results the person chose to share, or Not shared. Never birth details',
   "Notes" RICH_TEXT
 )
 ```

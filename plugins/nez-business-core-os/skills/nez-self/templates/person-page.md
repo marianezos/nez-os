@@ -17,6 +17,6 @@ The six Communication Tips lines: length, format, lead with, directness, detail,
 1 to 2 kind bullets on what drains them or slows them down, and how to help.
 
 ## Other results
-Any test they chose to share (for example "Enneagram 2" or "Human Design: Projector, Splenic"), or "Not shared."
+Same as the Other Results field: any test they chose to share (for example "Enneagram 2" or "Human Design: Projector, Splenic"), or "Not shared."
 
-For the agent's own row ("Me"), copy the summary from the Master Profile's My personality section and add: "Full profile: Master Profile, My personality."
+For the agent's own row ("Me"), copy the summary from the Master Profile's My personality section and add a link: "Full profile: Master Profile, My personality."
