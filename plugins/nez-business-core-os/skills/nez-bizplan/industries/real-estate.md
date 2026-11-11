@@ -82,6 +82,8 @@ Take one typical deal at their average GCI per deal. Show a short table in the o
 Fix it until they say yes. Save the confirmed order in plain words.
 **Saves to:** Deal walk-through (confirmed), and Take-home per deal (before cap / after cap)
 
+Also write a one-line summary of their pay structure (for example "80/20 to a \$20,000 cap, \$395 per deal, 6% royalty capped at \$3,000") on the **My split / fees** line of Business Plan & Goals.
+
 - "None" is zero. "Not sure" is not counted: write "not counted, you weren't sure" in the table and in the plan.
 - Never guess how a fee relates to the cap or to another fee. Ask.
 
@@ -161,13 +163,18 @@ If a milestone or award was given, show its math the same way, labeled "as you t
 
 ---
 
-## What each plan section adds for real estate
+## The plan sections for real estate
 
-- **Snapshot:** brokerage, years licensed, client types, specialty.
-- **Where you stand:** last year vs this year so far, both funnel rates, and the diagnosis. If the market is the issue, use **What my market is doing right now**.
-- **Your target and the math:** the deal walk-through table, take-home before and after the cap, and the per year, month and week table. This also fills the math table on Business Plan & Goals.
-- **Your lead engine:** fit to their client types. Sphere and past clients first if they have them; if they're new to their market, say so and lean on open houses, a lead magnet, local content and a Google Business Profile. Respect texting consent: never plan text campaigns to their database without documented consent.
-- **Your marketing plan:** tied to their Google Business Profile status, posting frequency, YouTube line and the marketing they picked. Fair Housing safe: areas and homes, never who belongs there. Housing ads use the Housing special ad category.
-- **Your conversion system:** speed to lead, follow-up in their CRM, their consultation, buyer and listing agreements, their Objection Bank answers marked Works.
-- **Your 90-day roadmap:** a conversion problem goes first and holds paid ads to Month 3. Name NEZ OS skills or Vault prompts for each action.
-- **What success looks like:** their success beyond the numbers and their good month, connected to the closings per week.
+Write the 9 sections in `../references/plan-sections.md`, in order, tailored to their client types and the pay structure they confirmed:
+
+1. **Agent snapshot:** who they are in 4 to 6 lines: name, brokerage, how they run their business (solo, team, team leader), years licensed, main market, client types, specialty, brand. Second person, specific to their brain.
+2. **Where you stand:** an honest look at last year and this year so far (closings, volume, GCI), both funnel rates (lead to agreement, agreement to close) and the diagnosis in one plain sentence: lead problem, conversion problem or market problem. If it's the market, use **What my market is doing right now**. One line on what's working that they should keep doing. No fluff.
+3. **Your target and the math:** the goal turned into weekly activity using their full pay structure (split, cap, per-deal fees, after-cap terms, royalty, monthly fees, team split, referral fees, outside costs). Show the deal walk-through table, take-home per deal before and after the cap, which deal reaches the cap, then deals, agreements, appointments, conversations and leads, per year, month and week. If they gave a milestone or award, show its math using only what they told you, labeled "as you told me." If the period is the rest of the year, subtract what's done. Every number labeled with where it came from. This also fills the math table on Business Plan & Goals.
+4. **Your lead engine:** built from their top lead source and the one they want to grow, fit to their client types, time, budget and boundaries. Sphere and past clients first if they have them in their market; if they're new to their market or have no sphere there, say so and lean on open houses, a lead magnet, local content and a Google Business Profile. Never plan text campaigns to their database without documented texting consent.
+5. **Your marketing plan:** from the marketing they picked, their Google Business Profile status, how often they post, paid ads and their YouTube line. Which platforms to focus on, how often to post, and 2 or 3 quick wins for the first 30 days. Fair Housing safe (homes and areas, never who belongs there), the disclosure line on everything public, and the Housing special ad category for Facebook and Instagram ads.
+6. **Your conversion system:** from their funnel numbers and how they use their CRM. Specific fixes for lead to appointment (speed to lead, follow-up in their CRM), appointment to agreement (their consultation, buyer and listing agreements, answers marked Works in their Objection Bank, their Client FAQs) and agreement to close.
+7. **Your 90-day roadmap:** Month 1, Month 2, Month 3, each with 3 to 5 specific actions (what, how many, by when), not general advice. What to do first, what to build next, what to improve last. A conversion problem goes first and holds paid ads to Month 3. Respect their biggest blocker (3 priorities if they take on too much) and their boundaries. Name the NEZ OS skill or Vault prompt that helps with each action.
+8. **Your biggest opportunity:** one clear insight, a short paragraph, about the biggest thing they're not using yet, based on all their numbers and their brain. For example: a source that converts well but gets little time, past clients they never follow up with, a client type they serve well but don't market to, or an area they know better than anyone. Make it specific to them, never a generic tip.
+9. **What success looks like:** their success beyond the numbers (from /nez-self), what a good month looks like and their 12-month goal, in their own words. Connect the closings per week to what they actually want. End on that, not on a number.
+
+**Tone by work style** (from My personality): a Driver gets it direct and punchy, numbers and actions first. A Connector gets the vision and the people first, with energy and stories. A Steady gets it calm and reassuring, step by step, relationship first. A Planner gets the data, the detail and the reasons.
