@@ -14,6 +14,18 @@ Turn real samples of how a person writes and talks into a skill that writes like
 
 Every NEZ OS writing skill can then use that voice. It works for the agent's own voice, a teammate's (an assistant who answers texts, a team member who posts), or a client or brand. An agent can have as many voices as they want.
 
+## What it covers
+
+- **Who:** the agent's own voice, a teammate's (an assistant who answers texts, a team member who posts), or a client or brand. As many voices as they want.
+- **Looks first:** reads the Master Profile, the Voice Library page from setup Stage 3, the My personality section from /nez-self, and the Voices database, and never re-asks what's already there.
+- **Real samples:** emails, texts, social posts and captions, listing descriptions, blogs and newsletters they wrote, plus video, podcast or voice memo transcripts. Pasted, uploaded, or read from their sent email (read only, with their OK).
+- **Interview:** up to four questions at a time, only what the samples didn't answer, with what it noticed shown as statements they can correct.
+- **Voice guide:** about 600 to 900 words: tone, rhythm, words, greetings and sign-offs, phrases, humor, emoji, formality by audience, stories, never-say list, do and don't, channel notes, and example lines with private details removed.
+- **Test round:** an email, a text and a post, rated and edited until they say "that's me."
+- **Saves:** a Voices entry in the NEZ OS brain (the live guide), an installable skill with a built-in snapshot, and a downloadable backup file with install steps. The agent's own first voice can become their default.
+- **Keeps learning:** saves lessons from their edits (with their OK), and later folds them into a new version of the voice.
+- **Safe by design:** never invents stories, results or quotes, never keeps private details, never changes a voice without their OK, and never overrides compliance, Fair Housing or disclosure rules.
+
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (two levels up from this skill). Follow it for finding the brain, where things go, never making a second copy, and logging.
