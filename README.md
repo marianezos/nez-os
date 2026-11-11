@@ -43,7 +43,7 @@ One marketplace, one plugin per pillar. Every plugin reads the same brain, so in
 | `/nez-bizplan` | Builds your business plan from your real numbers: your exact split and fees, the math step by step, an honest diagnosis and a 90-day roadmap. | Live |
 | `/nez-review` | Reviews how your business is doing against your plan: plan vs actual, by client type and lead source, take-home with your exact fees, the one bottleneck and up to 3 adjustments. | Live |
 | `/nez-brand` | Builds your brand: colors, fonts, logo direction and a simple brand guide saved to your brain. | Coming soon |
-| `/nez-goals` | Turns your income goal into a weekly plan with check-ins. | Coming soon |
+| `/nez-goals` | Turns your business plan into this quarter's targets and a 13-week plan, then keeps you on track with a 10-minute weekly check-in. | Live |
 | `/nez-a2p` | Gets your GoHighLevel texting approved the first time. | Coming soon |
 | `/nez-content` | Plans and drafts your content in your voice. | Coming soon |
 

@@ -25,7 +25,7 @@ The order /nez-next walks agents through. Walk top to bottom and recommend the f
 | 8 | Foundation | Market areas | /nez-setup | nez-business-core-os | live | `stage_6_market_areas` has a date, or Market Areas has at least 1 row | Real local detail for listings and content | (none: run /nez-setup) |
 | 9 | Foundation | Setup self-test | /nez-setup | nez-business-core-os | live | `self_test_last_run` has a date | Shows your AI using your brain and what's still missing | (none: run /nez-setup and choose the self-test) |
 | 10 | Plan | Your business plan | /nez-bizplan | nez-business-core-os | live | My business numbers has a Last plan date | Your exact split and fees, the real math, what's holding you back, and a 90-day roadmap | My One-Page Business Plan |
-| 11 | Plan | Weekly rhythm | /nez-goals | nez-business-core-os | vault | `last_check_in` has a date | A 10-minute weekly check-in keeps the plan alive | Friday Weekly Review |
+| 11 | Plan | Your quarter and weekly check-ins | /nez-goals | nez-business-core-os | live | Current quarter in My business numbers matches this quarter, and `last_check_in` has a date | Turns your plan into this quarter's targets, a 13-week plan, and a 10-minute weekly check-in | Friday Weekly Review |
 | 12 | Clients | Texting approval | /nez-a2p | nez-real-estate-os | vault | A Decisions Log row mentions A2P or texting approval | Texts to your database actually get delivered | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
 | 13 | Leads | Your lead magnet | /nez-lead-magnet | nez-marketing-os | vault | Marketing Hub has a row with Type "Lead magnet" | A reason for strangers to give you their contact info | Find My Best Lead Magnet |
 | 14 | Growth | Set up your advisory board | /nez-advisor | nez-business-core-os | live | Advisory Board has at least 1 Active row | A board that reads your business for every big decision | (none: run /nez-advisor) |
@@ -48,6 +48,7 @@ Recommend the first one that applies. A rule that names a skill applies only if 
 | --- | --- | --- |
 | A Board Meetings row has a Follow-up date that has passed and Outcome "Not reviewed" | Check how that decision turned out (/nez-board) | (none) |
 | `last_check_in` is more than 7 days ago | Weekly check-in (/nez-goals) | Friday Weekly Review |
+| A new quarter started and Quarterly Goals has no section for it | Set up next quarter (/nez-goals, option C) | Friday Weekly Review |
 | The CRM is GoHighLevel and no Decisions Log or Marketing Hub row shows a CRM map | Map your CRM pipeline and automations (/nez-crm) | (none) |
 | `last_review` is empty or more than 30 days ago and there have been at least 2 weekly check-ins, or the quarter ends within 14 days and there is no review this quarter | Business review against your plan (/nez-review) | Friday Weekly Review |
 | Content Planner has nothing with a Publish Date in the next 14 days | Plan content (/nez-content) | Plan My Week of Content |

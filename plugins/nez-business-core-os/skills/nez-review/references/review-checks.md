@@ -5,7 +5,7 @@ Used by `SKILL.md`. These rules keep every review honest and the same from one r
 ## 1. What data a review can use
 
 - **The plan:** a quarter plan from /nez-goals if one exists. Otherwise the weekly and monthly numbers in the math table on Business Plan & Goals, and This quarter's target closings, labeled (your plan, spread evenly by week).
-- **Actuals:** the lines under Weekly check-ins on Business Plan & Goals, Closed rows in Clients & Deals (Key Date in the timeframe, confirmed with the agent), and anything the agent gives during the review. Never rewrite a past check-in.
+- **Actuals:** the check-in log in the quarter's section on Quarterly Goals (from /nez-goals), any hand-written lines under Weekly check-ins on Business Plan & Goals, Closed rows in Clients & Deals (Key Date in the timeframe, confirmed with the agent), and anything the agent gives during the review. Never rewrite a past check-in.
 - **In progress:** Under contract rows in Clients & Deals, shown as "not counted yet."
 - **By client type:** check-in lines that name a type, and the Type on Closed deals. Everything else is a gap.
 - **By lead source:** check-in lines with a source tally (written as `Sources: Sphere 4, Open house 2`), the Lead Source on Clients & Deals rows, or rough counts the agent gives now, labeled (your estimate).

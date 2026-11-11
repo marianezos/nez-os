@@ -45,10 +45,11 @@ Read:
 - **Master Profile:** My business numbers (every line), Client types I work with, Where my business comes from, My boundaries, My personality.
 - **Business Plan & Goals** (`business_plan_page_id`): The big picture, The math table (per week and per month), Top lead sources, This quarter, My business plan (its date), and Weekly check-ins.
 - **Clients & Deals** (`clients_deals_ds_id`): rows with Stage Closed or Under contract, with Type, Price, Key Date and Lead Source.
+- **Quarterly Goals** (`quarterly_goals_page_id`, from /nez-goals): the quarter sections, each with its targets, weekly plan and check-in log.
 - **Business Reviews** (`business_reviews_page_id`): earlier reviews, so a rerun of the same period replaces its own section.
 - **Setup Status:** `last_check_in` and `last_review`.
 
-If a quarter plan from /nez-goals exists (a weekly plan for this quarter), use it as the plan. Otherwise the plan comes from the business plan's weekly numbers, labeled (your plan, spread evenly by week).
+If a quarter plan from /nez-goals exists (a section on Quarterly Goals for the timeframe), use its weekly plan and check-in log. Otherwise the plan comes from the business plan's weekly numbers, labeled (your plan, spread evenly by week).
 
 **No plan yet** (My business numbers has no Last plan date and the math table is empty): say "I review your results against your plan, and you don't have one yet. Run /nez-bizplan first (about 15 minutes), then come back." Stop. Don't run a mini plan here.
 
@@ -126,7 +127,7 @@ If the plan itself no longer fits (way behind with too little time left, or way 
 ## Step 10: Save
 
 1. **Business Reviews page:** write the review with `templates/review-page.md` as one section at the top (newest first). A rerun of the same period replaces only that section. If the page is missing, search the brain once for "Business Reviews." If it truly doesn't exist, ask once: "Your Business Reviews page isn't in your brain yet. Want me to add it inside your Business Plan & Goals page?" Write nothing until they say yes, then create it per `../nez-setup/templates/workspace-build.md` and save its ID in Page IDs.
-2. **Business Plan & Goals:** keep exactly one **Latest review:** line in This quarter, pointing to the new section with the date. Touch nothing else on that page.
+2. **Link it:** keep exactly one **Latest review:** line in This quarter on Business Plan & Goals, and, if the reviewed quarter has a section on Quarterly Goals, the same line in that section's Review part (for a year to date review, the current quarter's section). Each points to the new review with the date. Touch nothing else on those pages.
 3. **Master Profile:** in My business numbers, update **Last review date** (today), **Review period** (for example 2026 Q4 so far) and **Lead source spend** if you asked. In Setup Status, set `last_review` to today.
 4. Tell the agent in plain words what you saved and where.
 

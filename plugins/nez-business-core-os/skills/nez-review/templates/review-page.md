@@ -21,7 +21,7 @@ A heading 2 with the period and the review date, for example **2026 Q4 so far (r
 
 In the This quarter section, keep exactly one line:
 `Latest review: <link to the review section> (reviewed <date>)`
-Replace it on each new review. Touch nothing else on that page.
+Replace it on each new review. If the reviewed quarter has a section on the Quarterly Goals page, keep the same single line in its Review part. Touch nothing else on either page.
 
 ## Rules
 
