@@ -18,6 +18,7 @@ Give the agent an honest, clear look at how their business is doing against thei
 - **By client type and by lead source:** which type and which source is ahead or behind, the rate from lead to close per source, and cost per closing when spend is known. Small samples are called "too few to tell."
 - **Take-home:** the actual closings walked through their exact split, cap, fees and royalty, in the order they confirmed, next to the plan.
 - **What the numbers say:** up to three things working, three not, one bottleneck, and a keep, fix or drop list.
+- **Since your last review:** on every review after the first, it starts with the adjustments agreed last time: did they happen, and what did the number they were watching do? Follow-through gets credit, and anything that didn't happen gets a reason, not a repeat.
 - **Up to three adjustments,** each with the number behind it and what to watch next week. It never changes goals; that's /nez-bizplan or /nez-goals.
 - **Saves:** one section on the Business Reviews page (newest first, a rerun replaces its own section), a Latest review link on Business Plan & Goals, and the review date on the Master Profile.
 
@@ -66,6 +67,22 @@ Follow `references/review-checks.md` sections 1 and 2. Count the check-ins in th
 
 **Clients & Deals check:** show the closings you found ("I see 3 closings in this timeframe: [Type, month, price]. Is that all of them?"). Add any they name to the review only; never add or change rows in Clients & Deals from this skill.
 
+## Step 3b: Since your last review
+
+Skip this step on the first review. Otherwise open the most recent earlier review on the Business Reviews page (not the section this run is about to replace) and read its **Adjustments**.
+
+1. Show them in one short list: "Last time ([review date]) we agreed on: 1) ... 2) ... 3) ..."
+2. For each one, ask (one at a time, skippable):
+   > "Did this happen?
+   > A) Yes
+   > B) Partly
+   > C) Not yet"
+3. For each, show the number it said to watch, then and now, from this review's data (label the source). Say plainly whether it moved.
+4. **Done and the number moved:** call it a win and carry it into What's working.
+   **Done but the number didn't move:** say so; it may need more time or a different fix. Look at it in Step 8.
+   **Partly or not yet:** ask once, "What got in the way?" with short options: A) Ran out of time B) Wasn't sure how C) Changed my mind D) Something else. Use the answer: no time points to the time check, not sure how points to a skill or Vault prompt, changed my mind means offer to log it in the Decisions Log and drop it. Never repeat the same adjustment word for word without addressing why it didn't happen.
+5. Keep it short: one or two lines per adjustment. No guilt, no lecture: it's information for this review.
+
 ## Step 4: Plan vs actual
 
 Show each step on its own line with their numbers.
@@ -102,7 +119,7 @@ Follow the take-home steps in the industry file, using only the pay structure in
 
 ## Step 9: Adjustments
 
-Up to three (one or two if they tend to take on too much). Each one: what to change, why (the number behind it), and what to watch next week. Check each against **Hours per week for finding business** and My boundaries, and say plainly if one doesn't fit. Point to the NEZ OS skill or Vault prompt that helps where one exists (for example the Objection Bank for a conversion drop).
+Build on Step 3b: keep what worked, change the approach on what didn't move, and don't bring back an adjustment they decided to drop. Up to three (one or two if they tend to take on too much). Each one: what to change, why (the number behind it), and what to watch next week. Check each against **Hours per week for finding business** and My boundaries, and say plainly if one doesn't fit. Point to the NEZ OS skill or Vault prompt that helps where one exists (for example the Objection Bank for a conversion drop).
 
 If the plan itself no longer fits (way behind with too little time left, or way ahead), say so and suggest /nez-bizplan to update the plan or /nez-goals to revise the quarter. Never change goals here.
 
