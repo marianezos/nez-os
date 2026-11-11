@@ -24,7 +24,8 @@ Give the agent an honest, clear look at how their business is doing against thei
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (two levels up from this skill). Follow it for finding the brain, saving and logging.
-- **Never ask what the brain already has.** One question at a time, with short lettered lists so answers are quick. Any question can be skipped.
+- **Never ask what the brain already has.** One question at a time, with short lettered lists so answers are quick. Any question can be skipped. Match their language (Spanish if they write in Spanish).
+- **Missing a number the review needs?** Ask once, using the matching /nez-bizplan question, save it in My business numbers, and go on. This happens most with plans made before these lines existed: Time from first contact to closing, Hours per week for finding business, Pending deals now, My business mix. If they skip it, say what the review can't show without it.
 - **Never assume how they get paid.** Use only the pay structure saved by /nez-bizplan. If something is missing or unclear, ask once with the matching /nez-bizplan question, save it, and go on.
 - **Their plan, their numbers.** Compare actuals with their own plan. There are no targets per lead source, so compare sources with their own overall rates and their own ranking, and label that "from your own numbers."
 - **Label every number:** (your plan), (your check-ins), (Clients & Deals), (your estimate), (I asked you), or (I calculated this).
@@ -33,7 +34,7 @@ Give the agent an honest, clear look at how their business is doing against thei
 - **Fit it to them** (My personality): a **Driver** gets the numbers and the actions first, short. A **Connector** gets the wins first, with energy. A **Steady** gets steady progress first, calm and step by step. A **Planner** gets the data and the detail. If their biggest blocker is taking on too much, give one or two adjustments, never three.
 - **Write only where this skill writes:** the Business Reviews page, one link line on Business Plan & Goals, and three lines on the Master Profile. Never change goals, targets, the plan or past check-ins. Never create a database.
 - **Fair Housing safe:** a review is about numbers and activities, never about who lives where. Never rate an area.
-- **No em dashes,** anywhere: tables, headings and lists included.
+- **Write in their voice** if a default voice exists in the Voice Library: plain, the way they talk. **No em dashes,** anywhere: tables, headings and lists included.
 
 ## Step 1: Find the brain and read
 
@@ -44,6 +45,7 @@ Read:
 - **Business Plan & Goals** (`business_plan_page_id`): The big picture, The math table (per week and per month), Top lead sources, This quarter, My business plan (its date), and Weekly check-ins.
 - **Clients & Deals** (`clients_deals_ds_id`): rows with Stage Closed or Under contract, with Type, Price, Key Date and Lead Source.
 - **Business Reviews** (`business_reviews_page_id`): earlier reviews, so a rerun of the same period replaces its own section.
+- **Setup Status:** `last_check_in` and `last_review`.
 
 If a quarter plan from /nez-goals exists (a weekly plan for this quarter), use it as the plan. Otherwise the plan comes from the business plan's weekly numbers, labeled (your plan, spread evenly by week).
 
