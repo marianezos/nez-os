@@ -56,6 +56,9 @@ Read only what you need:
 - **Clients & Deals:** rows with Stage "Under contract" and their Key Date.
 - **Tasks:** rows not Done with a Due Date today or earlier.
 - **Bottlenecks:** rows Open with High impact.
+- **Inbox:** how many items are below the line.
+- **Open Questions:** rows with Status Open.
+- **Projects:** Active rows, their Due date and Next Step.
 - **Advisory Board and Board Meetings:** Active advisors, and meetings with a passed Follow-up date and Outcome "Not reviewed."
 
 ## Step 3: Choose the next step

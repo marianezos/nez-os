@@ -24,6 +24,7 @@ Read in this order, and only what the job needs:
 4. **The SOP for this job**, if one exists in SOPs.
 5. **AI Memory:** rows with Status "Active" for the Area you're working in, plus "General".
 6. **Decisions Log:** rows with "Still Active" checked that touch this job, so you never suggest something the agent already decided against.
+7. **Stories, Client FAQs and the Objection Bank** when you write anything a client or the public will see: use the agent's real stories (only rows marked Public in anything public), their approved answers, and their proof. Never invent a story, a result or an answer.
 
 ## 3. Where a new thing goes
 
@@ -33,6 +34,16 @@ Decide in this order:
 2. **It updates something on an existing page** (a new income goal, a new brokerage, a new rule): update that line in its section. Keep the heading and label; change only the value.
 3. **It's a new kind of thing that will keep coming up:** ask the agent first. If they agree, create ONE new database inside the NEZ OS Brain page with a clear title, an icon, a one-line description, a Status and a Date. Put it under the right section on the main page, add it to the Brain Index table, save both its IDs in Page IDs, and add it to the Dashboard's **Your workspace** list under the same section.
 4. **It's a one-time document** (an email, a landing page, an audit, a plan): add it as a row in Marketing Hub, never as a loose page at the top of the brain.
+5. **It's ongoing work with a goal and an end** (a website, a class, a new lead source, a listing launch) and it isn't in **Projects** yet: ask "Want me to set this up as a project?" On yes, add one Projects row (Status Active, Pillar, Goal, Next Step, Start) and link its Tasks to it. Never add a project without asking.
+6. **You don't know where it goes, or you're missing a fact you need:** don't guess. Ask once; if the agent can't answer now, add an **Open Questions** row (Question, Area, Status Open, Where It Goes, Found By, Date). When they answer later, save it where it belongs and set the row to Answered.
+
+## The Inbox
+
+The **Inbox** page (`inbox_page_id`) is where the agent drops anything: notes, links, transcripts, reviews, scripts, files. When they say "file my inbox" (or during a weekly review):
+1. Go through the items one at a time. For each, say where it belongs (which page or database, and which line) and what you'd add to the brain.
+2. Wait for their OK, then file it there and remove it from the Inbox.
+3. Something not needed? Ask whether to archive it (move it to a page called "Archive" under the Inbox). Never delete it.
+4. A review goes to Proof only if the agent confirms the client approved it. A story goes to Stories with "OK to Share" set by the agent. Never file passwords, Social Security numbers, bank details or other sensitive client information: tell the agent and leave it out.
 
 ## 4. Writing to Notion
 

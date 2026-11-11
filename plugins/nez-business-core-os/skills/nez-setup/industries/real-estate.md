@@ -83,6 +83,16 @@ The questions for every setup stage, for a real estate agent, team or broker. As
    **Saves to:** How I work, Hours I work and hours I protect.
 10. "What's the best way for clients to reach you: text, call or email?"
     **Saves to:** Best way for clients to reach me.
+11. "How do you want your AI to work with you? For example: always give me options, ask before you assume, keep it short."
+    **Saves to:** My boundaries, How I want AI to work with me.
+12. "Anything you don't do? Services, tasks or kinds of deals you'd rather refer out."
+    **Saves to:** Things I don't do.
+13. "Any situations you don't take on? Describe the situation, like 'rentals under 6 months' or 'out-of-state listings.'" *(Fair Housing: if they describe people, reword it to the situation with them.)*
+    **Saves to:** Clients or situations I don't take on.
+14. "When are you off limits? Days or hours your AI should never schedule or promise for you."
+    **Saves to:** When I'm off limits.
+15. "Anything your AI should never say or promise on your behalf?"
+    **Saves to:** Never say or promise for me.
 
 *Never ask for or save passwords or logins.*
 
@@ -108,19 +118,23 @@ Say first: "Now a few questions about your business. This is what lets me write 
    **Saves to:** Client types I work with (a list, in their order). *Every skill reads this list, and Stage 5 builds the Objection Bank from it, so make sure it's complete.*
 6. *(Skip if they picked one type.)* "Is one of those your specialty, or do you work with everyone about the same?"
    **Saves to:** My specialty (their words, or "general").
-7. "When clients first talk to you, what are they usually most worried about?"
+7. "What usually makes clients reach out to you? What's going on in their life right then?" *(Situations, never people.)*
+   **Saves to:** What makes them reach out for help.
+8. "When clients first talk to you, what are they usually most worried about?"
    **Saves to:** Their biggest worries.
-8. "What do they need to hear from you to feel confident?"
+9. "What do they need to hear from you to feel confident?"
    **Saves to:** What they need to hear from me.
-9. "Rank where your business comes from, biggest first: sphere and referrals, past clients, open houses, social media, YouTube, paid ads, online leads (Zillow, Realtor.com and so on), door knocking or cold calls, partners, or something else."
+10. "What are the 3 to 5 questions clients ask you most? Give me your usual answer for each, even if it's rough."
+   **Saves to:** **Client FAQs**: one row per question (Client Type, My Answer in their words, a one-line Short Version you write and they approve, Status Approved once they OK it, Last Updated today). Never invent an answer; if they're unsure, Status Draft.
+11. "Rank where your business comes from, biggest first: sphere and referrals, past clients, open houses, social media, YouTube, paid ads, online leads (Zillow, Realtor.com and so on), door knocking or cold calls, partners, or something else."
    **Saves to:** Where my business comes from (an ordered list).
-10. "Walk me through working with you as a **buyer**, from first call to keys."
+12. "Walk me through working with you as a **buyer**, from first call to keys."
     **Saves to:** Offers & Services, For buyers (What's included, My buyer process).
-11. "And as a **seller**: what's in your marketing, and what are the main steps?"
+13. "And as a **seller**: what's in your marketing, and what are the main steps?"
     **Saves to:** Offers & Services, For sellers (My listing marketing plan, What's included, My seller process).
-12. "Any programs you know really well? First-time buyer programs, down payment assistance, VA, FHA, and so on."
+14. "Any programs you know really well? First-time buyer programs, down payment assistance, VA, FHA, and so on."
     **Saves to:** Offers & Services, For buyers, Special programs I know well (or Other clients I serve if it's for investors, renters or relocation).
-13. "Do you offer any free guides, tools, classes or events?"
+15. "Do you offer any free guides, tools, classes or events?"
     **Saves to:** Offers & Services, Free resources I offer (each with its link) and Classes, events or workshops.
 
 *Never write promises or guarantees into Offers & Services. If they say "I'll sell your home in 30 days," save it as their goal or process, and say why in one sentence.*
@@ -212,7 +226,12 @@ Intro: "This is what makes my writing sound like you instead of any agent: who y
 4. "What three words would your best clients use to describe working with you?"
    **Saves to:** Three words clients use for me.
 5. "Tell me your story in a few sentences: where you started, a turning point, and why you do this now."
-   **Saves to:** My story in 3 sentences.
+   **Saves to:** My story in 3 sentences, and a **Stories** row (Type Origin) with the full story in their words on its page.
+6. "Tell me one client win you're proud of, and one lesson the business taught you. Leave out client names." *(Skippable. One at a time.)*
+   **Saves to:** **Stories**: one row each (Type Client win or Lesson), the story in their words on the page.
+7. "What do you believe about buying or selling a home that other agents might not say out loud?"
+   **Saves to:** **Stories** (Type Belief).
+   *For every story, ask: "OK to use this publicly, or conversations only?" and set OK to Share. Ask what it's best for (content, listing appointments, buyer consults, ads, bio, follow-up) and set Best For. Remove any client name, address or number.*
 
 → **Save Part 1.**
 
@@ -265,14 +284,18 @@ Intro: "Now we turn your goal into numbers you can actually track: closings, app
 
 1. "What's your goal for the next 12 months, in your own words? Deals, income, or a life goal."
    **Saves to:** Master Profile, My goals this year, My 12-month goal in my words.
-2. "What's your gross commission income goal for this year?"
-3. "Roughly what's your average sale price?"
-4. "Your average commission per side, as a percent or dollars?"
-5. "Your split and fees: brokerage split, cap, transaction fees?"
-6. "Do you know your conversion rates, like how many conversations it takes to get an appointment?" *(If not, use the estimates below and label them.)*
-7. "What do you want more of this year?"
-8. "And less of?"
-9. "What are your top 3 priorities this quarter?"
+2. "And your top 3 goals for the next 90 days? Tell me why each one matters."
+   **Saves to:** My top 3 goals for the next 90 days, and why.
+3. "What does a good month look like for you? Closings, appointments, time off, how you feel."
+   **Saves to:** What a good month looks like.
+4. "What's your gross commission income goal for this year?"
+5. "Roughly what's your average sale price?"
+6. "Your average commission per side, as a percent or dollars?"
+7. "Your split and fees: brokerage split, cap, transaction fees?"
+8. "Do you know your conversion rates, like how many conversations it takes to get an appointment?" *(If not, use the estimates below and label them.)*
+9. "What do you want more of this year?"
+10. "And less of?"
+11. "What are your top 3 priorities this quarter?" *(Skip if the 90-day goals already answer it; copy them into This quarter.)*
 
 **Do the math in the chat, step by step,** so they can check it:
 - Net per closing = average price × commission per side × (1 − split) − per-deal fees

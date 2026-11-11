@@ -53,6 +53,9 @@ Recommend the first one that applies. A rule that names a skill applies only if 
 | A video publishes in the next 7 days and its row has no Hook or script | Write the script (/nez-content) | Plan My Week of Content |
 | The newest Marketing Hub newsletter (Type Email, name includes "newsletter") is more than 35 days old | Send a newsletter (/nez-newsletter) | (none) |
 | The newest Marketing Hub "SEO audit" row is more than 90 days old, or the website changed | Run a site check (/nez-site-audit or /nez-seo) | (none) |
+| The Inbox has 3 or more items | File the inbox: say "file my inbox" (any NEZ OS skill can do it) | (none) |
+| Open Questions has 3 or more Open rows | Answer the top 3 open questions (name them) | (none) |
+| A Projects row is Active with a Due date that has passed, or no Next Step | Update that project: name it and ask for its next step | (none) |
 | A Bottlenecks row is Open with High impact | Work on that bottleneck: name it and suggest one first fix | (none) |
 | A Market Areas row has Data As Of older than 90 days, or no data at all | Refresh that area's numbers with a source and date | (none) |
 | Business Plan & Goals hasn't changed in 90 days, or a new quarter started | Update the plan (/nez-bizplan, or /nez-setup Stage 4 until it ships) | My One-Page Business Plan |
@@ -66,7 +69,7 @@ Show only skills in the agent's available skills, plus Vault prompts labeled "(V
 
 | Goal | Skills and prompts |
 | --- | --- |
-| Set up my brain | /nez-setup (profile, compliance, voice, goals, objections, areas, self-test), /nez-self (how I work best), /nez-voice (a voice skill for me, a teammate or a client) |
+| Set up my brain | "File my inbox," answer my open questions, /nez-setup (profile, compliance, voice, goals, objections, areas, self-test), /nez-self (how I work best), /nez-voice (a voice skill for me, a teammate or a client) |
 | Plan and hit my goals | /nez-bizplan, /nez-goals, /nez-review, /nez-dashboard, /nez-bottleneck · Vault: My One-Page Business Plan, Friday Weekly Review |
 | Make big decisions | /nez-advisor (build my board), /nez-board (bring it a decision) |
 | Get more leads | /nez-lead-magnet, /nez-funnel, /nez-dm-automation, /nez-ads, /nez-prospect · Vault: Find My Best Lead Magnet |

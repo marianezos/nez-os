@@ -24,6 +24,9 @@ The full voice guide from `../references/voice-guide.md`, without the Samples us
 ## Learned
 Dated bullets, one lesson each, added only with the agent's OK. Empty when the entry is created. Format: `- 2026-11-11: Never opens with "Hope you're well."`
 
+## Paste-ready instructions
+The full version and the short version from `../references/paste-ready.md`, each under its own small heading, ready to copy.
+
 ## Samples used
 Descriptions only: kind (email, text, post, transcript), approximate date, where it came from. Never the raw text, and no private details.
 

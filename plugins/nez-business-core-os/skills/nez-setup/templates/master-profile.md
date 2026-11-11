@@ -34,9 +34,10 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | My clients | Mostly buyers, sellers or both | Stage 1 C4 |
 | | Client types I work with | Stage 1 C5 (Stage 5 reads it) |
 | | My specialty | Stage 1 C6 |
-| | Their biggest worries | Stage 1 C7 |
-| | What they need to hear from me | Stage 1 C8 |
-| | Where my business comes from (biggest first) | Stage 1 C9 |
+| | What makes them reach out for help | Stage 1 C7 |
+| | Their biggest worries | Stage 1 C8 |
+| | What they need to hear from me | Stage 1 C9 |
+| | Where my business comes from (biggest first) | Stage 1 C11 |
 | My edge | Client situations I handle best | Stage 3 Part 1 Q1 |
 | | What I do that other agents don't | Stage 3 Part 1 Q2 |
 | | Proof point | Stage 3 Part 1 Q2 (`[ADD PROOF]` if none) |
@@ -58,6 +59,11 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Everything else | "see Software Stack" (Stage 1 B8) |
 | How I work | Hours I work and hours I protect | Stage 1 B9 |
 | | Best way for clients to reach me | Stage 1 B10 |
+| My boundaries | How I want AI to work with me | Stage 1 B11 |
+| | Things I don't do | Stage 1 B12 |
+| | Clients or situations I don't take on | Stage 1 B13 (situations, never people) |
+| | When I'm off limits | Stage 1 B14 |
+| | Never say or promise for me | Stage 1 B15 |
 | My personality | Work style | /nez-self Step 3 |
 | | How I decide | /nez-self |
 | | How I like information | /nez-self (length, format, detail, directness, what to lead with) |
@@ -75,10 +81,12 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Answer notes | /nez-self (two-letter answers, stronger one marked) |
 | | My People page | /nez-self (link to their own People row) |
 | My goals this year | My 12-month goal in my words | Stage 4 Q1 |
-| | Income goal | Stage 4 Q2 |
+| | My top 3 goals for the next 90 days, and why | Stage 4 Q2 |
+| | What a good month looks like | Stage 4 Q3 |
+| | Income goal | Stage 4 Q4 |
 | | Number of closings | Stage 4 math |
-| | What I want more of | Stage 4 Q7 |
-| | What I want less of | Stage 4 Q8 |
+| | What I want more of | Stage 4 Q9 |
+| | What I want less of | Stage 4 Q10 |
 | Required on all marketing | One fixed line: "My disclosure lines, required notices and brokerage rules live on the Compliance Guardrails page." | Template (never changes) |
 
 ## Setup Status
@@ -101,6 +109,11 @@ Heading `## Page IDs`, a gray 🤖 callout explaining `_db_id` and `_ds_id`, the
 | Each area | Market Areas (one row per area) |
 | Each objection | Objection Bank (one row per objection) |
 | Reviews and results | Proof |
+| Real stories (origin, client wins, lessons, beliefs) | Stories |
+| Questions clients ask most, and the answers | Client FAQs |
+| Ongoing work with a goal and an end | Projects |
+| Anything dropped in to file later | Inbox |
+| Gaps to fill later | Open Questions |
 | Lasting preferences and corrections | AI Memory |
 | Teammates' work styles and communication tips | People |
 | Decisions and why | Decisions Log |

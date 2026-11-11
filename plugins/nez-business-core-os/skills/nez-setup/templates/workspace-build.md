@@ -25,6 +25,7 @@ If this file and the Notion template ever disagree, the template wins; tell Mari
 | Getting Started | 🚀 | Start here | (none) | Template only. Never recreate; point to the Vault |
 | Brain Index | 🗂️ | Start here | brain_index_page_id | The "For AI" callout, the Where everything lives table (one row per page and database below), and the Rules for AI section from `../../../references/brain-rules.md` in short form |
 | Dashboard | 📊 | Start here | dashboard_page_id | The "For AI" callout, This week at a glance, Goal tracker, Open bottlenecks, and Your workspace (every page and database by section) |
+| Inbox | 📥 | Start here | inbox_page_id | The "For AI" callout (file items one at a time with the agent's OK, archive instead of delete, never file sensitive information), the "Drop anything here" callout, then a divider |
 | Master Profile | 👤 | 01 · Brain | master_profile_page_id | `master-profile.md` |
 | Voice Library | 🎙️ | 01 · Brain | voice_library_page_id | Headings in `voice.md`, plus a "My voice skills" section at the top (Default voice line) holding the Voices database |
 | Compliance Guardrails | 🛡️ | 01 · Brain | compliance_page_id | `compliance.md` |
@@ -50,6 +51,19 @@ CREATE TABLE "Proof" (
   "Date" DATE,
   "Approved to Use" CHECKBOX,
   "Source Link" URL
+)
+```
+
+### Stories (01 · Brain, after Proof) · stories_db_id / stories_ds_id
+Description: Your real stories: how you got started, client wins, lessons, what you believe. Your AI uses only these, never invented ones. Each row's page holds the story in your words, with client names removed.
+```sql
+CREATE TABLE "Stories" (
+  "Story" TITLE,
+  "Type" SELECT('Origin':purple, 'Client win':green, 'Lesson':blue, 'Belief':orange, 'Behind the scenes':gray),
+  "OK to Share" SELECT('Public':green, 'Conversations only':yellow),
+  "Best For" MULTI_SELECT('Content':pink, 'Listing appointments':orange, 'Buyer consults':blue, 'Ads':red, 'Bio and about page':purple, 'Follow-up':green),
+  "Date" DATE,
+  "Notes" RICH_TEXT
 )
 ```
 
@@ -148,6 +162,20 @@ CREATE TABLE "Objection Bank" (
 ```
 In build mode, Stage 5 fills it; no starter rows are needed.
 
+### Client FAQs (03 · Clients, after Objection Bank) · client_faqs_db_id / client_faqs_ds_id
+Description: The questions clients ask you most and your answers, by client type. Your AI uses them for content, follow-up, guides and chat replies.
+```sql
+CREATE TABLE "Client FAQs" (
+  "Question" TITLE,
+  "Client Type" SELECT('Seller':orange, 'Buyer':blue, 'Both':purple, 'First-time buyer':green, 'Investor':brown, 'Landlord':yellow, 'Renter':pink, 'Luxury':gray, 'New construction':red, 'Relocation':default, '55+ community':green, 'Commercial':brown, 'Land':yellow),
+  "My Answer" RICH_TEXT,
+  "Short Version" RICH_TEXT COMMENT 'One or two lines for a text or a caption',
+  "Status" SELECT('Draft':yellow, 'Approved':green, 'Retired':gray),
+  "Last Updated" DATE,
+  "Notes" RICH_TEXT
+)
+```
+
 ### Content Planner (04 · Content) · content_planner_db_id / content_planner_ds_id
 Description: Every piece of content from idea to published: social, video, blog, newsletter and Google Business Profile.
 ```sql
@@ -166,6 +194,21 @@ CREATE TABLE "Content Planner" (
 )
 ```
 
+### Projects (05 · Growth, after Business Plan & Goals) · projects_db_id / projects_ds_id
+Description: Ongoing work with a goal and an end, like a website, a class, a new lead source or a listing launch. Your AI asks before adding one, and links Tasks to it.
+```sql
+CREATE TABLE "Projects" (
+  "Project" TITLE,
+  "Status" STATUS('Idea':gray:to_do, 'Active':blue:in_progress, 'Paused':yellow:in_progress, 'Done':green:complete),
+  "Pillar" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange),
+  "Goal" RICH_TEXT,
+  "Next Step" RICH_TEXT,
+  "Start" DATE,
+  "Due" DATE
+)
+```
+After creating Projects (and Tasks), add the link on Tasks: `ADD COLUMN "Project" RELATION('<projects_ds_id>', DUAL 'Tasks')`.
+
 ### Tasks (05 · Growth) · tasks_db_id / tasks_ds_id
 Description: Your to-dos and your team's. Filter by priority or pillar to focus your day.
 ```sql
@@ -178,6 +221,7 @@ CREATE TABLE "Tasks" (
   "Owner" PEOPLE,
   "Notes" RICH_TEXT
 )
+-- then: "Project" RELATION to Projects, two-way, synced name 'Tasks'
 ```
 
 ### Bottlenecks (05 · Growth) · bottlenecks_db_id / bottlenecks_ds_id
@@ -265,6 +309,19 @@ CREATE TABLE "AI Memory" (
   "Details" RICH_TEXT,
   "Saved By" SELECT('Claude':orange, 'ChatGPT':green, 'Me':gray),
   "Status" SELECT('Active':green, 'Replaced':gray),
+  "Date" DATE
+)
+```
+
+### Open Questions (Memory, after AI Memory) · open_questions_db_id / open_questions_ds_id
+Description: Gaps in your brain your AI found and wants to fill. Answer them any time; your AI saves each answer where it belongs and marks the question Answered.
+```sql
+CREATE TABLE "Open Questions" (
+  "Question" TITLE,
+  "Area" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange, 'General':gray),
+  "Status" SELECT('Open':red, 'Answered':green),
+  "Where It Goes" RICH_TEXT COMMENT 'The page and line the answer belongs on',
+  "Found By" SELECT('Setup':blue, 'Self-test':purple, 'Weekly review':orange, 'Another skill':gray, 'Me':green),
   "Date" DATE
 )
 ```

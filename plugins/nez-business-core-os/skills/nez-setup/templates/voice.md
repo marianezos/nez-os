@@ -17,6 +17,7 @@ Fetch each page first and fill the lines under the existing headings. Keep every
 | How I sound, Length I like | Part 2 question 5 |
 | How I sound, Em dashes | Part 2 question 9 ("avoid" if skipped) |
 | How I sound, Spanish or other languages | Part 2 question 6 |
+| How I sound, Language rules | Part 2 question 6 (words they drop in, and where they never go) |
 | How I sound, How I open / How I close messages | from their samples, if they gave any |
 | Words and phrases I use | Part 2 question 7, plus phrases you spot in their samples (ask before adding those) |
 | I never sound like this | Part 2 question 1, plus any cliché they reject while revising |
@@ -30,11 +31,12 @@ When they paste samples, write all three, then check them before you show anythi
    - a 2-sentence text to a past client,
    - a 4-sentence intro of what they do,
    - a short social post about their market (no stats unless they gave them, and the short disclosure line if Stage 2 is done).
-3. **Three gaps:** places their writing is weaker than it could be (no clear next step, too much filler, buried point) and how to fix each without losing their personality.
+3. **Before and after:** three pairs for the Before and after table: a line the way a generic AI would write it, and the same line the way they would.
+4. **Three gaps:** places their writing is weaker than it could be (no clear next step, too much filler, buried point) and how to fix each without losing their personality.
 
 **Check before showing:** compare each sample to their originals. Fix any word, rhythm or punctuation they would never use. Cut real estate clichés ("dream home," "nestled," "won't last long," "don't hesitate to reach out") and anything on their never list. Follow the em dash setting.
 
-Then ask: "Does this sound like you? Tell me what to change." Revise until they say yes. Save the approved summary, samples and gaps under Voice summary, Sample messages in my voice and Gaps to watch, and paste their originals under My real samples.
+Then ask: "Does this sound like you? Tell me what to change." Revise until they say yes. Save the approved summary, samples, before and after pairs and gaps under Voice summary, Sample messages in my voice, Before and after, and Gaps to watch, and paste their originals under My real samples.
 
 If they skip samples, leave those three sections as they are.
 

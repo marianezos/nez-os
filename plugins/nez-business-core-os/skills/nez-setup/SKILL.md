@@ -13,9 +13,10 @@ Fill in the agent's NEZ OS brain in Notion so every other NEZ OS skill (and any 
 
 - **Who:** real estate agents, teams and brokers (other industries get the parts that fit any business).
 - **Finds the brain:** the NEZ OS Brain page by its `nez-os-root` line; saves every page and database ID quietly. Builds the whole brain if the template copy fails twice.
-- **Six stages, one question at a time:** core profile (you and your market, tools, business and clients, brand), compliance, voice and edge, goals with the math, objection bank by client type, and market area fact files.
+- **Fast start:** paste a brain dump transcript (a 15 to 20 minute voice memo about their business) and setup fills what it can, then asks only what's missing. Talk-instead-of-type tip included.
+- **Six stages, one question at a time:** core profile (you and your market, tools and boundaries, business, clients and their top questions, brand), compliance, voice and edge with their real stories, goals (12-month, 90-day and the math), objection bank by client type, and market area fact files.
 - **Saves as it goes:** after every group of questions, so stopping halfway loses nothing.
-- **Extras:** the NEZ OS line for Claude's preferences (once), a one-time offer of Maria Nez AI services that fit their answers, and a self-test that shows the brain at work and what's still missing.
+- **Extras:** the NEZ OS line for Claude's preferences (once), a one-time offer of Maria Nez AI services that fit their answers, a self-test that shows the brain at work and adds what's missing to Open Questions, and "try these first" prompts at the end.
 - **Re-run menu:** continue, update something, redo a stage, add objections, add an area, self-test, show the NEZ OS line.
 - **Keeps brains current:** a quiet workspace check (missing pages, databases, fields) and a profile update that asks only the new questions when NEZ OS adds something.
 - **Safe by design:** Spanish if they write in Spanish, Fair Housing rewording, no invented answers, never stores passwords or sensitive numbers, never deletes anything.
@@ -65,18 +66,33 @@ If the agent says they are not in real estate, say: "NEZ OS is built for real es
 2. **Workspace check:** follow Check mode in `templates/workspace-build.md` (missing pages, databases, fields or options; one question at most).
 
 
-- **Nothing done yet:** welcome them in 2 to 3 sentences: setup builds the brain every AI tool reads, Stage 1 takes about 10 minutes and skills work after it, and they can stop any time. Then start Stage 1.
+- **Nothing done yet:** welcome them in 2 to 3 sentences: setup builds the brain every AI tool reads, Stage 1 takes about 10 minutes and skills work after it, and they can stop any time. Add one tip: "You can talk instead of type: Win + H on Windows, or press Fn twice on a Mac." Then offer the BRAIN DUMP (below) before Stage 1.
 - **Some stages done:** show the RE-RUN MENU below.
 - **All stages done:** congratulate them in one line, then show the RE-RUN MENU.
+
+## BRAIN DUMP (optional fast start)
+
+On a first run, before Stage 1, ask:
+> "Want a faster start? If you have a 15 to 20 minute voice memo or video of you talking about your business (who you are, your market, your clients, how you work, your goals), paste the transcript here. I'll fill in everything I can and then ask only what's missing. Or say 'questions' and we'll go one at a time."
+
+If they paste a brain dump (or any notes, bio or about page they wrote):
+1. Read it all. Match each fact to the questions in `industries/real-estate.md` (any stage).
+2. Show what you found as short statements grouped by stage, for example "You've been licensed 10 years, mostly first-time buyers in Elgin. Right?" Never add a fact they didn't say.
+3. Save only what they confirm, each in its own section, and mark those stages or groups in progress in Setup Status.
+4. Real stories in the dump (how they started, a client win, a lesson, a belief): ask if each can be saved to **Stories**, and whether it's OK to share publicly.
+5. Things that belong somewhere you can't place, or facts that are unclear: add them to **Open Questions**.
+6. Then run the stages as normal, skipping every question already answered.
+
+Never save sensitive information from a dump (client names with details, account numbers and so on); tell the agent and leave it out.
 
 ## Step 4: The stages
 
 | Stage | What it captures | Time | Saves to | What gets better |
 | --- | --- | --- | --- | --- |
-| 1. Core profile | Who they are, their market, clients, services, tools, brand | ~10 min | Master Profile, Offers & Services, Software Stack | Everything. Skills work after this stage |
+| 1. Core profile | Who they are, their market, clients and their top questions, services, tools, boundaries, brand | ~10 min | Master Profile, Client FAQs, Offers & Services, Software Stack | Everything. Skills work after this stage |
 | 2. Compliance | Disclosure lines, notices, Fair Housing areas, brokerage rules, texting consent | ~5 min | Compliance Guardrails | Anything public: posts, ads, emails, pages |
-| 3. Voice and edge | What sets them apart, proof, how they write, writing samples | ~8 min | Master Profile (My edge), Voice Library | Every draft sounds like them |
-| 4. Goals | Income goal, the math, lead sources, this quarter | ~8 min | Master Profile (My goals), Business Plan & Goals | Planning, check-ins, the Advisory Board |
+| 3. Voice and edge | What sets them apart, proof, their stories, how they write, writing samples | ~8 min | Master Profile (My edge), Stories, Voice Library | Every draft sounds like them |
+| 4. Goals | 12-month and 90-day goals, a good month, income goal, the math, this quarter | ~8 min | Master Profile (My goals), Business Plan & Goals | Planning, check-ins, the Advisory Board |
 | 5. Objection bank | Their answers to pushback, one client type at a time | ~10 min per client type | Objection Bank | Consultations, follow-up, roleplay, the Conversion Coach |
 | 6. Market areas | A fact file per area they serve | ~10 min per area | Market Areas | Listings, local content, market updates, the Local Market Expert |
 
@@ -100,7 +116,12 @@ When every stage is done or skipped:
 2. Add one row to **Decisions Log**: Decision "Completed NEZ OS setup", Date today, Pillar Brain, Why "Brain filled in so every AI tool knows my business", Decided By the agent's name, Still Active checked.
 3. Tell them in 3 to 4 sentences what their brain now knows and why it matters.
 4. Offer the self-test if they haven't run it.
-5. Recommend the next step: run /nez-next. It reads the brain and points to the best next move (usually the Advisory Board with /nez-advisor).
+5. **Try these first.** Give 3 prompts they can try right now, built from their brain, for example:
+   - "Write a text to a past client checking in, in my voice."
+   - "What are the 3 questions my [main client type] clients ask most, and how do I answer them?"
+   - "Plan 5 posts for next week about [their main market]."
+   Ask them to try one now. That's the moment the brain clicks.
+6. Recommend the next step: run /nez-next. It reads the brain and points to the best next move (usually the Advisory Board with /nez-advisor).
 
 ---
 
@@ -150,7 +171,7 @@ The self-test proves the brain is loading and being used, and shows the agent wh
    - **What I used:** each brain detail you actually used, by name (for example "your main market," "your short disclosure line," "your answer to 'we want to wait for rates'"). Never list something you didn't use.
    - **What was missing or thin:** details that would have made it better, and which stage adds them.
    - **One fix:** the single change that would improve results most.
-6. **Save:** set `self_test_last_run` in Setup Status to today's date. Then offer the stage that fixes the biggest gap.
+6. **Save:** set `self_test_last_run` in Setup Status to today's date. Add each gap from "What was missing or thin" as an Open Questions row (Found By Self-test, Status Open), unless an Open row already asks it. Then offer the stage that fixes the biggest gap.
 
 ## Writing style for everything you say
 

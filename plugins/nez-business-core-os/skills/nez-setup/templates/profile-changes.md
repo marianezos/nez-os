@@ -3,7 +3,7 @@
 Every brain has a `profile_version` line in the Master Profile's Setup Status. When /nez-setup runs on a brain that already exists, it compares that number with the current version below. If the brain is behind, setup offers to add only what's new (see PROFILE UPDATE in `SKILL.md`). Nothing the agent already saved is changed.
 
 **Current profile_version: 2**
-**Current template_version: 2026-11-10**
+**Current template_version: 2026-11-11**
 
 ## Rules for adding a version (for Maria)
 
@@ -17,7 +17,7 @@ Every brain has a `profile_version` line in the Master Profile's Setup Status. W
 
 The first template. A brain with no `profile_version` line is version 1. You can spot it by the old Setup Status lines: `stage_1_you_and_market`, `stage_2_clients_and_difference`, `stage_3_brand_and_rules`, `stage_5_tools`, `stage_6_areas`.
 
-## Version 2 (2026-11-10)
+## Version 2 (2026-11-10, template updated 2026-11-11)
 
 **Added automatically (no questions):**
 
@@ -33,6 +33,8 @@ The first template. A brain with no `profile_version` line is version 1. You can
 | How I sound lines (Sentences, Length I like, Em dashes), Voice summary, Sample messages in my voice, Gaps to watch | Voice Library | Add any missing heading or line |
 | My personality section (16 blank lines) and Setup Status lines `self_profile` and `projects_offered` | Master Profile, before My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-self fills them; setup never asks these |
 | Voices database (inside the Voice Library page), Page IDs `voices_db_id` and `voices_ds_id`, and a "My voice skills" section with a Default voice line on the Voice Library page | Voice Library | Workspace check offers the database; add the section and lines |
+| Inbox page (Start here), Stories (01 · Brain), Client FAQs (03 · Clients), Projects (05 · Growth, with a Project relation on Tasks), Open Questions (Memory), and their Page IDs | Main page | Workspace check offers each one |
+| Voice Library: Language rules line, Before and after table, Paste-ready instructions section | Voice Library | Add any missing heading or line |
 | People fields: Reports To, Personality, Communication Tips, Profile Source, Profile Date, Status, Human or AI, Other Results; Role option "Me" | People | Workspace check adds them |
 
 **New lines that need an answer** (ask only the ones that are blank, one at a time):
@@ -47,12 +49,18 @@ The first template. A brain with no `profile_version` line is version 1. You can
 | Mostly buyers, sellers or both | My clients | Stage 1 C4 |
 | Client types I work with | My clients | Stage 1 C5 |
 | My specialty | My clients | Stage 1 C6 |
-| Where my business comes from (biggest first) | My clients | Stage 1 C9 |
+| Where my business comes from (biggest first) | My clients | Stage 1 C11 |
 | How I use my CRM | My tools | Stage 1 B3 |
 | Calendar or scheduling | My tools | Stage 1 B4 |
 | Where my branding stands | My brand | Stage 1 D1 |
 | YouTube | My brand | Stage 1 B7 |
 | My 12-month goal in my words | My goals this year | Stage 4 Q1 |
+| My top 3 goals for the next 90 days, and why | My goals this year | Stage 4 Q2 |
+| What a good month looks like | My goals this year | Stage 4 Q3 |
+| What makes them reach out for help | My clients | Stage 1 C7 |
+| My boundaries (5 lines) | My boundaries, after How I work | Stage 1 B11 to B15 |
+| Client FAQs (3 to 5 rows) | Client FAQs | Stage 1 C10 |
+| Stories (origin, a client win, a lesson, a belief) | Stories | Stage 3 Part 1 Q5 to Q7 |
 
 **Moved sections** (version 1 had these elsewhere; copy the values, never delete the old lines):
 - "My ideal clients" → "My clients" (worries, what they need to hear).

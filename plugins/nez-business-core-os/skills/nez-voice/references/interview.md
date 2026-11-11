@@ -34,7 +34,7 @@ Ask only what the samples and the look-first step didn't answer.
 6. **Openings and closings.** How do you start and end an email, a text, a post, a video?
 7. **Stories.** Do you tell stories? Short or long? Do you lead with the point or build up to it?
 8. **Slang and local words.** Any slang, local phrases or neighborhood nicknames you use?
-9. **Languages.** Which languages do you write in? Do you mix them, and when?
+9. **Languages.** Which languages do you write in? Do you mix them, and when? Any words you drop in from another language (like "mija")? Where would you never use them?
 10. **Profanity.** Do you swear in your own writing or speech? Yes or no, and where?
 11. **How you want to come across.** Warm, direct, funny, calm, bold? What should a reader feel?
 12. **Anything else** a ghostwriter should know about how you write.
