@@ -124,18 +124,26 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Closings needed | /nez-bizplan math |
 | Required on all marketing | One fixed line: "My disclosure lines, required notices and brokerage rules live on the Compliance Guardrails page." | Template (never changes) |
 
-**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan reuses the lines above where they fit and adds these when needed:
+**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan uses the shared lines above (Last plan date, Leads last year, My business mix, Deal walk-through (confirmed), Top lead source, Lead source to add or grow, Google Business Profile, How often I post, Paid ads, Marketing I want to add, Plan period, Goal type, Goal number, Milestone or award) and adds these inside the section the first time it needs them. It never uses the real estate pay lines (split, cap, brokerage fees, GCI) for another kind of business.
 
 | Line | Filled by |
 | --- | --- |
 | Last year: revenue | /nez-bizplan generic A1 |
+| Last year: clients | /nez-bizplan generic A2 (in their word: clients, loans, policies) |
 | Average value per client | /nez-bizplan generic A3 |
+| This year so far: clients | /nez-bizplan generic B4 |
 | This year so far: revenue | /nez-bizplan generic B4 |
+| Calls or proposals last year | /nez-bizplan generic C6 |
+| Became clients | /nez-bizplan generic C7 |
 | Fees on each sale | /nez-bizplan generic P1 |
 | Payment processing | /nez-bizplan generic P2 |
+| Partner and referral fees | /nez-bizplan generic P3 |
 | Monthly or yearly costs | /nez-bizplan generic P4 |
+| Other costs | /nez-bizplan generic P5 |
 | What I keep after costs | /nez-bizplan generic P6 |
+| Take-home per client | /nez-bizplan generic walk-through |
 | My capacity | /nez-bizplan generic P7 |
+| Clients needed | /nez-bizplan generic math |
 
 ## Setup Status
 
