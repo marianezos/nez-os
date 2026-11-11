@@ -125,7 +125,7 @@ Say first: "Now a few questions about your business. This is what lets me write 
 9. "What do they need to hear from you to feel confident?"
    **Saves to:** What they need to hear from me.
 10. "What are the 3 to 5 questions clients ask you most? Give me your usual answer for each, even if it's rough."
-   **Saves to:** **Client FAQs**: one row per question (Client Type, My Answer in their words, a one-line Short Version you write and they approve, Status Approved once they OK it, Last Updated today). Never invent an answer; if they're unsure, Status Draft.
+   **Saves to:** **Client FAQs**: one row per question (Client Type, My Answer in their words, a one-line Short Version you write and they approve, Status Approved once they OK it, Last Updated today). Never invent an answer. If they're unsure or the answer is rough, save what they said (or leave My Answer blank), set Status Draft, and add an **Open Questions** row: "Confirm your answer: [question]", Area Clients, Status Open, Where It Goes "Client FAQs: [question]", Found By Setup. Tax, legal and lending questions get a referral answer ("Great question for your CPA, attorney or lender. I can connect you.") for them to approve, never advice.
 11. "Rank where your business comes from, biggest first: sphere and referrals, past clients, open houses, social media, YouTube, paid ads, online leads (Zillow, Realtor.com and so on), door knocking or cold calls, partners, or something else."
    **Saves to:** Where my business comes from (an ordered list).
 12. "Walk me through working with you as a **buyer**, from first call to keys."

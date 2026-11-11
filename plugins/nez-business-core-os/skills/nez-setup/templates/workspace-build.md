@@ -163,7 +163,7 @@ CREATE TABLE "Objection Bank" (
 In build mode, Stage 5 fills it; no starter rows are needed.
 
 ### Client FAQs (03 · Clients, after Objection Bank) · client_faqs_db_id / client_faqs_ds_id
-Description: The questions clients ask you most and your answers, by client type. Your AI uses them for content, follow-up, guides and chat replies.
+Description: The questions clients ask you most and your answers, by client type. Your AI uses only Approved answers for content, follow-up, guides and chat replies. A Draft answer also shows up in Open Questions until you confirm it.
 ```sql
 CREATE TABLE "Client FAQs" (
   "Question" TITLE,
