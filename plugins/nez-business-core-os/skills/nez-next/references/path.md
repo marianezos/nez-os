@@ -49,7 +49,7 @@ Recommend the first one that applies. A rule that names a skill applies only if 
 | A Board Meetings row has a Follow-up date that has passed and Outcome "Not reviewed" | Check how that decision turned out (/nez-board) | (none) |
 | `last_check_in` is more than 7 days ago | Weekly check-in (/nez-goals) | Friday Weekly Review |
 | The CRM is GoHighLevel and no Decisions Log or Marketing Hub row shows a CRM map | Map your CRM pipeline and automations (/nez-crm) | (none) |
-| `last_review` is empty or more than 30 days ago, and there have been at least 2 weekly check-ins | Monthly review (/nez-review, or /nez-goals until it ships) | Friday Weekly Review |
+| `last_review` is empty or more than 30 days ago and there have been at least 2 weekly check-ins, or the quarter ends within 14 days and there is no review this quarter | Business review against your plan (/nez-review) | Friday Weekly Review |
 | Content Planner has nothing with a Publish Date in the next 14 days | Plan content (/nez-content) | Plan My Week of Content |
 | A video publishes in the next 7 days and its row has no Hook or script | Write the script (/nez-content) | Plan My Week of Content |
 | The newest Marketing Hub newsletter (Type Email, name includes "newsletter") is more than 35 days old | Send a newsletter (/nez-newsletter) | (none) |

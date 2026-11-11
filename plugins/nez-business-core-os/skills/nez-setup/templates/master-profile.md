@@ -126,9 +126,12 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Goal number | /nez-bizplan G19 |
 | | Milestone or award | /nez-bizplan G20 (in the agent's words) |
 | | Closings needed | /nez-bizplan math |
+| | Last review date | /nez-review (today, every run) |
+| | Review period | /nez-review (for example 2026 Q4 so far) |
+| | Lead source spend | /nez-review or /nez-bizplan (monthly spend per paid source) |
 | Required on all marketing | One fixed line: "My disclosure lines, required notices and brokerage rules live on the Compliance Guardrails page." | Template (never changes) |
 
-**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan uses the shared lines above (Last plan date, Pending deals now, Active clients likely to close, Time from first contact to closing, Hours per week for finding business, Leads last year, My business mix, Deal walk-through (confirmed), Top lead source, Lead source to add or grow, Google Business Profile, How often I post, Paid ads, Marketing I want to add, Plan period, Goal type, Goal number, Milestone or award) and adds these inside the section the first time it needs them. It never uses the real estate pay lines (split, cap, brokerage fees, GCI) for another kind of business.
+**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan uses the shared lines above (Last plan date, Pending deals now, Active clients likely to close, Time from first contact to closing, Hours per week for finding business, Leads last year, My business mix, Deal walk-through (confirmed), Top lead source, Lead source to add or grow, Google Business Profile, How often I post, Paid ads, Marketing I want to add, Plan period, Goal type, Goal number, Milestone or award, Last review date, Review period, Lead source spend) and adds these inside the section the first time it needs them. It never uses the real estate pay lines (split, cap, brokerage fees, GCI) for another kind of business.
 
 | Line | Filled by |
 | --- | --- |
@@ -165,6 +168,7 @@ Heading `## Page IDs`, a gray 🤖 callout explaining `_db_id` and `_ds_id`, the
 | Disclosure lines, notices, Fair Housing areas, brokerage rules, texting consent | Compliance Guardrails |
 | What they offer buyers, sellers and others; programs; free resources | Offers & Services |
 | The income math, lead sources plan, this quarter, the full business plan | Business Plan & Goals |
+| Reviews of how the business did against the plan | Business Reviews |
 | Each tool | Software Stack (one row per tool) |
 | Each area | Market Areas (one row per area) |
 | Each objection | Objection Bank (one row per objection) |

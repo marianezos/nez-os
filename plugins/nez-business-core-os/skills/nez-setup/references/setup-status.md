@@ -43,7 +43,7 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 - `self_test_last_run`: the date of the last self-test.
 - `voice_profile`: the date an approved voice summary was saved (by Stage 3), or the agent's own voice skill was saved (by /nez-voice).
 - `last_check_in`: written by /nez-goals (weekly check-ins).
-- `last_review`: written by /nez-goals or a monthly review.
+- `last_review`: written by /nez-review (business review against the plan).
 - Never remove a line. Only fill in or update values. If an older brain has the old stage lines (`stage_1_you_and_market` and so on), leave them and add the new lines below them.
 
 ---
@@ -63,6 +63,7 @@ The Master Profile also has a section headed `## Page IDs`, right after Setup St
 - compliance_page_id:            (Compliance Guardrails)
 - offers_page_id:                (Offers & Services)
 - business_plan_page_id:         (Business Plan & Goals)
+- business_reviews_page_id:      (Business Reviews)
 - dashboard_page_id:             (Dashboard)
 - proof_db_id:                   (Proof)
 - proof_ds_id:                  (Proof data source)
