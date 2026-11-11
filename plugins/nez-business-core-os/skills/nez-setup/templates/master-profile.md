@@ -87,7 +87,55 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Number of closings | Stage 4 math |
 | | What I want more of | Stage 4 Q9 |
 | | What I want less of | Stage 4 Q10 |
+| My business numbers | Last plan date | /nez-bizplan (today, every run) |
+| | Last year: closings | /nez-bizplan A1 |
+| | Last year: sales volume | /nez-bizplan A2 |
+| | Last year: GCI | /nez-bizplan A3 |
+| | This year so far: closings | /nez-bizplan B4 |
+| | This year so far: GCI | /nez-bizplan B5 |
+| | Leads last year | /nez-bizplan C6 |
+| | Agreements signed last year | /nez-bizplan C7 |
+| | Closed from those agreements | /nez-bizplan C8 |
+| | Average sale price | /nez-bizplan C9 (starts from Stage 4 Q5) |
+| | My business mix | /nez-bizplan C10 |
+| | Split and cap | /nez-bizplan P1 (starts from Stage 4 Q7) |
+| | Cap year starts, cap paid so far | /nez-bizplan P2 |
+| | Fees on each deal | /nez-bizplan P3 (one line per fee) |
+| | After the cap | /nez-bizplan P4 |
+| | Franchise or royalty fee | /nez-bizplan P5 |
+| | Monthly or yearly brokerage fees | /nez-bizplan P6 |
+| | Team split | /nez-bizplan P7 |
+| | Referral fees | /nez-bizplan P8 |
+| | Costs outside my brokerage | /nez-bizplan P9 |
+| | My commission per side | /nez-bizplan P10 (starts from Stage 4 Q6) |
+| | Team deals count toward my goal | /nez-bizplan P11 |
+| | Deal walk-through (confirmed) | /nez-bizplan, the order and amounts the agent confirmed |
+| | Take-home per deal (before cap / after cap) | /nez-bizplan walk-through |
+| | Top lead source | /nez-bizplan E12 (starts from Stage 1 C11) |
+| | Lead source to add or grow | /nez-bizplan E13 |
+| | Google Business Profile | /nez-bizplan F14 |
+| | How often I post | /nez-bizplan F15 |
+| | Paid ads | /nez-bizplan F16 |
+| | Marketing I want to add | /nez-bizplan F17 |
+| | Plan period | /nez-bizplan G18 |
+| | Goal type | /nez-bizplan G19 (GCI, take-home or deals) |
+| | Goal number | /nez-bizplan G19 |
+| | Milestone or award | /nez-bizplan G20 (in the agent's words) |
+| | Closings needed | /nez-bizplan math |
 | Required on all marketing | One fixed line: "My disclosure lines, required notices and brokerage rules live on the Compliance Guardrails page." | Template (never changes) |
+
+**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan reuses the lines above where they fit and adds these when needed:
+
+| Line | Filled by |
+| --- | --- |
+| Last year: revenue | /nez-bizplan generic A1 |
+| Average value per client | /nez-bizplan generic A3 |
+| This year so far: revenue | /nez-bizplan generic B4 |
+| Fees on each sale | /nez-bizplan generic P1 |
+| Payment processing | /nez-bizplan generic P2 |
+| Monthly or yearly costs | /nez-bizplan generic P4 |
+| What I keep after costs | /nez-bizplan generic P6 |
+| My capacity | /nez-bizplan generic P7 |
 
 ## Setup Status
 
@@ -104,7 +152,7 @@ Heading `## Page IDs`, a gray 🤖 callout explaining `_db_id` and `_ds_id`, the
 | How they write, words to use and avoid, samples | Voice Library |
 | Disclosure lines, notices, Fair Housing areas, brokerage rules, texting consent | Compliance Guardrails |
 | What they offer buyers, sellers and others; programs; free resources | Offers & Services |
-| The income math, lead sources plan, this quarter | Business Plan & Goals |
+| The income math, lead sources plan, this quarter, the full business plan | Business Plan & Goals |
 | Each tool | Software Stack (one row per tool) |
 | Each area | Market Areas (one row per area) |
 | Each objection | Objection Bank (one row per objection) |

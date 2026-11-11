@@ -2,7 +2,7 @@
 
 Every brain has a `profile_version` line in the Master Profile's Setup Status. When /nez-setup runs on a brain that already exists, it compares that number with the current version below. If the brain is behind, setup offers to add only what's new (see PROFILE UPDATE in `SKILL.md`). Nothing the agent already saved is changed.
 
-**Current profile_version: 2**
+**Current profile_version: 3**
 **Current template_version: 2026-11-11**
 
 ## Rules for adding a version (for Maria)
@@ -69,3 +69,14 @@ The first template. A brain with no `profile_version` line is version 1. You can
 - "Required on all marketing" values → Compliance Guardrails, My details. Then leave the version 1 lines where they are.
 
 Stage 2 (compliance), Stage 3 (voice and edge), Stage 5 (objection bank) and the self-test changed a lot in version 2. If those stages were done in version 1, don't redo them automatically: offer them once, as "new and improved," in the update summary.
+
+## Version 3 (2026-11-11)
+
+**Added automatically (no questions):**
+
+| Change | Where | How |
+| --- | --- | --- |
+| My business numbers section (callout and 35 blank lines) | Master Profile, right after My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-bizplan fills them; setup never asks these |
+| My business plan heading with a "Last updated" line | Business Plan & Goals, right after This quarter | Add the heading and a blank Last updated line. /nez-bizplan writes the plan under it |
+
+**New lines that need an answer:** none. /nez-bizplan asks for them when the agent builds a plan.

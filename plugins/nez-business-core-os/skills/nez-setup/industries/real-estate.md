@@ -307,6 +307,8 @@ Intro: "Now we turn your goal into numbers you can actually track: closings, app
 
 Setup Status: `stage_4_goals: <today's date>`.
 
+Then say once: "That's the quick version. For a full business plan with your exact split and fees, an honest look at your numbers and a 90-day roadmap, run /nez-bizplan."
+
 ---
 
 # STAGE 5: Objection bank (about 10 minutes per client type)
