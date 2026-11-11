@@ -14,10 +14,14 @@ Turn the agent's goal into a plan they can actually work, built from their own n
 - **Reads first:** Master Profile (market, clients, lead sources, goals, boundaries, personality), Business Plan & Goals, and any numbers saved by an earlier run. It never asks for something the brain already has.
 - **Asks only for numbers:** last year, this year so far, leads and conversions, average price, business mix, how they get paid, lead sources, online presence and marketing, the plan period and the goal. About 15 minutes the first time, a few minutes to update.
 - **How you get paid, exactly:** split, cap, per-deal fees, after-cap terms, royalty, monthly fees, team split, referral fees and outside costs, asked once. Nothing is filled in from memory, even when the agent names their brokerage.
+- **What's already coming in:** reads Clients & Deals for deals under contract and active clients, confirms them with the agent, and counts them toward the goal, so the plan only covers the gap.
+- **Timing:** asks how long a client usually takes from first contact to closing, and shows when the activity has to happen for the closings to land inside the plan period.
+- **Time check:** compares the weekly conversations and appointments the goal needs with the hours the agent actually has, and says plainly if it doesn't fit.
 - **One deal, walked through:** a short table of one typical deal before and after the cap. The agent confirms the order and amounts before any math happens.
 - **The math, step by step:** goal, take-home per deal, deals needed, appointments, conversations and leads, per month and per week, with every number labeled by where it came from.
 - **An honest diagnosis:** lead problem, conversion problem or market problem, and what to fix first.
 - **The plan:** 9 sections, from where they stand to a 90-day roadmap and what success looks like to them, shaped by their work style and their biggest blocker.
+- **Month 1 becomes action:** with the agent's OK, Month 1 of the roadmap becomes Tasks, and bigger items are offered as Projects.
 - **Saves:** the numbers to My business numbers on the Master Profile, and the plan to Business Plan & Goals (updated in place, never a second copy). Offers a copy as text, a Google Doc, a Word file or a PDF.
 - **Any business:** a real estate flow and a flow for any other industry (lenders, coaches, insurance, services).
 
@@ -45,7 +49,7 @@ Read `industry_flow` from Setup Status and load `industries/<industry_flow>.md` 
 
 ## Step 2: Opening
 
-Read from the Master Profile: name, brokerage or business, main market, typical price range, client types, specialty, where my business comes from, My 12-month goal, top 3 goals for 90 days, what a good month looks like, income goal, My boundaries, and My personality (work style, success beyond the numbers, biggest thing holding me back). Read the **My business numbers** section if it exists.
+Read from the Master Profile: name, brokerage or business, main market, typical price range, client types, specialty, where my business comes from, My 12-month goal, top 3 goals for 90 days, what a good month looks like, income goal, My boundaries, and My personality (work style, success beyond the numbers, biggest thing holding me back). Read the **My business numbers** section if it exists. Read **Clients & Deals** (`clients_deals_ds_id`): rows with Stage "Under contract" (Price, Key Date, Type) and rows with Stage "Active".
 
 **First time:** open with the opening line in the industry file.
 
@@ -58,6 +62,10 @@ Read from the Master Profile: name, brokerage or business, main market, typical 
 Follow the question order in the industry file. Save each group of answers to **My business numbers** on the Master Profile as you finish it, so stopping halfway loses nothing.
 
 **Year to date and the plan period.** Always ask how they're doing so far this year, not only last year, and what period the goal covers (next 12 months, rest of this year, a cap year, an award year). If it's the rest of a year, subtract what they've already done.
+
+**What's already coming in.** Before the goal math, show what Clients & Deals has: "I see [N] deals under contract, closing around [Key Dates], and [N] active clients. Is that right? Anything missing, or anything that fell through?" Save the confirmed count and their expected GCI or revenue to **Pending deals now**, and how many active clients they expect to close in the plan period to **Active clients likely to close**. Pending deals that close inside the plan period count toward the goal. Never count a deal the agent says is shaky; ask. If Clients & Deals is empty, ask the question anyway. Never add rows to Clients & Deals from this skill.
+
+**Timing.** Ask how long a typical client takes from first contact to closing (the question is in the industry file). Use it in the math to show when activity has to happen: leads generated after the cutoff date can't close inside the plan period, so the plan says what has to happen now and what feeds next period.
 
 **Skip questions that answer themselves, and say why:**
 - Agreements signed equals deals closed: skip "how many of those closed."
@@ -75,7 +83,9 @@ Calculate their funnel rates (lead to agreement, agreement to close). Then name 
 - **Market problem:** steady leads and conversion, but fewer closings than last year because of prices, rates or inventory in their area.
 - **Not enough data:** say what's missing and use the NEZ OS starting estimates from the industry file, labeled.
 
-If an agent's numbers don't add up to their goal at their capacity or within their boundaries, say so and offer options (raise average price, add help, change the period, change the target). Never quietly shrink the goal.
+**Time check.** Turn the weekly activity into hours: about 10 minutes per conversation and 1.5 hours per appointment unless they gave their own numbers (label these as starting estimates), plus any open houses or events in the plan. Compare it with **Hours per week for finding business** and with the hours in My boundaries. If it fits, say so in one line. If it doesn't, say how many hours are missing.
+
+If an agent's numbers don't add up to their goal at their capacity, in their time, or within their boundaries, say so and offer options (raise average price, add help, change the period, change the target). Never quietly shrink the goal.
 
 ## Step 5: Save the numbers
 
@@ -98,11 +108,14 @@ On **Business Plan & Goals**, update in place (never a second page):
 - **This quarter:** quarter, target closings, top 3 priorities from the roadmap.
 - **My business plan:** the full plan, under this heading with "Last updated [date]". Replace the old plan under it on a rerun. Create the heading right after This quarter if it's missing.
 
+**Month 1 becomes action.** Ask: "Want me to add Month 1 of your roadmap to your Tasks, so it's on your list starting this week?" On yes, add one Tasks row per Month 1 action (Status Not started, Priority from the roadmap, Pillar, Due Date spread across the month, Notes "From my business plan, [date]"), never more than 8. For anything bigger with several steps and an end (a lead magnet, a website, a referral program), ask "Want me to set this up as a project?" per the brain rules, and link its Tasks to it. On no, leave Tasks alone. On a rerun, check for open Tasks from the last plan first and ask what to do with them; never duplicate.
+
 Then say:
 
 > "Your business plan is ready, [name].
 > ✅ Saved to your brain: Business Plan & Goals, with your math table and this quarter's priorities
 > ✅ Your numbers are saved to your Master Profile, so your other skills use them too
+> ✅ Month 1 is on your Tasks list (if you said yes)
 > ✅ It's a living plan: run /nez-bizplan any time your numbers change
 >
 > Want a copy to save, print or share?

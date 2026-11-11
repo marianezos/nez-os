@@ -96,6 +96,9 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Leads last year | /nez-bizplan C6 |
 | | Agreements signed last year | /nez-bizplan C7 |
 | | Closed from those agreements | /nez-bizplan C8 |
+| | Pending deals now | /nez-bizplan B5a (from Clients & Deals, confirmed) |
+| | Active clients likely to close | /nez-bizplan B5a |
+| | Time from first contact to closing | /nez-bizplan C9a |
 | | Average sale price | /nez-bizplan C9 (starts from Stage 4 Q5) |
 | | My business mix | /nez-bizplan C10 |
 | | Split and cap | /nez-bizplan P1 (starts from Stage 4 Q7) |
@@ -109,6 +112,7 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Costs outside my brokerage | /nez-bizplan P9 |
 | | My commission per side | /nez-bizplan P10 (starts from Stage 4 Q6) |
 | | Team deals count toward my goal | /nez-bizplan P11 |
+| | Hours per week for finding business | /nez-bizplan P12 |
 | | Deal walk-through (confirmed) | /nez-bizplan, the order and amounts the agent confirmed |
 | | Take-home per deal (before cap / after cap) | /nez-bizplan walk-through |
 | | Top lead source | /nez-bizplan E12 (starts from Stage 1 C11) |
@@ -124,7 +128,7 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Closings needed | /nez-bizplan math |
 | Required on all marketing | One fixed line: "My disclosure lines, required notices and brokerage rules live on the Compliance Guardrails page." | Template (never changes) |
 
-**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan uses the shared lines above (Last plan date, Leads last year, My business mix, Deal walk-through (confirmed), Top lead source, Lead source to add or grow, Google Business Profile, How often I post, Paid ads, Marketing I want to add, Plan period, Goal type, Goal number, Milestone or award) and adds these inside the section the first time it needs them. It never uses the real estate pay lines (split, cap, brokerage fees, GCI) for another kind of business.
+**My business numbers** sits right after My goals this year, with a gray 🤖 callout: "For AI: /nez-bizplan fills this section. Use only these numbers for plans and math, never a brokerage's fees from memory. 'None' means zero; 'not sure' is not counted." Setup never asks these lines. For a business outside real estate (`industry_flow` not `real-estate`), /nez-bizplan uses the shared lines above (Last plan date, Pending deals now, Active clients likely to close, Time from first contact to closing, Hours per week for finding business, Leads last year, My business mix, Deal walk-through (confirmed), Top lead source, Lead source to add or grow, Google Business Profile, How often I post, Paid ads, Marketing I want to add, Plan period, Goal type, Goal number, Milestone or award) and adds these inside the section the first time it needs them. It never uses the real estate pay lines (split, cap, brokerage fees, GCI) for another kind of business.
 
 | Line | Filled by |
 | --- | --- |

@@ -26,6 +26,9 @@ Used by `SKILL.md` when `industry_flow` isn't `real-estate`: a lender, an insura
 4. "How many clients so far this year, and about how much revenue has that brought in?"
    **Saves to:** This year so far: clients *(any business)*, This year so far: revenue *(any business)*
 
+4a. **What's already coming in** (see `SKILL.md` Step 3): confirm signed clients not yet paid or delivered, and active prospects likely to buy, from Clients & Deals or in their words.
+    **Saves to:** Pending deals now, Active clients likely to close
+
 ## C. Leads and conversions
 
 Intro: "Now let's walk through how people become clients. This tells us exactly where to focus. Rough numbers are fine."
@@ -42,6 +45,8 @@ Calculate for the plan:
 - Proposal to client = clients ÷ proposals × 100
 - Diagnose: lead problem, conversion problem or market problem (see `SKILL.md` Step 4).
 
+7a. "From first contact to getting paid, how long does it usually take?" *(If they don't know, ask for a guess and label it.)*
+    **Saves to:** Time from first contact to closing (in their words, like "first contact to paid")
 8. "What's the mix of your business? For example 70% new clients and 30% repeat, or mostly one service with a few others."
    **Saves to:** My business mix
 
@@ -77,6 +82,8 @@ Fix it until they say yes. Save the confirmed order in plain words.
 - Compare the result with the percent they gave in P6 and point out any big gap: "Your walk-through says you keep about 62%, but you guessed 80%. Want to look at what's different?"
 - Never guess how one fee relates to another. Ask.
 
+P6a. "In a normal week, how many hours can you spend finding new clients: calls, follow-up, content, meetings?"
+     **Saves to:** Hours per week for finding business
 P7. "How many clients or projects can you realistically handle at once, or in a month, before it's too much?"
     **Saves to:** My capacity *(any business)*
 
@@ -144,7 +151,7 @@ If there's no client goal yet, calculate it with the math below and ask them to 
 
 ## The math (show every line)
 
-1. Goal (your number). If the period is the rest of the year, minus what's done so far.
+1. Goal (your number). If the period is the rest of the year, minus what's done so far, minus pending clients who pay inside the plan period.
 2. If the goal is take-home: take-home per client from the confirmed walk-through.
    If the goal is revenue: use average value per client.
 3. Clients needed = goal ÷ take-home or value per client. Round up.
@@ -152,7 +159,8 @@ If there's no client goal yet, calculate it with the math below and ask them to 
 5. Leads needed = proposals ÷ lead to proposal rate.
 6. If they don't know their rates, say so, use a starting estimate they agree to (for example 1 client per 3 proposals, 1 proposal per 5 leads), and label it "starting estimate."
 7. Per month and per week (divide by the months and weeks in the plan period).
-8. **Capacity check:** compare clients per month with My capacity. If the target doesn't fit, say so plainly and offer options: raise prices, add help or a team member, a longer period, or a different target. Never quietly shrink the goal.
+8. **Timing and time check:** the cutoff date (end of the period minus first contact to paid) and weekly hours needed vs Hours per week for finding business, as in `SKILL.md`.
+9. **Capacity check:** compare clients per month with My capacity. If the target doesn't fit, say so plainly and offer options: raise prices, add help or a team member, a longer period, or a different target. Never quietly shrink the goal.
 
 If a milestone was given, show its math the same way, labeled "as you told me."
 

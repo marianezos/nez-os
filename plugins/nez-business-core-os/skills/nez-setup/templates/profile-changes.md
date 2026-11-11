@@ -76,7 +76,7 @@ Stage 2 (compliance), Stage 3 (voice and edge), Stage 5 (objection bank) and the
 
 | Change | Where | How |
 | --- | --- | --- |
-| My business numbers section (callout and 35 blank lines) | Master Profile, right after My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-bizplan fills them; setup never asks these |
+| My business numbers section (callout and 39 blank lines) | Master Profile, right after My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-bizplan fills them; setup never asks these |
 | My business plan heading with a "Last updated" line | Business Plan & Goals, right after This quarter | Add the heading and a blank Last updated line. /nez-bizplan writes the plan under it |
 
 **New lines that need an answer:** none. /nez-bizplan asks for them when the agent builds a plan.

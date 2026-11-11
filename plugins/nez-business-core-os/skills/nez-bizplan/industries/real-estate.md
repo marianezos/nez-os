@@ -24,6 +24,9 @@ Used by `SKILL.md`. Follow its core rules: ask only for what the brain doesn't h
 5. "About how much GCI have those brought in?" *(Skippable.)*
    **Saves to:** This year so far: GCI
 
+5a. **What's already coming in** (see `SKILL.md` Step 3): confirm the deals under contract and active clients from Clients & Deals.
+    **Saves to:** Pending deals now (count, expected GCI, expected closing months), Active clients likely to close
+
 ## C. Leads and conversions
 
 Intro: "Now the part that tells us where to focus: how leads turn into clients. Rough numbers are fine."
@@ -41,6 +44,8 @@ Calculate and save to the plan, not the profile:
 
 9. "You usually work around [typical price range]. What was your average sale price?" *(Skip if they closed one deal; use that price and say why.)*
    **Saves to:** Average sale price
+9a. "From the first time you talk to someone to the day they close, how long does it usually take? A rough guess is fine, for example 'buyers about 3 months, sellers about 2.'" *(If they don't know, use 90 days as a starting estimate and label it.)*
+    **Saves to:** Time from first contact to closing
 10. "What's the mix of your business? For example 60% buyers and 40% sellers, or mostly investors with some rentals. I know you work with [client types]."
     **Saves to:** My business mix
 
@@ -86,6 +91,11 @@ Also write a one-line summary of their pay structure (for example "80/20 to a \$
 
 - "None" is zero. "Not sure" is not counted: write "not counted, you weren't sure" in the table and in the plan.
 - Never guess how a fee relates to the cap or to another fee. Ask.
+
+### Time
+
+P12. "In a normal week, how many hours can you actually spend finding business: calls, follow-up, open houses, appointments, content? Not showings or paperwork." *(Start from Hours I work and hours I protect, and confirm.)*
+     **Saves to:** Hours per week for finding business
 
 ## E. Lead sources
 
@@ -150,7 +160,7 @@ If there's no deal goal yet, calculate deals needed with the math below and ask 
 
 ## The math (show every line)
 
-1. Goal (your number). If the period is the rest of the year, minus what's done so far.
+1. Goal (your number). If the period is the rest of the year, minus what's done so far. Minus pending deals that close inside the plan period, and active clients they expect to close (show each line).
 2. If the goal is take-home: take-home per deal from the confirmed walk-through, before and after the cap. Count how many deals reach the cap (using cap paid so far) and add the take-home deal by deal.
    If the goal is GCI: GCI ÷ GCI per deal.
 3. Deals needed (round up). If team deals count, show their share separately.
@@ -158,6 +168,8 @@ If there's no deal goal yet, calculate deals needed with the math below and ask 
 5. Leads needed = agreements ÷ lead to agreement rate.
 6. Conversations and appointments: use their numbers if they have them. If not, use the NEZ OS starting estimates and label them: 1 closing per 1.2 agreements, 1 agreement per 3 appointments, 1 appointment per 10 conversations, 1 conversation per 5 new leads.
 7. Per month and per week (divide by the months and weeks in the plan period).
+8. **Timing:** the cutoff date = end of the plan period minus time from first contact to closing. Leads after that date feed next period. Show the weekly activity needed between now and the cutoff (it's higher than an even spread if the period is short), and say so plainly.
+9. **Time check:** weekly conversations and appointments turned into hours (see `SKILL.md` Step 4), compared with Hours per week for finding business.
 
 If a milestone or award was given, show its math the same way, labeled "as you told me."
 
@@ -169,11 +181,11 @@ Write the 9 sections in `../references/plan-sections.md`, in order, tailored to 
 
 1. **Agent snapshot:** who they are in 4 to 6 lines: name, brokerage, how they run their business (solo, team, team leader), years licensed, main market, client types, specialty, brand. Second person, specific to their brain.
 2. **Where you stand:** an honest look at last year and this year so far (closings, volume, GCI), both funnel rates (lead to agreement, agreement to close) and the diagnosis in one plain sentence: lead problem, conversion problem or market problem. If it's the market, use **What my market is doing right now**. One line on what's working that they should keep doing. No fluff.
-3. **Your target and the math:** the goal turned into weekly activity using their full pay structure (split, cap, per-deal fees, after-cap terms, royalty, monthly fees, team split, referral fees, outside costs). Show the deal walk-through table, take-home per deal before and after the cap, which deal reaches the cap, then deals, agreements, appointments, conversations and leads, per year, month and week. If they gave a milestone or award, show its math using only what they told you, labeled "as you told me." If the period is the rest of the year, subtract what's done. Every number labeled with where it came from. This also fills the math table on Business Plan & Goals.
+3. **Your target and the math:** the goal turned into weekly activity using their full pay structure (split, cap, per-deal fees, after-cap terms, royalty, monthly fees, team split, referral fees, outside costs). Show the deal walk-through table, take-home per deal before and after the cap, which deal reaches the cap, pending deals counted in, then deals, agreements, appointments, conversations and leads, per year, month and week. If they gave a milestone or award, show its math using only what they told you, labeled "as you told me." If the period is the rest of the year, subtract what's done. Every number labeled with where it came from. This also fills the math table on Business Plan & Goals.
 4. **Your lead engine:** built from their top lead source and the one they want to grow, fit to their client types, time, budget and boundaries. Sphere and past clients first if they have them in their market; if they're new to their market or have no sphere there, say so and lean on open houses, a lead magnet, local content and a Google Business Profile. Never plan text campaigns to their database without documented texting consent.
 5. **Your marketing plan:** from the marketing they picked, their Google Business Profile status, how often they post, paid ads and their YouTube line. Which platforms to focus on, how often to post, and 2 or 3 quick wins for the first 30 days. Fair Housing safe (homes and areas, never who belongs there), the disclosure line on everything public, and the Housing special ad category for Facebook and Instagram ads.
 6. **Your conversion system:** from their funnel numbers and how they use their CRM. Specific fixes for lead to appointment (speed to lead, follow-up in their CRM), appointment to agreement (their consultation, buyer and listing agreements, answers marked Works in their Objection Bank, their Client FAQs) and agreement to close.
-7. **Your 90-day roadmap:** Month 1, Month 2, Month 3, each with 3 to 5 specific actions (what, how many, by when), not general advice. What to do first, what to build next, what to improve last. A conversion problem goes first and holds paid ads to Month 3. Respect their biggest blocker (3 priorities if they take on too much) and their boundaries. Name the NEZ OS skill or Vault prompt that helps with each action.
+7. **Your 90-day roadmap:** Month 1, Month 2, Month 3, each with 3 to 5 specific actions (what, how many, by when), not general advice. What to do first, what to build next, what to improve last. A conversion problem goes first and holds paid ads to Month 3. Respect their biggest blocker (3 priorities if they take on too much) and their boundaries. Name the NEZ OS skill or Vault prompt that helps with each action. Put time-sensitive lead generation in Month 1 because of the timing cutoff. If the time check is short, Month 1 starts with the fix (time blocks, help, dropping a task). Month 1 actions are written so they can become Tasks.
 8. **Your biggest opportunity:** one clear insight, a short paragraph, about the biggest thing they're not using yet, based on all their numbers and their brain. For example: a source that converts well but gets little time, past clients they never follow up with, a client type they serve well but don't market to, or an area they know better than anyone. Make it specific to them, never a generic tip.
 9. **What success looks like:** their success beyond the numbers (from /nez-self), what a good month looks like and their 12-month goal, in their own words. Connect the closings per week to what they actually want. End on that, not on a number.
 

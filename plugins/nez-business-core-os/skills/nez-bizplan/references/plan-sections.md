@@ -9,7 +9,7 @@ Who they are in 4 to 6 lines: name, business, market, role, years in, client typ
 An honest look at last year and this year so far. Their funnel rates, then the diagnosis in one plain sentence (lead problem, conversion problem, market problem, or not enough data yet). One line on what's working that they should keep doing. No fluff.
 
 ## 3. Your target and the math
-The chain from goal to weekly activity, one step per line, with their numbers. Each line ends with where the number came from: (your number), (your estimate), (I calculated this) or (starting estimate). Include the deal walk-through result: take-home per deal before and after the cap, or per sale after costs. If the period is the rest of a year, subtract what's done. If they gave a milestone or award, show its math using only what they told you, labeled "as you told me." End with a small table: per year, per month, per week.
+The chain from goal to weekly activity, one step per line, with their numbers. Each line ends with where the number came from: (your number), (your estimate), (I calculated this) or (starting estimate). Start with what's already coming in (pending deals counted toward the goal). Include the deal walk-through result: take-home per deal before and after the cap, or per sale after costs. If the period is the rest of a year, subtract what's done. If they gave a milestone or award, show its math using only what they told you, labeled "as you told me." End with a small table: per year, per month, per week. Then the timing cutoff (when activity has to happen for closings to land inside the period) and the time check (hours needed vs hours they have).
 
 ## 4. Your lead engine
 Built from their top lead source and the one they want to add. Specific actions for each, sized to their time, budget, boundaries and client types. If they have no past clients or sphere in their market, say so and lean on sources that build one.
@@ -21,7 +21,7 @@ Built from the marketing they picked, their online presence (Google Business Pro
 Built from their funnel numbers, their CRM and how they use it. Specific fixes for lead to appointment, appointment to agreement, and agreement to close. Point to their Objection Bank and Client FAQs where they help, and to /nez-setup if those are empty.
 
 ## 7. Your 90-day roadmap
-Month 1, Month 2, Month 3, each with 3 to 5 specific actions (who, what, how many). Build first, then grow, then improve. A conversion problem puts conversion first and holds paid ads until Month 3. Respect their biggest blocker (3 priorities if they take on too much) and their boundaries. Name the NEZ OS skill or Vault prompt that helps with each action where one exists.
+Month 1, Month 2, Month 3, each with 3 to 5 specific actions (who, what, how many). Build first, then grow, then improve. A conversion problem puts conversion first and holds paid ads until Month 3. Respect their biggest blocker (3 priorities if they take on too much) and their boundaries. Name the NEZ OS skill or Vault prompt that helps with each action where one exists. Write Month 1 actions so each can become a Task (one action, a number, a due week).
 
 ## 8. Your biggest opportunity
 One insight, a short paragraph: the biggest thing they're not using yet, based on everything in their numbers and brain.
