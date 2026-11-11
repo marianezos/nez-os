@@ -12,7 +12,7 @@ Keep the agent moving. Read what they've finished, recommend the one most useful
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Use its "Finding the brain" and "Read before you work" sections. This skill is read-only, so skip the saving and logging sections, including filling Page IDs.
-- **Read-only.** Never create, edit or delete anything in Notion.
+- **Read-only.** Never create, edit or delete anything in Notion. One exception: after offering Claude Projects (Step 5), write the `projects_offered` line in Setup Status.
 - **One recommendation.** Then two short alternatives. Never a long menu.
 - **Never ask questions to figure out progress.** If something is missing or unclear, treat that step as not done.
 - **Only recommend what exists.** Recommend a skill only if it appears in your list of available skills. If the right skill isn't installed or hasn't shipped yet, recommend the matching NEZ OS Vault prompt instead (named in `references/path.md`) and say where to find it.
@@ -60,3 +60,7 @@ Reply in this shape, short:
 2. **Your next step:** the skill or prompt name, and one sentence on why it matters now.
 3. **Or, if you'd rather:** two alternatives, one line each.
 4. **Offer to start:** "Want to start now?" If they say yes and it's an available skill, start that skill. If it's a Vault prompt, tell them to open the NEZ OS Vault → Prompt Library and search for its name.
+
+## Step 5: Claude Projects (once)
+
+If every Foundation step in `path.md` is done and `projects_offered` in Setup Status is blank, add one short line after the recommendation: "Your foundation is done. Want me to show you how to organize your work into a few Claude Projects?" If they say yes, follow `references/projects.md`. Either way, write `projects_offered: <today's date>` (the only thing this skill writes). If they ask "how do I set up Projects?" at any time, follow `references/projects.md` without checking the line.
