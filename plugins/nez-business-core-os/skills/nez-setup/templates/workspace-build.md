@@ -190,7 +190,7 @@ CREATE TABLE "People" (
   "Best Way to Reach" SELECT('Text':green, 'Call':blue, 'Email':gray),
   "Reports To" RICH_TEXT,
   "Personality" RICH_TEXT,
-  "Communication Tips" RICH_TEXT COMMENT 'Length, format, detail, directness, what to lead with',
+  "Communication Tips" RICH_TEXT COMMENT 'Length, format, lead with, directness, detail, updates',
   "Profile Source" SELECT('Own answers':green, 'Estimated':yellow),
   "Profile Date" DATE,
   "Status" SELECT('Active':green, 'Waiting for answers':yellow, 'Former':gray),

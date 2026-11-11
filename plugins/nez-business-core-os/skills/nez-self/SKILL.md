@@ -264,7 +264,7 @@ Fetch the Master Profile and fill the **My personality** lines (see `../nez-setu
 
 - **Work style:** main and second style, for example "Connector, then Steady"
 - **How I decide:** from Q1, Q25 and their results
-- **How I like information:** five short parts: length, format (bullets, story or table), detail, directness, what to lead with
+- **How I like information:** six short parts: length, format (bullets, story or table), what to lead with, directness, detail, updates
 - **How I take feedback:** Q4
 - **What drives me:** Q17 and Q18
 - **What drains me:** Q19

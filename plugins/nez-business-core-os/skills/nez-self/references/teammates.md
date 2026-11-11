@@ -16,9 +16,9 @@ Ask for (if not already in People): name, role, email (optional), and who they r
 
 **Way 1 (best): they answer themselves.** Say: "The best way is for them to answer a few questions themselves. It's more accurate than your guess. Send this however you usually message them, then paste their answers here." Give them the question set in `teammate-questions.md` in a code block. Offer to create their People row now with Status "Waiting for answers."
 
-When the answers come back: score A to D the same way as SKILL.md Step 3, read their communication answers directly, and save with Profile Source "Own answers."
+When the answers come back: score them with the scoring guide at the bottom of `teammate-questions.md` (questions 1 to 8 give the work style; 9 to 15 go straight into Communication Tips), and save with Profile Source "Own answers."
 
-**Way 2: the agent answers from what they've seen.** Ask the same questions about the person ("When she has a big decision, she usually..."), one at a time. Save with Profile Source "Estimated," and start the Personality field and the first line of their page with "Estimated by [agent's name]." Say once: "This is your read of them, so I'll use it lightly. If they answer the questions later, I'll swap it in."
+**Way 2: the agent answers from what they've seen.** Ask questions 1 to 15 from `teammate-questions.md` about the person ("When she has a big decision, she usually..."), one at a time, with the same letters. Skip the optional sections: energy and test results can only come from the person. Save with Profile Source "Estimated," and start the Personality field and the first line of their page with "Estimated by [agent's name]." Say once: "This is your read of them, so I'll use it lightly. If they answer the questions later, I'll swap it in."
 
 ## Human Design and other tests
 
@@ -35,7 +35,7 @@ Show the row and wait for the agent's OK. Fill:
 | Company, Phone, Email, Best Way to Reach | if the agent gives them |
 | Reports To | the manager's name as it appears in People, or the agent's name |
 | Personality | one line, for example "Steady-Planner, own answers" |
-| Communication Tips | five short lines: length, format, detail, directness, what to lead with. Only what their answers support |
+| Communication Tips | six short lines: length, format, lead with, directness, detail, updates. Only what their answers support |
 | Profile Source | Own answers or Estimated |
 | Profile Date | today |
 | Status | Active, Waiting for answers, or Former |

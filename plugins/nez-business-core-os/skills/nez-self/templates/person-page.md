@@ -8,7 +8,7 @@ First line: "Estimated by [agent's name]" if Profile Source is Estimated. Otherw
 Main and second style in one line, then 2 to 3 sentences on what it means day to day.
 
 ## How to communicate with them
-The five Communication Tips lines: length, format, detail, directness, what to lead with.
+The six Communication Tips lines: length, format, lead with, directness, detail, updates.
 
 ## What helps them do their best work
 2 to 4 bullets from their answers (what drives them, their ideal day, anything they added).
