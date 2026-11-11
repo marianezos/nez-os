@@ -19,22 +19,24 @@ The order /nez-next walks agents through. Walk top to bottom and recommend the f
 | 2 | Foundation | Compliance | /nez-setup | nez-business-core-os | live | `stage_2_compliance` has a date | Everything public comes out with your disclosure line and Fair Housing safe | Compliance Guardrails for Every Draft |
 | 3 | Foundation | Voice and edge | /nez-setup | nez-business-core-os | live | `stage_3_voice_and_edge` has a date, or Voice Library has real content | Drafts sound like you and lead with what makes you different | Teach AI How I Actually Talk |
 | 4 | Foundation | Your personality and work style | /nez-self | nez-business-core-os | live | `self_profile` has a date, or the Work style line is filled in | Plans and scripts fit how you actually work | (none: run /nez-self) |
-| 5 | Foundation | Goals | /nez-setup | nez-business-core-os | live | `stage_4_goals` has a date | Turns your goal into weekly numbers you can track | My One-Page Business Plan |
-| 6 | Foundation | Objection bank | /nez-setup | nez-business-core-os | live | `stage_5_objection_bank` has a date, or the Objection Bank has at least 3 rows with Status Testing or Works | Answers ready for the pushback you hear most | (none: run /nez-setup) |
-| 7 | Foundation | Market areas | /nez-setup | nez-business-core-os | live | `stage_6_market_areas` has a date, or Market Areas has at least 1 row | Real local detail for listings and content | (none: run /nez-setup) |
-| 8 | Foundation | Setup self-test | /nez-setup | nez-business-core-os | live | `self_test_last_run` has a date | Shows your AI using your brain and what's still missing | (none: run /nez-setup and choose the self-test) |
-| 9 | Plan | Weekly rhythm | /nez-goals | nez-business-core-os | vault | `last_check_in` has a date | A 10-minute weekly check-in keeps the plan alive | Friday Weekly Review |
-| 10 | Clients | Texting approval | /nez-a2p | nez-real-estate-os | vault | A Decisions Log row mentions A2P or texting approval | Texts to your database actually get delivered | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
-| 11 | Leads | Your lead magnet | /nez-lead-magnet | nez-marketing-os | vault | Marketing Hub has a row with Type "Lead magnet" | A reason for strangers to give you their contact info | Find My Best Lead Magnet |
-| 12 | Growth | Set up your advisory board | /nez-advisor | nez-business-core-os | live | Advisory Board has at least 1 Active row | A board that reads your business for every big decision | (none: run /nez-advisor) |
-| 13 | Growth | Meet your advisory board | /nez-board | nez-business-core-os | live | Board Meetings has at least 1 row | Pressure-test your next big decision before you spend on it | (none: run /nez-board) |
-| 14 | Content | Your first content week | /nez-content | nez-studio-os | vault | Content Planner has at least 3 rows with a Publish Date | Consistent content in your voice brings leads to you | Plan My Week of Content |
+| 5 | Foundation | Your voice skill | /nez-voice | nez-business-core-os | live | Voices has an Active row with For "Self" | Every draft sounds exactly like you, and gets better from your edits | Teach AI How I Actually Talk |
+| 6 | Foundation | Goals | /nez-setup | nez-business-core-os | live | `stage_4_goals` has a date | Turns your goal into weekly numbers you can track | My One-Page Business Plan |
+| 7 | Foundation | Objection bank | /nez-setup | nez-business-core-os | live | `stage_5_objection_bank` has a date, or the Objection Bank has at least 3 rows with Status Testing or Works | Answers ready for the pushback you hear most | (none: run /nez-setup) |
+| 8 | Foundation | Market areas | /nez-setup | nez-business-core-os | live | `stage_6_market_areas` has a date, or Market Areas has at least 1 row | Real local detail for listings and content | (none: run /nez-setup) |
+| 9 | Foundation | Setup self-test | /nez-setup | nez-business-core-os | live | `self_test_last_run` has a date | Shows your AI using your brain and what's still missing | (none: run /nez-setup and choose the self-test) |
+| 10 | Plan | Weekly rhythm | /nez-goals | nez-business-core-os | vault | `last_check_in` has a date | A 10-minute weekly check-in keeps the plan alive | Friday Weekly Review |
+| 11 | Clients | Texting approval | /nez-a2p | nez-real-estate-os | vault | A Decisions Log row mentions A2P or texting approval | Texts to your database actually get delivered | (none yet: tell them A2P help is coming to NEZ OS and is covered live in the community) |
+| 12 | Leads | Your lead magnet | /nez-lead-magnet | nez-marketing-os | vault | Marketing Hub has a row with Type "Lead magnet" | A reason for strangers to give you their contact info | Find My Best Lead Magnet |
+| 13 | Growth | Set up your advisory board | /nez-advisor | nez-business-core-os | live | Advisory Board has at least 1 Active row | A board that reads your business for every big decision | (none: run /nez-advisor) |
+| 14 | Growth | Meet your advisory board | /nez-board | nez-business-core-os | live | Board Meetings has at least 1 row | Pressure-test your next big decision before you spend on it | (none: run /nez-board) |
+| 15 | Content | Your first content week | /nez-content | nez-studio-os | vault | Content Planner has at least 3 rows with a Publish Date | Consistent content in your voice brings leads to you | Plan My Week of Content |
 
 ## Skip rules
 
 - **Texting approval:** skip if Software Stack and My tools show no CRM at all.
 - **YouTube steps and YouTube upkeep:** skip if My brand's YouTube line is blank or says they don't plan to start one.
 - **Plugin not installed:** never recommend a `live` skill that isn't in your available skills. Name its plugin and say to install it from the NEZ OS marketplace; use the next installed step as the recommendation.
+- **Voice skill:** if they say they don't want a voice skill, treat that step as done for now (they can run /nez-voice any time).
 - **Not real estate:** if `industry_flow` isn't `real-estate`, skip the objection bank, market areas and texting approval steps.
 
 ## Upkeep (when the path is done)
@@ -64,7 +66,7 @@ Show only skills in the agent's available skills, plus Vault prompts labeled "(V
 
 | Goal | Skills and prompts |
 | --- | --- |
-| Set up my brain | /nez-setup (profile, compliance, voice, goals, objections, areas, self-test), /nez-self (how I work best) |
+| Set up my brain | /nez-setup (profile, compliance, voice, goals, objections, areas, self-test), /nez-self (how I work best), /nez-voice (a voice skill for me, a teammate or a client) |
 | Plan and hit my goals | /nez-bizplan, /nez-goals, /nez-review, /nez-dashboard, /nez-bottleneck · Vault: My One-Page Business Plan, Friday Weekly Review |
 | Make big decisions | /nez-advisor (build my board), /nez-board (bring it a decision) |
 | Get more leads | /nez-lead-magnet, /nez-funnel, /nez-dm-automation, /nez-ads, /nez-prospect · Vault: Find My Best Lead Magnet |

@@ -26,7 +26,7 @@ If this file and the Notion template ever disagree, the template wins; tell Mari
 | Brain Index | 🗂️ | Start here | brain_index_page_id | The "For AI" callout, the Where everything lives table (one row per page and database below), and the Rules for AI section from `../../../references/brain-rules.md` in short form |
 | Dashboard | 📊 | Start here | dashboard_page_id | The "For AI" callout, This week at a glance, Goal tracker, Open bottlenecks, and Your workspace (every page and database by section) |
 | Master Profile | 👤 | 01 · Brain | master_profile_page_id | `master-profile.md` |
-| Voice Library | 🎙️ | 01 · Brain | voice_library_page_id | Headings in `voice.md` |
+| Voice Library | 🎙️ | 01 · Brain | voice_library_page_id | Headings in `voice.md`, plus a "My voice skills" section at the top (Default voice line) holding the Voices database |
 | Compliance Guardrails | 🛡️ | 01 · Brain | compliance_page_id | `compliance.md` |
 | Offers & Services | 🎁 | 01 · Brain | offers_page_id | "For AI" callout (describe services in the agent's words, never promise results), then: For buyers (What's included, My buyer process, Special programs I know well), For sellers (My listing marketing plan, What's included, My seller process), Other clients I serve (Investors, Renters / landlords, Relocation), Free resources I offer (one bullet per resource with its link), Classes, events or workshops |
 | Business Plan & Goals | 🎯 | 05 · Growth | business_plan_page_id | "For AI" callout, then: The big picture (income goal, average sale price, commission per side, split / fees, closings needed), The math (work backward) table with rows Closings, Contracts written, Appointments, Conversations, New leads and columns Per year, Per month, Per week, Top lead sources (focus here) as a numbered list of 3, This quarter (Quarter, Target closings, Top 3 priorities), My weekly rhythm, Weekly check-ins (newest first) |
@@ -68,6 +68,21 @@ CREATE TABLE "Market Areas" (
   "Last Updated" DATE
 )
 ```
+
+### Voices (inside the Voice Library page) · voices_db_id / voices_ds_id
+Description: Your voice skills, one row per person or brand. Each row's page holds that voice's guide and what it has learned. Run /nez-voice to create or update one.
+```sql
+CREATE TABLE "Voices" (
+  "Name" TITLE,
+  "Skill Name" RICH_TEXT COMMENT 'The skill folder name, for example marias-voice',
+  "For" SELECT('Self':blue, 'Teammate':green, 'Client or brand':purple),
+  "Status" SELECT('Draft':yellow, 'Active':green, 'Retired':gray),
+  "Version" NUMBER,
+  "Date" DATE,
+  "Default" CHECKBOX COMMENT 'Only one voice is the default'
+)
+```
+Created inside the Voice Library page, not on the main page. Listed in the Dashboard under 01 · Brain.
 
 ### Marketing Hub (02 · Leads) · marketing_hub_db_id / marketing_hub_ds_id
 Description: Emails, landing pages, funnels, lead magnets, ads and SEO audits your AI writes for you.

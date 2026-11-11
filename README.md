@@ -24,7 +24,7 @@ One marketplace, one plugin per pillar. Every plugin reads the same brain, so in
 
 | Plugin | Pillar | What's in it | Status |
 | --- | --- | --- | --- |
-| `nez-business-core-os` | Brain + Growth | Setup, personality profile, next step, advisory board, board meetings | Live |
+| `nez-business-core-os` | Brain + Growth | Setup, personality profile, voice skills, next step, advisory board, board meetings | Live |
 | `nez-marketing-os` | Leads | Lead magnets, funnels, DM automation, ads, prospecting | Coming soon |
 | `nez-real-estate-os` | Clients | Texting approval (A2P), CRM, follow-up, transactions, sphere, roleplay | Coming soon |
 | `nez-studio-os` | Content | Content plans, hooks, Reels, carousels, listing pages, videos | Coming soon |
@@ -39,7 +39,7 @@ One marketplace, one plugin per pillar. Every plugin reads the same brain, so in
 | `/nez-next` | Reads your progress and tells you your best next step. | Live |
 | `/nez-advisor` | Builds your advisory board: 7 real estate advisors to start, plus simulated mentors built from the coaches and creators you follow, or advisors you design. | Live |
 | `/nez-board` | Brings a decision to your board, gives you a call and a recommendation, and checks back on how it turned out. | Live |
-| `/nez-voice` | Builds a full voice skill from your real writing and speaking (setup Stage 3 covers the basics). | Coming soon |
+| `/nez-voice` | Turns your real writing into a voice skill (for you, a teammate, or a client or brand) that keeps learning from your edits. | Live |
 | `/nez-brand` | Builds your brand: colors, fonts, logo direction and a simple brand guide saved to your brain. | Coming soon |
 | `/nez-goals` | Turns your income goal into a weekly plan with check-ins. | Coming soon |
 | `/nez-a2p` | Gets your GoHighLevel texting approved the first time. | Coming soon |

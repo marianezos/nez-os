@@ -83,7 +83,7 @@ Alternatives:
 
 ## Step 5: The Claude Projects tip (once)
 
-If the core profile, compliance, voice and edge, /nez-self and goals are all done (path steps 1 to 5), and `projects_offered` in Setup Status is blank, add after the recommendation: "One more tip: a few separate Claude Projects, one per kind of work, keep everything organized. Want me to show you how?"
+If the core profile, compliance, voice and edge, /nez-self and goals are all done (the Foundation steps with those names in `path.md`), and `projects_offered` in Setup Status is blank, add after the recommendation: "One more tip: a few separate Claude Projects, one per kind of work, keep everything organized. Want me to show you how?"
 
 Whatever they answer, write `projects_offered: <today's date>` in Setup Status. If they say yes, follow `references/projects.md`. If they ask "how do I set up Projects?" any time, follow `references/projects.md` without checking the line.
 

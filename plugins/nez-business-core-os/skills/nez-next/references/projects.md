@@ -1,6 +1,6 @@
 # Claude Projects for NEZ OS
 
-Used by /nez-next once, when path steps 1 to 5 are done (core profile, compliance, voice and edge, /nez-self, goals), or any time the agent asks "how do I set up Projects?". Suggest a few Claude Projects, one per kind of work, so each conversation stays focused and easy to find. Every Project reads the same NEZ OS brain in Notion, so nothing gets entered twice.
+Used by /nez-next once, when the core profile, compliance, voice and edge, /nez-self and goals steps are done, or any time the agent asks "how do I set up Projects?". Suggest a few Claude Projects, one per kind of work, so each conversation stays focused and easy to find. Every Project reads the same NEZ OS brain in Notion, so nothing gets entered twice.
 
 ## Why (say it in two or three sentences)
 

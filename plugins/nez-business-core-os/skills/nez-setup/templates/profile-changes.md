@@ -32,6 +32,7 @@ The first template. A brain with no `profile_version` line is version 1. You can
 | My details section | Compliance Guardrails, at the top | Add the heading and blank lines from `compliance.md` |
 | How I sound lines (Sentences, Length I like, Em dashes), Voice summary, Sample messages in my voice, Gaps to watch | Voice Library | Add any missing heading or line |
 | My personality section (16 blank lines) and Setup Status lines `self_profile` and `projects_offered` | Master Profile, before My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-self fills them; setup never asks these |
+| Voices database (inside the Voice Library page), Page IDs `voices_db_id` and `voices_ds_id`, and a "My voice skills" section with a Default voice line on the Voice Library page | Voice Library | Workspace check offers the database; add the section and lines |
 | People fields: Reports To, Personality, Communication Tips, Profile Source, Profile Date, Status, Human or AI, Other Results; Role option "Me" | People | Workspace check adds them |
 
 **New lines that need an answer** (ask only the ones that are blank, one at a time):

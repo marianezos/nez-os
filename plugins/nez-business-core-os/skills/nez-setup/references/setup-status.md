@@ -41,7 +41,7 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 - `projects_offered`: the date /nez-next offered Claude Projects (`nez-next/references/projects.md`). Written once; never offered again unless the agent asks.
 - `self_profile`: the date /nez-self last saved the agent's own profile.
 - `self_test_last_run`: the date of the last self-test.
-- `voice_profile`: the date an approved voice summary was saved (by Stage 3, or later by /nez-voice).
+- `voice_profile`: the date an approved voice summary was saved (by Stage 3), or the agent's own voice skill was saved (by /nez-voice).
 - `last_check_in`: written by /nez-goals (weekly check-ins).
 - `last_review`: written by /nez-goals or a monthly review.
 - Never remove a line. Only fill in or update values. If an older brain has the old stage lines (`stage_1_you_and_market` and so on), leave them and add the new lines below them.
@@ -67,6 +67,8 @@ The Master Profile also has a section headed `## Page IDs`, right after Setup St
 - proof_ds_id:                  (Proof data source)
 - market_areas_db_id:            (Market Areas)
 - market_areas_ds_id:           (Market Areas data source)
+- voices_db_id:                 (Voices, inside the Voice Library page)
+- voices_ds_id:                 (Voices data source)
 - marketing_hub_db_id:           (Marketing Hub)
 - marketing_hub_ds_id:          (Marketing Hub data source)
 - clients_deals_db_id:           (Clients & Deals)
