@@ -9,6 +9,17 @@ description: Tells a real estate agent their best next step in NEZ OS. Reads the
 
 Keep the agent moving. Read what they've finished, recommend the one most useful next step and why, give two short alternatives, and offer to start it. Agents can use NEZ OS in any order; this skill keeps them from guessing.
 
+## What it covers
+
+- **Reads progress** from the NEZ OS brain: setup stages, profile, plan, content, deals, tasks, bottlenecks, advisors. Never asks questions to figure it out.
+- **One recommendation:** the first unfinished step on the NEZ OS path, with why it matters for them, two alternatives, and an offer to start.
+- **Urgent first:** a contract deadline in the next 3 days or a pile of overdue tasks comes before the path.
+- **Only what exists:** recommends installed skills; points to the plugin to install, or the matching Vault prompt when a skill hasn't shipped.
+- **After the path:** upkeep checks like weekly and monthly reviews, board follow-ups, content gaps, newsletters, site checks, stale market data, and reconnecting with past clients.
+- **Extras:** a weekly check-in reminder, a one-time tip on organizing work into Claude Projects, and a "show me everything" menu grouped by goal.
+- **Fits the agent:** shapes the reply to their personality profile; Spanish if they write in Spanish.
+- **Read-only:** never changes the brain, except one line noting the Projects tip was offered.
+
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Use its "Finding the brain" and "Read before you work" sections. Skip the saving and logging sections, including filling Page IDs.

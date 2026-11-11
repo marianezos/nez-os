@@ -9,6 +9,16 @@ description: Runs a meeting of the agent's personal advisory board. Brings a bus
 
 Pressure-test a decision with several sharp perspectives, then give the agent one clear recommendation. Each advisor answers through its own lens from its brain page in the Advisory Board. The meeting is saved to Board Meetings with a follow-up date, so the agent can check later whether the advice worked.
 
+## What it covers
+
+- **Bring a decision:** ads, hiring, joining a team, pricing, a new niche, going full time, or anything big.
+- **The meeting:** up to 7 advisors from the agent's board each answer through their own lens (about 120 words each), using the agent's real numbers. The Local Market Expert reads Market Areas, the Conversion Coach reads the Objection Bank, and The Skeptic always goes last.
+- **A clear call:** Go, No go, Go with changes, or Need more info, with the next steps. The agent decides.
+- **Saves it:** a Board Meetings row with a follow-up date 30 days out.
+- **Closes the loop:** checks back on past decisions, records how they turned out (Worked, Mixed, Didn't work, Didn't do it), and learns from it.
+- **Empty board?** It sets up the default board first.
+- **Safe by design:** advisors built from real people are labeled simulations, and anything that hinges on law, taxes, contracts or licensing goes to the agent's broker, attorney or CPA.
+
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill).

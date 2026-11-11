@@ -9,6 +9,17 @@ description: Sets up a real estate agent's NEZ OS brain in Notion. Finds their N
 
 Fill in the agent's NEZ OS brain in Notion so every other NEZ OS skill (and any AI they use) knows who they are, where they work, who they serve, how they sound, what rules they follow and what they're aiming for. Setup runs in six stages. Stage 1 takes about 10 minutes, and skills work after it. The rest can be done any time, and each one makes the results better.
 
+## What it covers
+
+- **Who:** real estate agents, teams and brokers (other industries get the parts that fit any business).
+- **Finds the brain:** the NEZ OS Brain page by its `nez-os-root` line; saves every page and database ID quietly. Builds the whole brain if the template copy fails twice.
+- **Six stages, one question at a time:** core profile (you and your market, tools, business and clients, brand), compliance, voice and edge, goals with the math, objection bank by client type, and market area fact files.
+- **Saves as it goes:** after every group of questions, so stopping halfway loses nothing.
+- **Extras:** the NEZ OS line for Claude's preferences (once), a one-time offer of Maria Nez AI services that fit their answers, and a self-test that shows the brain at work and what's still missing.
+- **Re-run menu:** continue, update something, redo a stage, add objections, add an area, self-test, show the NEZ OS line.
+- **Keeps brains current:** a quiet workspace check (missing pages, databases, fields) and a profile update that asks only the new questions when NEZ OS adds something.
+- **Safe by design:** Spanish if they write in Spanish, Fair Housing rewording, no invented answers, never stores passwords or sensitive numbers, never deletes anything.
+
 ## Core rules
 
 - **Read the brain rules first.** Before anything else, read the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Follow it for finding the brain, where things go, logging and what never to store. If it conflicts with this file, the brain rules win.

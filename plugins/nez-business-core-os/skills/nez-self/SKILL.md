@@ -9,6 +9,17 @@ description: Builds a real estate agent's personality and work-style profile for
 
 Learn how the agent works, decides, communicates and stays motivated, and save it to their brain. Then every NEZ OS skill shapes its work to fit them: a fast decider gets short options and a clear pick, a planner gets the steps and the reasons, a people person gets plans built around conversations. It also profiles teammates so the agent's messages land with each person.
 
+## What it covers
+
+- **Who:** the agent, and anyone on their team (assistant, team member, partner, transaction coordinator).
+- **Three ways in:** paste results they already have (DISC, Enneagram, 16 Personalities, CliftonStrengths, Kolbe, Human Design), take a free test first, or answer 31 short questions with real estate examples.
+- **Work style:** Driver, Connector, Steady or Planner, plus a second style, and an approximate energy tendency (Starter, Responder, Guide, Explorer).
+- **Plain-language results:** strengths, blind spots, how they like information, what drives and drains them, best hours, and how this changes everything NEZ OS creates for them.
+- **Saves:** the My personality section of the Master Profile, a "How to work with me" note in AI Memory, and their own row in People.
+- **Teammates:** a copy-and-paste question set the teammate answers themselves (or an "Estimated" profile from the agent), saved in People with six communication tips.
+- **Used everywhere:** every NEZ OS skill shapes the structure of its work to fit the profile, never the facts, and never in anything a client sees.
+- **Safe by design:** never for hiring, firing or pay, never saves health, family, age or birth details, and anyone can see, fix or remove their profile.
+
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (two levels up from this skill). Follow it for finding the brain, saving and logging.

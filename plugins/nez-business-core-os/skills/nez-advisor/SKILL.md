@@ -9,6 +9,15 @@ description: Builds and manages a real estate agent's personal advisory board in
 
 Give the agent a board of advisors they trust: ready-made real estate roles, roles they design, and simulated mentors built from the public work of people they already learn from. Each advisor is a row in the Advisory Board with a brain page. /nez-board reads those pages when the board meets.
 
+## What it covers
+
+- **Builds the board:** seats the default seven advisors with one question (Listings Strategist, Lead & Marketing Builder, Conversion Coach, Profit Keeper, Systems Operator, Client Champion, The Skeptic).
+- **Extras:** Content Builder, Team Growth Coach and Local Market Expert, plus custom advisors from five questions.
+- **Mentors from real content:** builds a simulated advisor from a coach, author or creator the agent follows, using YouTube videos, podcasts, PDFs or posts (a fetch script pulls the transcripts), with a test of up to three rounds before seating them.
+- **Each advisor has a brain page:** their question, who they are, how they think, what they believe, their tools, where they stand, how they talk, where they can be wrong, and sources (plus stories and short quotes for real people), personalized to the agent's business.
+- **Manages the board:** refresh an advisor with new sources (shown as a plan first), bench or bring back advisors, and change who sits on the board.
+- **Safe by design:** simulated advisors are always labeled "(simulated)," quotes stay short and sourced, it's for the agent's own use, and nothing is ever deleted.
+
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (in the `nez-business-core-os` plugin folder, two levels up from this skill). Follow it for finding the brain, writing to Notion (including `\$` for dollar signs), logging, and what never to store.
