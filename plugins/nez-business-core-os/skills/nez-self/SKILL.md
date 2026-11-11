@@ -1,6 +1,6 @@
 ---
 name: nez-self
-description: Builds a real estate agent's personality and work-style profile for NEZ OS, so every skill fits how they think, decide, communicate and stay motivated. Uses results they already have (DISC, Enneagram, 16 Personalities, CliftonStrengths, Kolbe, Human Design) or 28 short multiple-choice questions, then explains the result in plain words and saves it to the Master Profile. Also builds profiles for teammates in the People database, so messages fit how each person reads best. Triggers when the user runs /nez-self, or says "personality profile", "learn about me", "how do I work best", "how should I message my team", "profile my teammate", or "work style".
+description: Builds a real estate agent's personality and work-style profile for NEZ OS, so every skill fits how they think, decide, communicate and stay motivated. Uses results they already have (DISC, Enneagram, 16 Personalities, CliftonStrengths, Kolbe, Human Design) or 31 short questions, then explains the result in plain words and saves it to the Master Profile. Also builds profiles for teammates in the People database, so messages fit how each person reads best. Triggers when the user runs /nez-self, or says "personality profile", "learn about me", "how do I work best", "how should I message my team", "profile my teammate", or "work style".
 ---
 
 # NEZ OS Self: How You Work Best
@@ -12,7 +12,7 @@ Learn how the agent works, decides, communicates and stays motivated, and save i
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (two levels up from this skill). Follow it for finding the brain, saving and logging.
-- **One question at a time,** always with lettered options. They can add detail after picking. Match their language (Spanish if they write in Spanish).
+- **One question at a time,** always with lettered options. After each pick, add "Want to add anything?" the first few times, then only when an answer seems to need it. Match their language (Spanish if they write in Spanish).
 - **Two answers is fine.** If they say "B and C," ask "Which one is more like you?" if they don't say. The first counts fully; the second only breaks ties. Note both.
 - **Explain, don't label.** A style describes tendencies, not limits. Never box them in, and never use a profile to judge anyone.
 - **Plain language.** No jargon, no field names, no IDs.
@@ -28,7 +28,7 @@ Find the brain per the brain rules. Read the Master Profile's **My personality**
 
 ## Step 2: Opening
 
-> "This is what makes NEZ OS fit you instead of giving you the same thing it gives every agent. I'll learn how you work, decide and communicate, and every plan, script and message after this gets shaped around you. About 10 minutes, all multiple choice, no wrong answers. Ready?"
+> "This is what makes NEZ OS fit you instead of giving you the same thing it gives every agent. I'll learn how you work, decide and communicate, and every plan, script and message after this gets shaped around you. About 10 minutes, mostly multiple choice, no wrong answers. Ready?"
 
 Then ask:
 
@@ -52,16 +52,16 @@ Then ask:
 | Result | Usually answers |
 | --- | --- |
 | DISC | Sections 1 and 2 (it gives the work style directly) |
-| Enneagram | Section 3, plus Q2 and Q8 |
-| 16 Personalities / Myers-Briggs | Q1, Q5, Q24 to Q27 |
+| Enneagram | Q17 to Q21, plus Q2 and Q8 |
+| 16 Personalities / Myers-Briggs | Q1, Q5, Q25, Q26, Q28, Q29 |
 | CliftonStrengths | Q7, Q20 |
 | Kolbe | Q1, Q6 |
 | Human Design | Section 4 |
 | Anything else | Decide from what it measures; ask if unsure |
 
-Always ask Q13, Q14, Q16 (content), Q21 (success beyond the numbers) and Q22 (biggest thing holding them back). No test covers those.
+Always ask Q13 to Q16 (content and phrases), Q22 (success beyond the numbers) and Q23 (biggest thing holding them back). No test covers those. Then score (Step 3): a DISC result gives the work style directly; for other tests, estimate the closest style and say it's an estimate. Note which tests they gave under Other results I shared.
 
-**C: questions.** Ask Q1 to Q28 in order.
+**C: questions.** Ask Q1 to Q31 in order.
 
 ---
 
@@ -191,51 +191,69 @@ B) A mix of people, creative work and flexibility
 C) A predictable schedule with time for relationships
 D) Long blocks of quiet time to think and build"
 
-**Q21.** *(Open.)* "Beyond the money, what does success look like for you? More time with family, a team, being the name in your market, travel? Say it your way."
+**Q21.** "When you set a goal, you:
+A) Make it big, say it out loud, and go hard
+B) Get excited about the vision and share it with everyone
+C) Make sure it's realistic and I have support around it
+D) Break it into a step-by-step plan first"
 
-**Q22.** *(Open.)* "What's the biggest thing holding you back right now?"
+**Q22.** *(Open.)* "Beyond the money, what does success look like for you? More time with family, a team, being the name in your market, travel? Say it your way."
 
-### Section 4: Your energy and decisions (not scored, read directly)
+**Q23.** *(Open.)* "What's the biggest thing holding you back right now?"
 
-If they gave a Human Design type and authority, save them under Other results and skip any question they clearly answer.
+### Section 4: Your energy and decisions
 
-**Q23.** "Opportunities in your business usually come from:
+If they gave a Human Design type and authority, save them under Other results and skip any question they clearly answer. These are read as tendencies, not scored for work style.
+
+**Q24.** "Opportunities in your business usually come from:
 A) Me going after them
 B) Me responding to what shows up
 C) People asking for my help or advice
 D) Trying different things until something fits"
 
-**Q24.** "Your energy during the day:
+**Q25.** "Your energy during the day:
 A) Steady: I can go all day
 B) Comes in waves
 C) Depends on who I'm around
 D) Not high, but very clear and focused"
 
-**Q25.** "Your best decisions come from:
+**Q26.** "Your best decisions come from:
 A) A gut feeling in the moment
 B) Sleeping on it
 C) Talking it through until it feels right
 D) Waiting until it clearly feels right"
 
-**Q26.** "After a full day of showings and client calls, you feel:
+**Q27.** "In your business, you naturally:
+A) Start things and hand them off
+B) Do my best work responding to what's already moving
+C) Guide and advise: I see what others miss
+D) Explore different things before I find my lane"
+
+**Q28.** "After a full day of showings and client calls, you feel:
 A) Energized
 B) Good, but ready to unwind
 C) Drained: I need alone time
 D) It depends on the people"
 
-**Q27.** "When you learn something new, you:
+**Q29.** "When you learn something new, you:
 A) Know right away if it's for you
 B) Need time to process it
 C) Need to talk it through
 D) Research it before forming an opinion"
 
-**Q28.** "What time of day do you do your best thinking and your best people work?" *(Open.)*
+**Q30.** "Are you pretty much the same person everywhere, or do you shift with who you're around?
+A) The same everywhere
+B) I adapt, but my core stays the same
+C) I really take on the energy of the people around me
+D) It depends on the situation"
+
+**Q31.** *(Open.)* "What time of day do you do your best thinking, and your best people work?"
 
 ---
 
 ## Step 3: Score it
 
-1. Count A, B, C and D across Q1 to Q15 and Q17 to Q20 (19 scored questions). Use the first answer when there are two; second answers only break ties.
+1. Count A, B, C and D across Q1 to Q15 and Q17 to Q21 (20 scored questions). When they gave two answers, the stronger one counts fully and the other only breaks ties. Note every two-letter answer under Answer notes.
 2. **Main style** = the highest count. **Second style** = the next highest. If two are within one point, call it a blend ("Driver-Planner").
 3. If they gave a DISC result, use it for the main style (D = Driver, I = Connector, S = Steady, C = Planner) and say so. For other tests, estimate the closest style and say it's an estimate.
 
@@ -246,6 +264,17 @@ D) Research it before forming an opinion"
 | **Steady** | Builds trust, protects stability, avoids conflict | A clear step-by-step plan, support, no surprises, time to adjust |
 | **Planner** | Researches, wants accuracy, hates rushing | The details and the reasons, data, time to review before deciding |
 
+**Energy tendency (approximate).** Count A to D across Q24, Q26, Q27 and Q29 (Q25, Q28 and Q30 add color):
+
+| Mostly | Tendency | In plain words |
+| --- | --- | --- |
+| A | Starter | Creates their own opportunities, works in bursts, likes to start and hand off |
+| B | Responder | Does best responding to what's in motion, steady when doing work they like |
+| C | Guide | Sees what others miss, best when asked for advice, needs to protect their energy |
+| D | Explorer | Tries things before committing, takes time to decide, reads the room |
+
+Always say it's an approximation. If they want their official Human Design type, point them to a free chart at mybodygraph.com (it needs birth date, time and place, which you never save). If they already shared their type, use theirs and skip the approximation.
+
 ## Step 4: Explain it
 
 In plain words, under 200 words, show:
@@ -254,28 +283,31 @@ In plain words, under 200 words, show:
 - one or two blind spots to watch, framed kindly,
 - how they like information,
 - what drives them and what drains them,
-- their energy pattern and best hours (Section 4 and Q28).
+- their energy pattern, approximate energy tendency and best hours (Section 4),
+- **how this changes what you create for them:** one or two sentences, for example "Every plan, script and email I make for you will be built for a Connector: around conversations, with a story up front and room for variety. You'll see the difference right away."
 
-Ask: "Does this sound like you? Tell me anything that's off." Revise until they agree.
+Ask: "Does this sound like you? Want to go deeper on any of this before we move on?" Revise until they agree.
 
 ## Step 5: Save it
 
-Fetch the Master Profile and fill the **My personality** lines (see `../nez-setup/templates/master-profile.md`). Keep every label; replace only the values:
+Fetch the Master Profile and fill the **My personality** lines (see `../nez-setup/templates/master-profile.md`) inside that section, never at the end of the page. Keep every label; replace only the values:
 
 - **Work style:** main and second style, for example "Connector, then Steady"
-- **How I decide:** from Q1, Q25 and their results
+- **How I decide:** from Q1, Q26, Q29 and their results
 - **How I like information:** six short parts: length, format (bullets, story or table), what to lead with, directness, detail, updates
 - **How I take feedback:** Q4
-- **What drives me:** Q17 and Q18
+- **What drives me:** Q17, Q18 and how they set goals (Q21)
 - **What drains me:** Q19
 - **When I'm stressed:** Q2 and Q8
-- **My energy:** Q5, Q24, Q26, best hours from Q28
+- **My energy:** Q5, Q25, Q28, Q30, best hours from Q31, and the approximate energy tendency (labeled approximate)
 - **Content strengths and challenge:** Q10, Q13, Q14, Q15
-- **Success beyond the numbers:** Q21, in their words
-- **Biggest thing holding me back:** Q22, in their words
+- **Success beyond the numbers:** Q22, in their words
+- **Biggest thing holding me back:** Q23, in their words
 - **Other results I shared:** each test and its result in one line, or "none"
 - **How my AI should work with me:** 3 to 5 short instructions drawn from the above (for example "Give me 2 options and your pick," "Show me the numbers before the plan," "Plan my week around people time in the morning")
-- **Profile source and date:** "30-question profile" or the tests used, and today's date
+- **Profile source and date:** "NEZ OS questions" or the tests used, and today's date
+- **Answer notes:** any two-letter answers, with the stronger one marked, or "none"
+- **My People page:** a link to their own People row (filled after step 2 below)
 
 Then:
 1. Add an **AI Memory** row: Memory "How to work with me", Type Preference, Area General, Applies To "All NEZ OS skills", Details = the "How my AI should work with me" lines, Saved By Claude, Status Active, Date today. If an Active row with that name exists, set it to Replaced first.

@@ -72,6 +72,8 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Other results I shared | /nez-self (DISC, Enneagram and so on, or "none") |
 | | How my AI should work with me | /nez-self (3 to 5 short instructions) |
 | | Profile source and date | /nez-self |
+| | Answer notes | /nez-self (two-letter answers, stronger one marked) |
+| | My People page | /nez-self (link to their own People row) |
 | My goals this year | My 12-month goal in my words | Stage 4 Q1 |
 | | Income goal | Stage 4 Q2 |
 | | Number of closings | Stage 4 math |
