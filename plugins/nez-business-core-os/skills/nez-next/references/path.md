@@ -65,7 +65,7 @@ Recommend the first one that applies. A rule that names a skill applies only if 
 | Open Questions has 3 or more Open rows | Answer the top 3 open questions (name them) | (none) |
 | A Projects row is Active with a Due date that has passed, or no Next Step | Update that project: name it and ask for its next step | (none) |
 | An AI Employees row is Active with a Review Date of today or earlier | Review that AI employee: is it still doing its job well? (/nez-org-chart) | (none) |
-| Coach Library has at least 3 rows saved after the Master Coach's Last Refreshed date | Refresh your Master Coach (/nez-advisor, option 4) | (none) |
+| A Master Coach exists and the Coach Library has 10 or more Business advice, Sales pitch or Story rows created since the Master Coach was last edited, and the agent hasn't declined that count (`master_coach_refresh_declined`) | Refresh your Master Coach (/nez-advisor, option 4) | (none) |
 | A Bottlenecks row is Open with High impact | Work on that bottleneck: name it and suggest one first fix | (none) |
 | A Market Areas row has Data As Of older than 90 days, or no data at all | Refresh that area's numbers with a source and date | (none) |
 | Business Plan & Goals hasn't changed in 90 days, or a new quarter started | Update the plan (/nez-bizplan) | My One-Page Business Plan |
