@@ -39,7 +39,7 @@ Decide in this order:
 
 ## The Inbox
 
-The **Inbox** page (`inbox_page_id`) is where the agent drops anything: notes, links, transcripts, reviews, scripts, files. When they say "file my inbox" (or during a weekly review):
+The **Inbox** page (`inbox_page_id`) is where the agent drops anything: notes, links, transcripts, reviews, scripts, files. When they say "file my inbox" (or during a brain check, /nez-brain-check):
 1. Go through the items one at a time. For each, say where it belongs (which page or database, and which line) and what you'd add to the brain.
 2. Wait for their OK, then file it there and remove it from the Inbox.
 3. Something not needed? Ask whether to archive it (move it to a page called "Archive" under the Inbox). Never delete it.

@@ -28,7 +28,7 @@ One marketplace, one plugin per pillar. Every plugin reads the same brain, so in
 | `nez-marketing-os` | Leads | Lead magnets, funnels, DM automation, ads, prospecting | Coming soon |
 | `nez-real-estate-os` | Clients | Texting approval (A2P), CRM, follow-up, transactions, sphere, roleplay | Coming soon |
 | `nez-studio-os` | Content | Content plans, hooks, Reels, carousels, listing pages, videos | Coming soon |
-| `nez-tools-os` | All | Local connectors for GoHighLevel and other tools | Later |
+| `nez-tools-os` | All | Local connectors on your computer: CapCut projects and free transcripts now, GoHighLevel social and YouTube next | Live (CapCut) |
 
 ## Skills in nez-business-core-os
 
@@ -46,6 +46,7 @@ One marketplace, one plugin per pillar. Every plugin reads the same brain, so in
 | `/nez-bottleneck` | Finds the work eating your week, ranks it by what it costs you, and gives you the cheapest fix that works (a tool, an AI employee or a person). | Live |
 | `/nez-library` | Your swipe file: saves posts and videos you like, with the hook and why it works, in folders you can search. | Live |
 | `/nez-dashboard` | Builds your dashboards in Claude: today's tasks, goals, follow-ups, deals and email, from your brain and the apps you connect. | Live |
+| `/nez-brain-check` | A quick, optional tune-up of your brain: a health score, then fixes for anything out of date, missing, duplicated or contradicting itself. Skip it, snooze it or turn it off any time. | Live |
 | `/nez-brand` | Builds your brand: colors, fonts, logo direction and a simple brand guide saved to your brain. | Coming soon |
 | `/nez-goals` | Turns your business plan into this quarter's targets and a 13-week plan, then keeps you on track with a 10-minute weekly check-in. | Live |
 | `/nez-a2p` | Gets your GoHighLevel texting approved the first time. | Coming soon |

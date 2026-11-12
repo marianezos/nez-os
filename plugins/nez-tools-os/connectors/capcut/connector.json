@@ -1,0 +1,32 @@
+{
+  "name": "capcut",
+  "title": "CapCut connector",
+  "version": "1.0.0",
+  "upstream": {
+    "bridge": {
+      "project": "VectCutAPI by sun-guannan",
+      "url": "https://github.com/sun-guannan/VectCutAPI",
+      "commit": "133d232e3bdeff2c467133def094cecc7a869617",
+      "license": "Apache-2.0",
+      "changes": "None. Downloaded from GitHub at this commit during install and used as is."
+    },
+    "mcp_server": {
+      "project": "capcut-mcp-server by Atx-Guy",
+      "url": "https://github.com/Atx-Guy/capcut-mcp-server",
+      "commit": "d154070b94b1194894111f016d6dfeaf1a24966f",
+      "license": "MIT",
+      "changes": "Included in mcp-server with NEZ OS changes marked in the code. See NOTICE.md."
+    },
+    "transcripts": {
+      "project": "faster-whisper by SYSTRAN",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "license": "MIT",
+      "model": "small"
+    }
+  },
+  "port": 9001,
+  "requires": { "windows": true, "python": "3.10", "node": "18", "ffmpeg": true, "capcut": true },
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-11-12", "note": "First release. Claude builds CapCut projects with your clips, photos, text and music, saves them straight into CapCut under the name you pick (never replacing a project you made), makes free transcripts and captions files on your computer, and moves finished videos into your project folder." }
+  ]
+}

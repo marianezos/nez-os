@@ -1,8 +1,14 @@
 {
   "name": "nez-tools-os",
-  "description": "NEZ OS Tools: local connectors that let Claude work with GoHighLevel and other tools on your computer. Coming later.",
-  "version": "0.1.2",
+  "description": "NEZ OS Tools: local connectors that run on your own computer, set up by conversation. First up: the CapCut connector, so Claude can build your CapCut projects, make free transcripts and captions of your videos, and file your finished videos. Windows, Claude desktop app.",
+  "version": "0.2.0",
   "author": {
     "name": "Maria Nez AI"
+  },
+  "mcpServers": {
+    "nez-capcut": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/connectors/capcut/launch.mjs"]
+    }
   }
 }

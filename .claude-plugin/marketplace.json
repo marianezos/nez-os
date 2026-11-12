@@ -4,14 +4,14 @@
     "name": "Maria Nez AI"
   },
   "metadata": {
-    "description": "NEZ OS \u00b7 The Agent Operating System. AI and GoHighLevel systems for real estate agents, built around a Notion brain that knows your business."
+    "description": "NEZ OS · The Agent Operating System. AI and GoHighLevel systems for real estate agents, built around a Notion brain that knows your business."
   },
   "plugins": [
     {
       "name": "nez-business-core-os",
       "source": "./plugins/nez-business-core-os",
       "description": "The core NEZ OS skills for real estate agents: build your AI brain in Notion, get your next best step, and run your business across five pillars (Brain, Leads, Clients, Content, Growth) with Fair Housing guardrails built in.",
-      "version": "0.17.0",
+      "version": "0.18.0",
       "author": {
         "name": "Maria Nez AI"
       },
@@ -23,6 +23,23 @@
         "ai brain",
         "gohighlevel",
         "fair housing",
+        "nez os"
+      ]
+    },
+    {
+      "name": "nez-tools-os",
+      "source": "./plugins/nez-tools-os",
+      "description": "NEZ OS Tools: connectors that run on your own Windows computer, set up by conversation. Claude builds your CapCut projects, makes free transcripts and captions of your videos, and files your finished videos.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Maria Nez AI"
+      },
+      "keywords": [
+        "capcut",
+        "video editing",
+        "transcripts",
+        "captions",
+        "real estate",
         "nez os"
       ]
     }

@@ -43,6 +43,7 @@ The order /nez-next walks agents through. Walk top to bottom and recommend the f
 - **Voice skill:** if they say they don't want a voice skill, treat that step as done for now (they can run /nez-voice any time).
 - **Not real estate:** if `industry_flow` isn't `real-estate`, skip the objection bank, market areas and texting approval steps.
 - **First review:** skip it until `last_check_in` has a date and Quarterly Goals shows at least 4 weekly check-ins, so there's real data to review. Move on to the next step meanwhile.
+- **Brain check "not now":** set `brain_check_schedule` to the schedule plus `snoozed until` one period from today (for example `weekly, snoozed until 2026-11-19`). "Stop reminding me": set it to `off`. Either way, say one line and go on.
 - **Optional steps (marked optional):** recommend each one once. If the agent says not now, add it to `path_not_now` in Setup Status (for example `nez-dashboard 2026-11-12`) and treat it as done. Never recommend it again on the path; it stays in the goal menu and the Anytime list.
 
 ## Upkeep (when the path is done)
@@ -61,6 +62,7 @@ Recommend the first one that applies. A rule that names a skill applies only if 
 | A video publishes in the next 7 days and its row has no Hook or script | Write the script (/nez-content) | Plan My Week of Content |
 | The newest Marketing Hub newsletter (Type Email, name includes "newsletter") is more than 35 days old | Send a newsletter (/nez-newsletter) | (none) |
 | The newest Marketing Hub "SEO audit" row is more than 90 days old, or the website changed | Run a site check (/nez-site-audit or /nez-seo) | (none) |
+| A brain check is due: `brain_check_schedule` isn't `off`, isn't snoozed past today, and `last_brain_check` is empty or older than the schedule (7 days if weekly or blank, 14 for every 2 weeks, 30 for monthly), and `stage_1_core_profile` has a date | Brain check: a 10-minute tune-up of your brain (/nez-brain-check). Not now? Say so and it waits one more period; "stop reminding me" turns it off | (none) |
 | The Inbox has 3 or more items | File the inbox: say "file my inbox" (any NEZ OS skill can do it) | (none) |
 | Open Questions has 3 or more Open rows | Answer the top 3 open questions (name them) | (none) |
 | A Projects row is Active with a Due date that has passed, or no Next Step | Update that project: name it and ask for its next step | (none) |
@@ -84,6 +86,7 @@ These aren't path steps. Suggest one only when its signal shows up, once, after 
 | /nez-advisor | The agent mentions a coach, author or creator they learn from, or wants a Master Coach |
 | /nez-board | The agent mentions a big decision |
 | /nez-bottleneck | The agent says they're too busy, behind, or doing everything themselves |
+| /nez-brain-check | The agent says something in the brain is wrong or out of date, or asks to clean it up |
 | /nez-next | Any time: "what should I do next?" |
 
 ## Goal menu ("show me everything")
@@ -92,12 +95,12 @@ Show only skills in the agent's available skills, plus Vault prompts labeled "(V
 
 | Goal | Skills and prompts |
 | --- | --- |
-| Set up my brain | "File my inbox," answer my open questions, /nez-setup (profile, compliance, voice, goals, objections, areas, self-test), /nez-self (how I work best), /nez-voice (a voice skill for me, a teammate or a client) |
+| Set up my brain | /nez-brain-check (weekly tune-up), "File my inbox," answer my open questions, /nez-setup (profile, compliance, voice, goals, objections, areas, self-test), /nez-self (how I work best), /nez-voice (a voice skill for me, a teammate or a client) |
 | Plan and hit my goals | /nez-bizplan, /nez-goals, /nez-review, /nez-dashboard, /nez-bottleneck · Vault: My One-Page Business Plan, Friday Weekly Review |
 | Make big decisions | /nez-advisor (build my board), /nez-board (bring it a decision) |
 | Get more leads | /nez-lead-magnet, /nez-funnel, /nez-dm-automation, /nez-ads, /nez-prospect · Vault: Find My Best Lead Magnet |
 | Follow up and nurture | /nez-email, /nez-newsletter, /nez-sphere · Vault: Past Client Check-In That Isn't Awkward |
 | Win and serve clients | /nez-listing-appt, /nez-buyer, /nez-transaction, /nez-seller-updates, /nez-roleplay, /nez-a2p, /nez-crm · Vault: Contract to Close Timeline |
-| Create content | /nez-library (your swipe file of saved posts), /nez-content, /nez-hooks, /nez-reels, /nez-market-carousel, /nez-social, /nez-youtube, /nez-walkthrough-video · Vault: Plan My Week of Content |
+| Create content | /nez-connector (CapCut projects and free transcripts on your computer), /nez-library (your swipe file of saved posts), /nez-content, /nez-hooks, /nez-reels, /nez-market-carousel, /nez-social, /nez-youtube, /nez-walkthrough-video · Vault: Plan My Week of Content |
 | Get found online | /nez-website, /nez-listing-page, /nez-seo, /nez-blog, /nez-site-audit |
 | Build my team | /nez-self (teammate profiles), /nez-org-chart |

@@ -25,6 +25,8 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 - last_check_in:
 - last_review:
 - path_not_now:
+- last_brain_check:
+- brain_check_schedule:
 ```
 
 ## How to write them
@@ -45,6 +47,8 @@ The Master Profile page ends with a section headed `## Setup Status`. NEZ OS ski
 - `voice_profile`: the date an approved voice summary was saved (by Stage 3), or the agent's own voice skill was saved (by /nez-voice).
 - `last_check_in`: written by /nez-goals (weekly check-ins, logged on the Quarterly Goals page).
 - `last_review`: written by /nez-review (business review against the plan).
+- `last_brain_check`: written by /nez-brain-check: the date and score, for example `2026-11-12 (score 84%, 15 of 18)`.
+- `brain_check_schedule`: `weekly`, `every 2 weeks`, `monthly` or `off`, chosen in /nez-brain-check. Blank means weekly. `snoozed until YYYY-MM-DD` when the agent said not now; after that date it goes back to their schedule (keep the schedule in the line, for example `weekly, snoozed until 2026-11-19`).
 - `path_not_now`: written by /nez-next. Optional path steps the agent said not now to, with the date, for example `nez-dashboard 2026-11-12, nez-bottleneck 2026-11-12`. Never recommend those on the path again.
 - Never remove a line. Only fill in or update values. If an older brain has the old stage lines (`stage_1_you_and_market` and so on), leave them and add the new lines below them.
 

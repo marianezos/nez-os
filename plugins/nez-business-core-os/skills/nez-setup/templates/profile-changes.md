@@ -83,6 +83,7 @@ Stage 2 (compliance), Stage 3 (voice and edge), Stage 5 (objection bank) and the
 | Status option Reviewing, and fields Status Changed and Needs from Me | Content Planner | Workspace check adds them |
 | Coach Library database and Page IDs `coach_library_db_id`, `coach_library_ds_id` | 04 · Content, after Content Planner | Workspace check offers it |
 | Library Folders and Board Updates headings | Master Profile, after My business numbers | Add the empty headings |
+| Setup Status lines `path_not_now`, `last_brain_check`, `brain_check_schedule` | Master Profile, Setup Status | Add the blank lines. /nez-next and /nez-brain-check fill them |
 | AI Employees database and Page IDs `ai_employees_db_id`, `ai_employees_ds_id` | Your team & how you work, after Software Stack | Workspace check offers it |
 | Owner, Hours per Week, Pain, Automatable, Fix Type, AI Employee, Estimated Hours Saved, Actual Hours Saved, Fix Cost, Check By fields; Status options Planned, Dropped, Kept human | Bottlenecks | Workspace check adds the fields and options |
 | Quarterly Goals page and Page ID `quarterly_goals_page_id` | Inside Business Plan & Goals, at the bottom | Workspace check offers it |
