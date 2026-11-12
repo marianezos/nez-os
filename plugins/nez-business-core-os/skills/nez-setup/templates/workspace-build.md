@@ -25,6 +25,8 @@ If this file and the Notion template ever disagree, the template wins; tell Mari
 | Getting Started | 🚀 | Start here | (none) | Template only. Never recreate; point to the Vault |
 | Brain Index | 🗂️ | Start here | brain_index_page_id | The "For AI" callout, the Where everything lives table (one row per page and database below), and the Rules for AI section from `../../../references/brain-rules.md` in short form |
 | Dashboard | 📊 | Start here | dashboard_page_id | The "For AI" callout, This week at a glance, Goal tracker, Open bottlenecks, and Your workspace (every page and database by section) |
+
+**Inside the Dashboard page, at the bottom:** the **Dashboards** database (`dashboards_db_id` / `dashboards_ds_id`), with the layout in `../../nez-dashboard/references/notion-trackers.md`. Description: "Your live dashboards, one row each. Run /nez-dashboard to build or update one."
 | Inbox | 📥 | Start here | inbox_page_id | The "For AI" callout (file items one at a time with the agent's OK, archive instead of delete, never file sensitive information), the "Drop anything here" callout, then a divider |
 | Master Profile | 👤 | 01 · Brain | master_profile_page_id | `master-profile.md` |
 | Voice Library | 🎙️ | 01 · Brain | voice_library_page_id | Headings in `voice.md`, plus a "My voice skills" section at the top (Default voice line) holding the Voices database |
@@ -183,7 +185,9 @@ Description: Every piece of content from idea to published: social, video, blog,
 ```sql
 CREATE TABLE "Content Planner" (
   "Title" TITLE,
-  "Status" STATUS('Idea':gray:to_do, 'Scripting':purple:in_progress, 'Recording':blue:in_progress, 'Editing':yellow:in_progress, 'Scheduled':orange:in_progress, 'Published':green:complete),
+  "Status" STATUS('Idea':gray:to_do, 'Scripting':purple:in_progress, 'Recording':blue:in_progress, 'Editing':yellow:in_progress, 'Reviewing':pink:in_progress, 'Scheduled':orange:in_progress, 'Published':green:complete),
+  "Status Changed" DATE COMMENT 'Set to today by any skill that moves the Status',
+  "Needs from Me" RICH_TEXT COMMENT 'What the agent needs to give or decide for this piece',
   "Platform" MULTI_SELECT('Instagram':pink, 'Facebook':blue, 'TikTok':gray, 'YouTube':red, 'Google Business Profile':green, 'Newsletter':orange, 'Blog':brown, 'LinkedIn':blue),
   "Format" SELECT('Reel / Short':pink, 'Carousel':purple, 'Photo post':blue, 'Long video':red, 'Story':yellow, 'Email':orange, 'Blog post':brown),
   "Topic" SELECT('Market update':blue, 'Buyers':green, 'Sellers':orange, 'First-time buyers':purple, 'Listing':pink, 'Neighborhood':yellow, 'Personal / story':gray),
@@ -195,6 +199,11 @@ CREATE TABLE "Content Planner" (
   "Leads" NUMBER
 )
 ```
+
+
+### Coach Library (04 · Content, after Content Planner) · coach_library_db_id / coach_library_ds_id
+Description: The posts and videos you learn from: hooks, lessons and pitches, logged by /nez-library. For inspiration only: anything made from them is written new, in your voice.
+Fields: exactly as in `../../nez-advisor/references/notion.md` (Title, Creator, Platform, Link, Posted, Saved, Use, Topics, Folder, Hook, Main Point, Lesson, Pitch, Why I Liked It, Words Read, Status).
 
 ### Projects (05 · Growth, after Business Plan & Goals) · projects_db_id / projects_ds_id
 Description: Ongoing work with a goal and an end, like a website, a class, a new lead source or a listing launch. Your AI asks before adding one, and links Tasks to it.
@@ -227,15 +236,25 @@ CREATE TABLE "Tasks" (
 ```
 
 ### Bottlenecks (05 · Growth) · bottlenecks_db_id / bottlenecks_ds_id
-Description: What's slowing you down and how it got fixed.
+Description: What's slowing you down, how much time it costs, and the lightest fix. /nez-bottleneck finds and ranks them; /nez-org-chart uses Owner and Hours per Week to spot overload.
 ```sql
 CREATE TABLE "Bottlenecks" (
   "Bottleneck" TITLE,
-  "Status" STATUS('Open':red:to_do, 'Fixing':yellow:in_progress, 'Fixed':green:complete),
+  "Status" STATUS('Open':red:to_do, 'Planned':orange:to_do, 'Fixing':yellow:in_progress, 'Fixed':green:complete, 'Dropped':gray:complete, 'Kept human':blue:complete),
   "Impact" SELECT('High':red, 'Medium':yellow, 'Low':gray),
   "Pillar" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange),
   "Date Found" DATE,
-  "The Fix" RICH_TEXT
+  "The Fix" RICH_TEXT,
+  "Owner" RICH_TEXT COMMENT 'Person from People who owns it, by exact name',
+  "Hours per Week" NUMBER COMMENT 'Hours a week this costs, as reported',
+  "Pain" NUMBER COMMENT '1 to 5, from the agent',
+  "Automatable" NUMBER COMMENT '1 to 5, how much a tool can do',
+  "Fix Type" SELECT('Remove or simplify':gray, 'Existing NEZ OS skill':purple, 'Platform automation':orange, 'AI help':blue, 'AI employee':green, 'Keep human':brown),
+  "AI Employee" RICH_TEXT COMMENT 'Name from AI Employees, if one handles it',
+  "Estimated Hours Saved" RICH_TEXT COMMENT 'A range, labeled as an estimate',
+  "Actual Hours Saved" NUMBER COMMENT 'What the agent says it saved, after two weeks',
+  "Fix Cost" RICH_TEXT COMMENT 'What the fix costs a month and to set up, or Not known yet',
+  "Check By" DATE COMMENT 'When /nez-next asks if the fix saved the time'
 )
 ```
 
@@ -258,6 +277,23 @@ CREATE TABLE "People" (
   "Human or AI" SELECT('Human':blue, 'AI':purple),
   "Other Results" RICH_TEXT COMMENT 'Test results the person chose to share, or Not shared. Never birth details',
   "Notes" RICH_TEXT
+)
+```
+
+### AI Employees (Your team & how you work, after Software Stack) · ai_employees_db_id / ai_employees_ds_id
+Description: AI that does a recurring job you rely on, like a Claude Project that drafts listing descriptions or GoHighLevel Conversation AI answering new leads. Each one has exactly one person who manages it. /nez-org-chart shows them on your chart.
+```sql
+CREATE TABLE "AI Employees" (
+  "Name" TITLE,
+  "Role" RICH_TEXT,
+  "Human Manager" RICH_TEXT COMMENT 'Exactly one person from People, by exact name',
+  "Status" SELECT('Draft':gray, 'Active':green, 'Paused':yellow, 'Retired':red),
+  "Where It Runs" SELECT('Claude Project':purple, 'Scheduled task':blue, 'GoHighLevel':orange, 'Custom GPT':green, 'Other':gray),
+  "What It Does" RICH_TEXT,
+  "Review Cadence" SELECT('Monthly':blue, 'Quarterly':green, 'Twice a year':gray),
+  "Review Date" DATE,
+  "Link" URL,
+  "Created" DATE
 )
 ```
 

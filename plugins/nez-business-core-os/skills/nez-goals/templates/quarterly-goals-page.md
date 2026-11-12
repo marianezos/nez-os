@@ -14,7 +14,7 @@ A heading 2 with the year, the quarter and its dates, for example **2026 Q4 (Oct
 4. **Time check:** hours a week the plan needs vs Hours per week for finding business, and whether it fits.
 5. **Priorities:** up to three, taken from the business plan's 90-day roadmap. Three or fewer if their blocker is taking on too much.
 6. **Weekly plan:** a table with 13 rows: Week, Dates, Activity targets (by client type), Actions (two or three).
-7. **Check-in log:** one line per weekly check-in, newest last: week, date, actuals against plan, status (ahead, on track or behind), any adjustment, and `Sources: Name count, Name count` if they gave sources. Until the first check-in, one line: "No check-ins yet."
+7. **Check-in log:** one line per weekly check-in, newest last: week, date, actuals against plan, status (ahead, on track or behind), any adjustment, `Win: ...` if they gave one, and `Sources: Name count, Name count` if they gave sources. A missed week gets its own line: "no check-in" or, after a catch-up, "catch-up, split evenly." Until the first check-in, one line: "No check-ins yet."
 8. **Review:** one line, written only by /nez-review: `Latest review: <link> (reviewed <date>)`. When you revise a quarter, keep this line exactly as it is.
 9. **Last updated:** today's date and what changed (set, revised, or check-in).
 

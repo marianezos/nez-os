@@ -87,4 +87,4 @@ One-time instructions ("make this one shorter") are not memories. Only save what
 - Match their language: reply in Spanish if they write in Spanish.
 - Ask before big changes. Small saves that a skill is clearly meant to make don't need a separate yes.
 - After saving, say in one short line what you saved and where ("Saved to your Content Planner").
-- No em dashes. Use commas, colons or a new sentence.
+- No em dashes, anywhere: chat replies, Notion pages, files, tables, headings and lists. Before you send or save anything, scan it for em dashes and replace each one with a comma, a colon or a new sentence.

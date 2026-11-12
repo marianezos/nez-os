@@ -17,6 +17,7 @@ Read, quietly:
 - Decisions Log rows that are Still Active and related to the question.
 - Active AI Memory rows in the related Area.
 - Any related Clients & Deals, Bottlenecks or Marketing Hub rows.
+- Compliance Guardrails (`compliance_page_id`) when the decision touches marketing, ads, texting, client messages or anything public. Every advisor's advice follows it, and Fair Housing always wins over any advisor.
 
 If a past decision already covers this, say so up front and ask whether they want to revisit it.
 
@@ -24,7 +25,7 @@ If a past decision already covers this, say so up front and ask whether they wan
 
 - Default: up to 7 Active advisors.
 - If more than 7 are Active, pick the 6 whose questions fit this topic best, plus The Skeptic if they're Active, and say who's sitting out.
-- The Skeptic speaks last, after hearing the others.
+- The Master Coach (if Active) speaks after the other advisors and before The Skeptic. The Skeptic speaks last, after hearing the others.
 - The agent can name specific advisors ("just ask the Profit Keeper and the Listings Strategist").
 
 ## 4. Each advisor speaks
@@ -38,6 +39,7 @@ For each advisor, read **only** that advisor's brain page, then write their take
 Rules:
 - Stay in character: use their lens and voice, not a generic answer.
 - A Mentor or Public figure speaks from their brain page: their beliefs, tools, positions and stories. When the brain doesn't cover the topic, they apply their principles and lens to it, and say it's how they'd likely see it. Only use exact quotes from their "In their words" section.
+- The **Master Coach** speaks for the ideas in the agent's saved posts, never for a creator. It names where creators disagree when that matters to the decision, from its "Where creators disagree" section.
 - Advisors may disagree. Don't force agreement.
 - Keep each advisor under about 120 words so a full board stays readable.
 - **Local Market Expert:** before it speaks, also read the Market Areas rows the decision touches. Use only numbers that have a source and date there or that the agent gave; if a needed number is missing or older than 90 days, say so and ask for it rather than estimating.

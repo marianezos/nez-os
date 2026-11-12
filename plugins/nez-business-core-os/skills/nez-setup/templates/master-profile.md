@@ -134,6 +134,7 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | | Quarter closings goal | /nez-goals |
 | | Quarter GCI goal | /nez-goals |
 | | Quarter take-home goal | /nez-goals (only if the pay structure is saved) |
+| | Value of my hour | /nez-bottleneck (worked out from GCI and hours, or asked once) |
 | | Last review date | /nez-review (today, every run) |
 | | Review period | /nez-review (for example 2026 Q4 so far) |
 | | Lead source spend | /nez-review or /nez-bizplan (monthly spend per paid source) |
@@ -161,6 +162,8 @@ Labels are written in bold followed by a colon (`- **Brokerage:**`). Fill the va
 | Clients needed | /nez-bizplan generic math |
 | Quarter clients goal | /nez-goals generic |
 | Quarter revenue goal | /nez-goals generic |
+
+**Library Folders** and **Board Updates** are two more headings right after My business numbers, each empty until /nez-library writes to it (see `../../nez-advisor/references/notion.md`): Library Folders holds one line per synced social folder, Board Updates holds new content found for mentor advisors. Setup never asks these.
 
 ## Setup Status
 

@@ -46,7 +46,7 @@ Keep the agent moving. Read what they've finished, recommend the one most useful
 ## Step 2: Read progress
 
 Read only what you need:
-- **Master Profile:** Setup Status (every line; see `nez-setup/references/setup-status.md`), the My personality section, My tools (CRM), My brand (YouTube), My goals this year, and the Last plan date in My business numbers.
+- **Master Profile:** Setup Status (every line; see `../nez-setup/references/setup-status.md`), the My personality section, My tools (CRM), My brand (YouTube), My goals this year, and the Last plan date in My business numbers.
 - **Voice Library:** whether it has content beyond the template blanks.
 - **Business Plan & Goals:** whether an income goal is filled in, the quarter in This quarter, and the newest Weekly check-in.
 - **Market Areas:** how many rows, and their Data As Of dates.

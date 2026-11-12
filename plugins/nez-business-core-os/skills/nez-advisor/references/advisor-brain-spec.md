@@ -40,6 +40,10 @@ Their position on the topics agents bring most: commission and fees, hiring, pai
 - Mentor or Public figure: add the source id (or public work) and year when known. If their view changed over time, give the newer view and what it replaced.
 - If there's no basis for a position, leave that topic out rather than guess.
 
+## Where creators disagree (Master Coach only)
+
+Where the creators behind the saves, or the mentor advisors blended in, disagree: one line per topic, naming who's on each side and the ids that show it. If nothing is disagreed, say so plainly in one line and don't invent a conflict.
+
 ## How they talk
 
 Five to eight bullets: sentence length, energy, signature phrases, how they push back, what they never say.
@@ -63,3 +67,5 @@ A table with: Id (S1, S2, ...), Title, Kind (video, podcast, article, book, post
 - An advisor built partly from what the person is widely known for adds a row: "Public work: general knowledge of [name]'s published books, talks and content."
 - Store the table only, not full transcripts.
 - When refreshing, keep existing ids and continue the numbering.
+
+**Master Coach sources** come in two kinds. Coach Library rows get the ids L01, L02 and so on, in the order they were saved, each with its library link, and every belief that rests on a save cites them. Mentor advisors blended in are cited by their key and their own source id (for example `tom-ferry S3`), with one row in the table for each such advisor. A refresh continues the L numbers.

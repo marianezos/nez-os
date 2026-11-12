@@ -17,17 +17,19 @@ Turn the business plan into this quarter's targets and a week-by-week plan the a
 - **The math, step by step:** yearly goal, minus what's done, minus what's already under contract, this quarter's share, take-home with their exact split, cap and fees, deals needed, split by client type, then agreements and conversations per week.
 - **Timing built in:** shows which weeks agreements have to be signed for closings to land this quarter, and what this quarter's work sets up for next quarter.
 - **A 13-week plan:** each week with its dates, activity targets by client type, and two or three actions from the business plan's roadmap. Checked against their hours and boundaries.
-- **Weekly check-in:** this week's numbers, where new business came from, ahead, on track or behind, the bottleneck if behind, an adjustment to the next two weeks only, and one action for next week. Logged on the Quarterly Goals page.
+- **Weekly check-in:** catch-up for missed weeks, this week's numbers, a status on every deal under contract, where new business came from, a win of the week, ahead, on track or behind, the bottleneck if behind, an adjustment to the next two weeks (or a plain call to revise the quarter from week 8 if it's more than 25% behind), Tasks marked done and next week's added, and one action for next week. Year-to-date numbers stay current. Logged on the Quarterly Goals page.
+- **Closing the quarter:** the last check-in rolls into /nez-review and setting up next quarter in one sitting.
 - **Saves:** one section per quarter on the Quarterly Goals page (newest first, older quarters kept), This quarter on Business Plan & Goals, and the quarter's numbers on the Master Profile.
 
 ## Core rules
 
 - **Read the brain rules first:** the plugin's `references/brain-rules.md` (two levels up from this skill). Follow it for finding the brain, saving and logging.
 - **Never ask what the brain already has.** One question at a time, with short lettered lists for quick answers. Match their language (Spanish if they write in Spanish).
+- **Missing a number the math needs?** Ask once (with the matching /nez-bizplan question when there is one), save it in My business numbers, and go on.
 - **Never assume how they get paid.** Use only the pay structure saved by /nez-bizplan. Missing or unclear: ask once with the matching /nez-bizplan question, save it, and go on. "None" is zero; "not sure" isn't counted, and you say so.
 - **Label every number:** (your number), (your estimate), (I asked you), (I calculated this), or (assumption: even split).
 - **Check the target against reality.** If the weekly activity doesn't fit their **Hours per week for finding business**, their boundaries or their capacity, say so plainly and offer options (more help, a longer timeline, a different target, raising average price). Never quietly shrink the goal.
-- **Write only where this skill writes:** the Quarterly Goals page, the This quarter section of Business Plan & Goals, and the quarter lines on the Master Profile (plus Tasks and Clients & Deals only with the agent's OK, as described below). Keep older quarters. Never touch a review link line or a past check-in.
+- **Write only where this skill writes:** the Quarterly Goals page, the This quarter section of Business Plan & Goals, and the quarter lines on the Master Profile (plus This year so far lines after a closing, and Tasks, Clients & Deals, Stories and Proof only with the agent's OK, as described below). Keep older quarters. Never touch a review link line or a past check-in.
 - **Fit it to them** (My personality): a **Driver** gets the numbers and the actions first, short. A **Connector** gets the vision and the people first, with energy. A **Steady** gets steady progress, calm and step by step. A **Planner** gets the data and the detail. If their biggest blocker is taking on too much, the quarter has three priorities, no more.
 - **No promises.** Targets are plans, not predictions. Tax questions go to their CPA.
 - **Write in their voice** if a default voice exists. **No em dashes,** anywhere: tables, headings and lists included (write "Deal 3: reaches the cap").
@@ -100,16 +102,28 @@ Build 13 weeks (or the weeks left, if planning the rest of a quarter). Each week
 
 Use this when they pick A or say "weekly check-in." About 10 minutes.
 
-1. Read the current quarter's section: the plan to date and the check-in log.
-2. Ask one at a time for this week's numbers, using the activity names in the industry file, and anything that went under contract or closed. Short lists so they can answer fast.
-3. **Where it came from (optional):** ask once, "Where did this week's new agreements and closings come from?" Offer their own lead sources as short options plus "other," and let them skip. If they answer, keep it as a tally for the log line. If they skip, log nothing for sources. Never invent a source.
-4. **Clients & Deals (only with their OK):** if something closed or went under contract and it isn't in Clients & Deals, offer once: "Want me to add that to Clients & Deals?" On yes, add or update the row (Stage, Type, Price if they gave it, Key Date, Lead Source). Never add client contact details or sensitive information.
-5. Compare totals so far with the plan to date. Say plainly: ahead, on track or behind (within 10% is on track), with the numbers.
-6. **If behind,** find the bottleneck from their own rates: not enough activity, or activity that isn't converting (name the step). Adjust only the next two weeks unless they ask to revise the quarter. Keep the blocker rule.
-7. **Log it:** add one line to the quarter's check-in log: week, date, actuals against plan, status, any adjustment, and, if they gave sources, end with `Sources: Name count, Name count`. Set `last_check_in` in Setup Status to today.
-8. End with **one clear action for next week.** Say once per quarter: "Any time you want a deeper look, /nez-review compares your results with your plan by client type and lead source and shows your take-home."
+1. **Read** the current quarter's section (the plan to date and the check-in log), open Tasks from this quarter, and Under contract rows in Clients & Deals.
+2. **Missed weeks:** if `last_check_in` is more than 10 days ago, say how many weeks are missing and ask:
+   > "Want to catch up all [N] weeks at once, or just log this week?
+   > A) Catch up all of them (rough totals are fine)
+   > B) Just this week"
+   For A, ask for the combined numbers since the last check-in and log one line per missing week (split evenly and labeled "catch-up, split evenly" unless they give week-by-week numbers). For B, log this week and mark the missed weeks "no check-in" so the log has no gaps. No guilt: just get back on track.
+3. **This week's numbers:** ask one at a time, using the activity names in the industry file, and anything that went under contract or closed. Short lists so they can answer fast.
+4. **Deals in progress:** show each Under contract deal (Type, expected closing month) and ask "Still on track?" with A) Yes B) Delayed C) Fell through. Delayed: ask the new month. Fell through: with their OK update the row in Clients & Deals (Stage Lost, Notes with the reason in their words), update Pending deals now, and say plainly what it does to the quarter math (it adds back to what's needed). Never guess a status.
+5. **Where it came from (optional):** ask once, "Where did this week's new agreements and closings come from?" Offer their own lead sources as short options plus "other," and let them skip. If they answer, keep it as a tally for the log line. If they skip, log nothing for sources. Never invent a source.
+6. **Win of the week:** "What's one win from this week, big or small?" (skippable). Put it in the log line. If it's a client story, offer once to save it to Stories (OK to Share unchecked until they say so). If it's a review or a result a client approved, offer once to save it to Proof. Never save a client's private details.
+7. **Clients & Deals (only with their OK):** if something closed or went under contract and isn't in Clients & Deals, offer once: "Want me to add that to Clients & Deals?" On yes, add or update the row (Stage, Type, Price if they gave it, Key Date, Lead Source). Never add client contact details or sensitive information.
+8. **Keep year to date current:** when something closed this week, update This year so far: closings and This year so far: GCI (or clients and revenue) in My business numbers, adding this week's closings and GCI, and say the new totals in one line. This keeps /nez-review and next quarter's math on real numbers.
+9. **Compare** totals so far with the plan to date. Say plainly: ahead, on track or behind (within 10% is on track), with the numbers.
+10. **If behind,** find the bottleneck from their own rates: not enough activity, or activity that isn't converting (name the step). Adjust only the next two weeks, and keep the blocker rule.
+    **Time to revise:** from week 8 on, if closings or agreements are more than 25% behind the plan to date, say it plainly: "At this pace the quarter target isn't reachable by adjusting a week at a time. Want to revise the quarter (option B) so the plan matches what's real?" The 25% line is NEZ OS's rule; they can pick another. Never revise without their OK.
+11. **Tasks:** show last week's actions and ask which are done. With their OK, mark those Done in Tasks. Then offer: "Want me to add next week's actions to your Tasks?" On yes, add the actions not already open (Status Not started, Due Date next week, Notes "From my Q[n] goals"), never more than 4 at a time. Never duplicate a task.
+12. **Log it:** add one line to the quarter's check-in log: week, date, actuals against plan, status, any adjustment, `Win: ...` if they gave one, and, if they gave sources, end with `Sources: Name count, Name count`. Set `last_check_in` in Setup Status to today.
+13. End with **one clear action for next week.** Say once per quarter: "Any time you want a deeper look, /nez-review compares your results with your plan by client type and lead source and shows your take-home."
 
-If it's been more than four check-ins since the last review, or two weeks or less are left in the quarter, recommend /nez-review as the next step.
+**Last check-in of the quarter** (week 13, or the quarter's last week): after logging, say how the quarter ended against the target, then offer in this order: "Want to run /nez-review for the full picture, then set up next quarter right after?" On yes, run /nez-review's flow for "last quarter," then go to SET UP NEXT QUARTER. On no, offer just SET UP NEXT QUARTER. Either way, nothing about the closed quarter is changed except its log and Last updated line.
+
+Otherwise, if it's been more than four check-ins since the last review, or two weeks or less are left in the quarter, recommend /nez-review as the next step.
 
 ## SET UP NEXT QUARTER
 
@@ -122,7 +136,7 @@ When they pick C, or a new quarter has started:
 ## Next step
 
 Recommend ONE:
-- Setup Stage 5 (objection bank) not done: /nez-setup, Continue setup.
+- Setup Stage 4 (goals) or Stage 5 (objection bank) not done: /nez-setup, Continue setup.
 - Otherwise the next step on the NEZ OS path from /nez-next (for example your first content week or your lead magnet; use the Vault prompt if the skill isn't installed).
 
 Always add: "Do your first weekly check-in in 7 days. Run /nez-goals and pick Weekly check-in, and /nez-next will remind you."

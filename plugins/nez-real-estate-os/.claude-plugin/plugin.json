@@ -1,7 +1,7 @@
 {
   "name": "nez-real-estate-os",
   "description": "NEZ OS Real Estate: texting approval (A2P), CRM setup, follow-up sequences, transactions, seller updates and sphere touches for real estate agents. Reads the NEZ OS brain built by the nez-business-core-os plugin.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Maria Nez AI"
   }

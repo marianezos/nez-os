@@ -34,13 +34,12 @@ Pressure-test a decision with several sharp perspectives, then give the agent on
 ## Step 1: Find the board
 
 1. Find the brain per the brain rules. Open the **Advisory Board** and **Board Meetings** (`advisory_board_ds_id` and `board_meetings_ds_id` in Page IDs).
-2. **Board Meetings missing:** follow the brain rules' safety net and create it with this exact layout, save both IDs in Page IDs, add it to the Brain Index and the Dashboard's Your workspace list:
-   ```
-   CREATE TABLE ("Decision" TITLE, "Date" DATE, "Call" SELECT('Go':green, 'No go':red, 'Go with changes':yellow, 'Need more info':gray), "Advisors" RICH_TEXT, "Pillar" SELECT('Brain':purple, 'Leads':blue, 'Clients':green, 'Content':pink, 'Growth':orange), "Follow-up" DATE, "Outcome" SELECT('Not reviewed':gray, 'Worked':green, 'Mixed':yellow, 'Didn''t work':red, 'Didn''t do it':default), "What Happened" RICH_TEXT)
-   ```
+2. **Board Meetings missing:** follow the safety net in `../nez-advisor/references/notion.md`, which has its exact layout.
 3. **No advisors yet (or no Advisory Board):** say the board is empty and set it up first by following Step 2 ("Seat the default board") of the /nez-advisor skill (`../nez-advisor/SKILL.md`), including its one confirming question. Then continue with the meeting.
 
 ## Step 2: Check overdue follow-ups
+
+If the Master Profile has a **Board Updates** section with lines that have no "declined," offer in one line: "There's new content from [names]. Want me to refresh those advisors first?" A yes refreshes them with /nez-advisor Step 6 and clears those lines; a no adds `| declined <date>` to them, and the meeting goes on.
 
 If any Board Meetings row has a Follow-up date that has passed and Outcome "Not reviewed," mention it in one line and offer to check it now or after the meeting.
 

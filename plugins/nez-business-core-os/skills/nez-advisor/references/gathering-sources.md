@@ -13,6 +13,14 @@ Claude can only read a site the agent has allowed. Tell the agent up front:
 
 If a link fails with a network or "blocked" error, it's this permission, not the link: say so once, give the steps above, and switch to pasting until the agent has changed it. Don't keep retrying.
 
+## Private people
+
+Public work only, or the agent's own material. A private person (their coach, broker, a past manager) needs their OK first: say "Make sure you have their OK to build an advisor from their material."
+
+## From their Coach Library
+
+If the agent has a Coach Library (/nez-library), rows from this creator are good starting sources: the Hook, Main Point, Lesson and Pitch were already read from the posts. Count each row with Words Read checked as a short source, cite its Link, and still prefer long-form content for the depth of the brain.
+
 ## What makes a good source
 
 - **Best:** long interviews and podcast episodes, keynotes, their own long videos, books they wrote, their essays and newsletters, courses the agent bought.

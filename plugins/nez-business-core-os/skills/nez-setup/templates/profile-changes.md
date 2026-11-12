@@ -76,9 +76,15 @@ Stage 2 (compliance), Stage 3 (voice and edge), Stage 5 (objection bank) and the
 
 | Change | Where | How |
 | --- | --- | --- |
-| My business numbers section (callout and 50 blank lines) | Master Profile, right after My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-bizplan fills them; setup never asks these |
+| My business numbers section (callout and 51 blank lines) | Master Profile, right after My goals this year | Add the heading, callout and blank lines from `master-profile.md`. /nez-bizplan fills them; setup never asks these |
 | My business plan heading with a "Last updated" line | Business Plan & Goals, right after This quarter | Add the heading and a blank Last updated line. /nez-bizplan writes the plan under it |
 | Latest review line in This quarter; source tally format in the Weekly check-ins note | Business Plan & Goals | Add the line and update the note. /nez-review fills the line |
+| Dashboards database and Page IDs `dashboards_db_id`, `dashboards_ds_id` | Inside the Dashboard page, at the bottom | Workspace check offers it |
+| Status option Reviewing, and fields Status Changed and Needs from Me | Content Planner | Workspace check adds them |
+| Coach Library database and Page IDs `coach_library_db_id`, `coach_library_ds_id` | 04 · Content, after Content Planner | Workspace check offers it |
+| Library Folders and Board Updates headings | Master Profile, after My business numbers | Add the empty headings |
+| AI Employees database and Page IDs `ai_employees_db_id`, `ai_employees_ds_id` | Your team & how you work, after Software Stack | Workspace check offers it |
+| Owner, Hours per Week, Pain, Automatable, Fix Type, AI Employee, Estimated Hours Saved, Actual Hours Saved, Fix Cost, Check By fields; Status options Planned, Dropped, Kept human | Bottlenecks | Workspace check adds the fields and options |
 | Quarterly Goals page and Page ID `quarterly_goals_page_id` | Inside Business Plan & Goals, at the bottom | Workspace check offers it |
 | Business Reviews page and Page ID `business_reviews_page_id` | Inside Business Plan & Goals, at the bottom | Workspace check offers it |
 

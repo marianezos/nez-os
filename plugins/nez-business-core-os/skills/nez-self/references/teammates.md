@@ -47,7 +47,7 @@ One row and one page per person. Show the row in plain words and wait for the ag
 | --- | --- |
 | Name | their name |
 | Role | from the existing options ("Me" for the agent) |
-| Human or AI | Human (AI employees are added by /nez-org-chart later) |
+| Human or AI | Human (AI employees live in the AI Employees database, added by /nez-org-chart) |
 | Company, Phone, Email | if the agent gives them |
 | Best Way to Reach | question 15 (team chat goes in Notes) |
 | Reports To | the manager's name exactly as it appears in People, or the agent's name. Blank on the agent's own row unless they report to someone |
