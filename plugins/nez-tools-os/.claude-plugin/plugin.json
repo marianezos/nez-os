@@ -1,7 +1,7 @@
 {
   "name": "nez-tools-os",
   "description": "NEZ OS Tools: local connectors that run on your own computer, set up by conversation. First up: the CapCut connector, so Claude can build your CapCut projects, make free transcripts and captions of your videos, and file your finished videos. Windows, Claude desktop app.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Maria Nez AI"
   },

@@ -15,7 +15,7 @@ if (!fs.existsSync(SERVER)) stop('not installed on this computer yet. In Claude,
 
 let settings = {};
 try { settings = JSON.parse(fs.readFileSync(path.join(DIR, 'settings.json'), 'utf8')); } catch { /* use defaults */ }
-const port = Number(settings.port) || 9001;
+const port = Number(settings.port) || 9011;
 const python = process.platform === 'win32'
   ? path.join(DIR, 'bridge', 'venv', 'Scripts', 'python.exe')
   : path.join(DIR, 'bridge', 'venv', 'bin', 'python');

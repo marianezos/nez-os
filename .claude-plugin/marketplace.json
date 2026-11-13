@@ -30,7 +30,7 @@
       "name": "nez-tools-os",
       "source": "./plugins/nez-tools-os",
       "description": "NEZ OS Tools: connectors that run on your own Windows computer, set up by conversation. Claude builds your CapCut projects, makes free transcripts and captions of your videos, and files your finished videos.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Maria Nez AI"
       },

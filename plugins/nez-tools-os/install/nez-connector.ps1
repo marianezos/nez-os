@@ -127,10 +127,15 @@ if ($missing.Count -gt 0) {
   if (-not (Ffmpeg-Ok)) { Stop-With 'programs' 'FFmpeg did not finish installing. Restart the computer, then try again.' }
 }
 
-# Stop a running bridge from an earlier install, so its files can be replaced.
-Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
-  Where-Object { $_.ExecutablePath -and $_.ExecutablePath.StartsWith($CapDir, [StringComparison]::OrdinalIgnoreCase) } |
-  ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
+# Stop a running bridge from an earlier install, so its files can be replaced. On Windows a venv's python.exe
+# starts the main Python as a child process, so stop the children of anything running from our folder too.
+$procs = @(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue)
+$ours = @($procs | Where-Object {
+  ($_.ExecutablePath -and $_.ExecutablePath.StartsWith($CapDir, [StringComparison]::OrdinalIgnoreCase)) -or
+  ($_.CommandLine -and $_.CommandLine.IndexOf($CapDir, [StringComparison]::OrdinalIgnoreCase) -ge 0) } | Select-Object -ExpandProperty ProcessId)
+$kids = @($procs | Where-Object { $_.ParentProcessId -in $ours } | Select-Object -ExpandProperty ProcessId)
+foreach ($id in @($kids + $ours)) { Stop-Process -Id $id -Force -ErrorAction SilentlyContinue }
+Start-Sleep -Milliseconds 500
 
 # 1. The bridge: VectCutAPI, downloaded from its creator's GitHub at the pinned commit.
 $bridge = Join-Path $CapDir 'bridge'
